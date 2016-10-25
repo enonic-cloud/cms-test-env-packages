@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <!DOCTYPE urlrewrite
+        PUBLIC "-//tuckey.org//DTD UrlRewrite 3.0//EN"
+        "http://www.tuckey.org/res/dtds/urlrewrite3.0.dtd">
+
+    <urlrewrite>
+
+        <rule>
+           <from>/features</from>
+           <to type="forward">/site/0/en/features</to>
+        </rule>
+
+        <rule>
+           <from>/sp</from>
+           <to type="redirect">/site/0/en/sample-packages</to>
+        </rule>
+
+    </urlrewrite>
