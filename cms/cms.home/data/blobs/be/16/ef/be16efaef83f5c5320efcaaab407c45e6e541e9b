@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><issueCompacts><issue id="CMS-974"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>Inherit the language of parent menu item for new menu items.</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="description"><value>
+
+This solves S-133685.
+</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Improvement</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Viktar Fiodarau">vfi</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>Admin Console</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Reviewer"><value fullName="Runar A. Myklebust">rmy</value></field></issue><issue id="CMS-976"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>Support anchors in internal links</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="description"><value>Add support for anchors in internal links.
+
+See S-135211.</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Improvement</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Lasse Jul-Larsen">ljl</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>Admin Console</value></field></issue><issue id="CMS-515"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>Romanization of the name of Menu Items and Content</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="description"><value>Create a new property {{cms.name.transliterate}} that will limit the name of menu items and content to letters in the English alphabet.
+
+See S-131430, S-135552 and S-140907.
+
+http://www.enonic.com/en/community/forum/categories/thread?cat=1609&amp;current=133749&amp;thread=133749
+https://enonic.com/en/support/issue?key=131430</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Improvement</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Henady Zakalusky">hza</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>Portal</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Reviewer"><value fullName="Jørgen Sivesind">jsi</value></field></issue><issue id="CMS-693"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>Reload site.properties when it is changed on file</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="description"><value>Reload site.properties when it is changed on file.
+
+This solves partly S-134360.</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Improvement</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Henady Zakalusky">hza</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>Portal</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Reviewer"><value fullName="Jørund Vier Skriubakken">jvs</value></field></issue><issue id="CMS-887"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>Ensure that index (from) given in datasources is positive</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="description"><value>Now, a negative number in the index parameter in datasources are passed through to Elasticsearch, giving a nasty exception. This should be handled in the datasource, giving a nice, readable exception. </value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Improvement</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Viktar Fiodarau">vfi</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>Portal</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Reviewer"><value fullName="Runar A. Myklebust">rmy</value></field></issue><issue id="CMS-972"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>Multiple values for request parameters in EL</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="description"><value>Support multiple values for single request parameter in EL.
+
+If you submit a request with multiple values such as:
+{code}
+http://some.url?p=a&amp;p=b
+{code}
+
+*Proposed solution:*
+
+We should create a new scoped variable (as a Map) named {{params}} that returns arrays of string values. Example of usage:
+
+{code}
+params.p
+params.p[0]
+params.p[1]
+params.p.length
+{code}
+
+Not actually sure if {{params.p.length}} would work, but some similar function should be possible.
+
+This solves S-124173.
+</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Improvement</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Raman Yafimchyk">rya</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>Portal</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Reviewer"><value fullName="Runar A. Myklebust">rmy</value></field></issue><issue id="CMS-1157"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>Content sendmail http service should optionally send attachments</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="description"><value>Should have a parameter to include attachement (or not) in Content-Sendmail http service.
+
+This solves S-140331.
+
+</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Improvement</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Raman Yafimchyk">rya</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>Portal</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Reviewer"><value fullName="Jørgen Sivesind">jsi</value></field></issue><issue id="CMS-1444"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>Instruction Post Processing for a page should be presented before window rendering traces</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="description"><value>
+
+
+Instruction Post Processing for the page rendering result happens before any window rendering traces, and therefore should be prestended so in the trace detail view.</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Improvement</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Jørund Vier Skriubakken">jvs</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>Tools</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Reviewer"><value fullName="Jørund Vier Skriubakken">jvs</value></field></issue><issue id="CMS-66"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>New method in the Client API to retrieve items from the event log.</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="description"><value>Create a new method, {{getLogEntries( GetLogEntryParams )}} , in the Client API to work with items in the event log (rows in the tLogEntry table)
+
+Suggest parameters to enable "filter" of extracting log entries. Important parameteres are
+
+- Time span
+- DataType (content etc)
+- Event type
+- paging..
+
+Verify design with SRS and TSI
+
+This issue solves S-119851</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Improvement</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Alex Rodriguez">aro</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>API</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Reviewer"><value fullName="Sten Roger Sandvik">srs</value></field></issue><issue id="CMS-369"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>Allow multiple cookies in BinRpc client</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="description"><value>Right now we only take care of JSESSIONID as a cookie in BinRpc client. We need to make this generic so that it collects other cookies as well. One concrete problem is when BinRpc is running ontop of a load-balanced server (where multiple JSESSIONS need to be handled).
+
+Patch from Statens Vegvesen is attached.  It comes from support issue S-132794.</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Improvement</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Runar A. Myklebust">rmy</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>API</value></field></issue><issue id="CMS-655"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>Turn RPC off by default</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="description"><value>Many users do not use remote calls to Enonic CMS via RPC.  For some users, this may represent a security hole, if the url is not hidden behind a firewall.
+
+So, it would be better if the remote API (rpc) is not available by default, and have to be turned on with a setting in cms.properties.</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Improvement</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Henady Zakalusky">hza</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>API</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Reviewer"><value fullName="Sten Roger Sandvik">srs</value></field></issue><issue id="CMS-832"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>The menu datasources need to be able to retrieve "hidden" menuitems</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="description"><value>Until now, all menu datasources get the menuitems marked as "Show in menu".  Sometimes it is necessary to get all menuitems, for example when we create a sitemap.xml template. Actually, the real purpose of a sitemap.xml is to show menuitems that are not available through "normal" navigation. 
+
+We need to add an optional parameter to the menu datasources, for example like this:
+
+&lt;datasources&gt;
+  &lt;datasource name="getMenu"&gt;
+    &lt;parameter name="siteKey"&gt;${portal.siteKey}&lt;/parameter&gt;
+    &lt;parameter name="tagItem"&gt;-1&lt;/parameter&gt;
+    &lt;parameter name="levels"&gt;0&lt;/parameter&gt;
+    &lt;parameter name="includeHidden"&gt;false&lt;/parameter&gt;
+  &lt;/datasource&gt;
+&lt;/datasources&gt;
+
+The default value should be 'false' like today.
+
+PS: Task added after discussion with SRS</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Improvement</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Henady Zakalusky">hza</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>API</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Reviewer"><value fullName="Jørund Vier Skriubakken">jvs</value></field></issue><issue id="CMS-1096"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>Upgrade PDFBox to latest version</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="description"><value>There is a {{NullPointerException}} when indexing some specific PDF files. It seems that it might be a [fixed bug in PDFBox library|https://issues.apache.org/jira/browse/PDFBOX-361].
+
+The PDFBox dependency should be updated to the latest version and verify that the files causing the exception are then handled properly.
+
+Attached PDF file causing the exception.
+
+This issue was reported by a customer, see support case S-140775 for more details.</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Improvement</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Jørgen Sivesind">jsi</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>General</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Reviewer"><value fullName="Alex Rodriguez">aro</value></field></issue><issue id="CMS-1374"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>Cluster / Elasticsearch option cleanup</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="description"><value>The cluster options in cms.properties should be made more user-friendly
+
+The following options (at least) should be translated to user-friendly options, e.g cms.cluster.multicast.enabled, cms.cluster.multicast.group.
+
+Options like this should not be published:
+{code}cms.elasticsearch.discovery.zen.ping.multicast.enabled = false {code}
+
+Therefor, map all options to this
+
+||Zen-settings:||Enonic setting ||Real enonic option ||
+|discovery.zen.ping.multicast.group|cms.cluster.multicast.group|cms.elasticsearch.discovery.zen.ping.multicast.group|
+|discovery.zen.ping.multicast.port|cms.cluster.multicast.port|cms.elasticsearch.discovery.zen.ping.multicast.port|
+|discovery.zen.ping.multicast.ttl|cms.cluster.multicast.ttl|cms.elasticsearch.discovery.zen.ping.multicast.ttl|
+|discovery.zen.ping.multicast.port|cms.cluster.multicast.port|cms.elasticsearch.discovery.zen.ping.multicast.port|
+|discovery.zen.ping.multicast.enabled|cms.cluster.multicast.enabled|cms.elasticsearch.discovery.zen.ping.multicast.enabled|
+|discovery.zen.ping.unicast.hosts|cms.cluster.unicast.hosts|cms.elasticsearch.discovery.zen.ping.unicast.hosts|
+
+Also, default settings should be "true" for multicast.
+</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Improvement</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Runar A. Myklebust">rmy</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>General</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Reviewer"><value fullName="Runar A. Myklebust">rmy</value></field></issue><issue id="CMS-1508"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>SocketException "Broken pipe" while writing response for Attachment is filling up log</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="description"><value>It is unnecessary to log the whole stacktrace when this error happens since it only means that the client has cancelled the download.
+
+{code}
+May 2, 2013 10:08:49 AM com.enonic.cms.server.service.portal.PortalExceptionResolver logException
+SEVERE: null
+
+ClientAbortException:  java.net.SocketException: Broken pipe
+        at org.apache.catalina.connector.OutputBuffer.realWriteBytes(OutputBuffer.java:358)
+        at org.apache.tomcat.util.buf.ByteChunk.flushBuffer(ByteChunk.java:434)
+        at org.apache.tomcat.util.buf.ByteChunk.append(ByteChunk.java:349)
+        at org.apache.catalina.connector.OutputBuffer.writeBytes(OutputBuffer.java:381)
+        at org.apache.catalina.connector.OutputBuffer.write(OutputBuffer.java:370)
+        at org.apache.catalina.connector.CoyoteOutputStream.write(CoyoteOutputStream.java:89)
+        at com.google.common.io.ByteStreams.copy(ByteStreams.java:171)
+        at com.enonic.cms.server.service.portal.mvc.controller.AttachmentController.putBinaryOnResponse(AttachmentController.java:293)
+        at com.enonic.cms.server.service.portal.mvc.controller.AttachmentController.handleRequestInternal(AttachmentController.java:189)
+        at com.enonic.cms.server.service.portal.mvc.controller.AttachmentController.handleRequestInternal(AttachmentController.java:125)
+        at com.enonic.cms.server.service.portal.mvc.controller.AbstractSiteController.handleRequestInternal(AbstractSiteController.java:84)
+        at org.springframework.web.servlet.mvc.AbstractController.handleRequest(AbstractController.java:153)
+        at org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter.handle(SimpleControllerHandlerAdapter.java:48)
+        at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:875)
+        at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:807)
+        at com.enonic.cms.server.service.servlet.CmsDispatcherServlet.doService(CmsDispatcherServlet.java:90)
+        at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:571)
+        at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:501)
+        at javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+        at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+        at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:630)
+        at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:436)
+        at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:374)
+        at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:302)
+        at com.enonic.cms.server.service.vhost.VirtualHostFilter.doFilter(VirtualHostFilter.java:121)
+        at com.enonic.cms.server.service.vhost.VirtualHostFilter.doFilter(VirtualHostFilter.java:72)
+        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+        at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:83)
+        at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+        at org.springframework.orm.hibernate3.support.OpenSessionInViewFilter.doFilterInternal(OpenSessionInViewFilter.java:198)
+        at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+        at com.enonic.cms.server.service.servlet.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:47)
+        at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+        at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+        at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+        at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+        at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+        at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:286)
+        at org.apache.jk.server.JkCoyoteHandler.invoke(JkCoyoteHandler.java:190)
+        at org.apache.jk.common.HandlerRequest.invoke(HandlerRequest.java:283)
+        at org.apache.jk.common.ChannelSocket.invoke(ChannelSocket.java:767)
+        at org.apache.jk.common.ChannelSocket.processConnection(ChannelSocket.java:697)
+        at org.apache.jk.common.ChannelSocket$SocketConnection.runIt(ChannelSocket.java:889)
+        at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:690)
+        at java.lang.Thread.run(Thread.java:662)
+Caused by: java.net.SocketException: Broken pipe
+        at java.net.SocketOutputStream.socketWrite0(Native Method)
+        at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:92)
+        at java.net.SocketOutputStream.write(SocketOutputStream.java:136)
+        at org.apache.jk.common.ChannelSocket.send(ChannelSocket.java:531)
+        at org.apache.jk.common.JkInputStream.doWrite(JkInputStream.java:156)
+        at org.apache.coyote.Response.doWrite(Response.java:560)
+        at org.apache.catalina.connector.OutputBuffer.realWriteBytes(OutputBuffer.java:353)
+        ... 54 more
+May 2, 2013 10:08:49 AM org.apache.jk.common.ChannelSocket processConnection
+WARNING: processCallbacks status 2
+{code}</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Improvement</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Jørund Vier Skriubakken">jvs</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>General</value></field></issue><issue id="CMS-373"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>Wrong layout in windows opened from htmlarea (Google Chrome only)</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="description"><value>Windows opened from htmlarea like insert link popup, insert table, view html source etc. was auto resized to random sizes when using Google Chrome
+
+This is a problem in TinyMCE.
+
+This is a popup window resize window issue in TinyMCE or more specific in the Chrome code
+Discussed here: https://github.com/tinymce/tinymce/pull/156
+
+This is an issue to solve S-127542, S-128751, S-128395 and S-145200
+</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Bug</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Thomas Andersen">tan</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>Admin Console</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Reviewer"><value fullName="Jørund Vier Skriubakken">jvs</value></field></issue><issue id="CMS-795"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>Cannot edit contenttypes in IE 8</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="description"><value>When typing in the content type configuration area (codarea) the cursor is jumping back and forth
+This only happens in Internet Explorer 8
+
+Last time yours truly investigated this I commented out the keyup event that we have added to CodeMirror in javascript/codearea.js and it was working ok
+My guess we have to add the event/s in a different way in order to make it work for IE8. Research this first
+
+* Are there other ways to add the eventlistener (maybe codemirror.win.document means something different in IE)
+* Maybe there is something in the caretChange that is called for each keyup event
+* Maybe the codemirror version we are using have some better keyup hooks
+
+If this is a complicated bug and takes time we should remove the listener and related code.
+Which means we should remove the line/column number in the codearea's status bar (At least for IE 8)
+
+Support: S-137404</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Bug</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Raman Yafimchyk">rya</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>Admin Console</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Reviewer"><value fullName="Thomas Andersen">tan</value></field></issue><issue id="CMS-925"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>Form Builder/Edit form: Missing linebreaks in receipt input</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="description"><value>The receipt field in the form builder did not perserve the line breaks after saving the page. 
+
+From the customer:
+1. Create a new page/menu item of type formbuilder
+2. Set up a simple form and add some text lines (w/line breaks) to the receipt input
+3. Save the page
+4 Edit the page again
+
+According to the customer all line breaks in the edit form/receipt input are now missing
+
+*Investigate the issue first. Is it front-end or back-end*
+
+Support issue: S-138425
+https://enonic.com/en/support/issue?key=138425
+</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Bug</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Henady Zakalusky">hza</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>Admin Console</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Reviewer"><value fullName="Thomas Andersen">tan</value></field></issue><issue id="CMS-1073"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>Using HTTP service forceLocale does not work in ICE mode</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="description"><value>The httpservice forceLocale from the XSLT function i.e. "portal:createServicesUrl('portal','forceLocale', ('locale', 'de'))" does not change the locale when you are in /admin (ICE mode). Maybe it doesnt work when you are logged in either (?).</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Bug</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Henady Zakalusky">hza</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>Admin Console</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Reviewer"><value fullName="Jørgen Sivesind">jsi</value></field></issue><issue id="CMS-1103"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>Updating portlet does not clear Page Cache</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="description"><value>All cached windows for the site should have been cleared. 
+
+Tested on Enonic.com with logged in user (this page: https://enonic.com/en/try-now)
+Changed the text of the portlet to the right - but it does not update when refreshing the page, had to bypass cache to see the effect of the change.</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Bug</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Henady Zakalusky">hza</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>Admin Console</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Reviewer"><value fullName="Jørund Vier Skriubakken">jvs</value></field></issue><issue id="CMS-1197"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>Import of files from a zip-file does not get specified publish date</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="description"><value>When importing files in a .zip-file, and setting a publish date in the future, the date is ignored and "now" is used as the publish date instead.
+
+Steps to reproduce:
+1. Find or create a .zip-file with files and try to import them into a category for files.
+2. Set the publish date to a time in the future and choose to import the file
+3. Look at the category and check out the status of the imported files.  They are allready online.  If you open one of the file contents and check out the "Publishing" tab, it shows the time of import instead of the chosen future date.
+
+This task solves S-141474</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Bug</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Lasse Jul-Larsen">ljl</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>Admin Console</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Reviewer"><value fullName="Jørgen Sivesind">jsi</value></field></issue><issue id="CMS-1350"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>ICE: Missing icon in menu</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="description"><value>The icon for the "Create Content" menu item was missing.
+This also generated HTTP 404 responses in the server log.
+
+See MLA's description here: https://enonic.com/en/support/issue?key=142233
+
+Support: S-142233</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Bug</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Thomas Andersen">tan</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>Admin Console</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Reviewer"><value fullName="Jørund Vier Skriubakken">jvs</value></field></issue><issue id="CMS-1557"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>Main window becomes white and UI freezes after doing Save and Publish from inside a content in IE10</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="description"><value>
+
+This problem is reported in support case: S-145538
+https://enonic.com/en/support/issue?key=145538
+
+To provoke bug:
+Create new content and save as draft.
+From inside the content, click Save and Publish and the right window becomes white and nothing can be done without refreshing the window.</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Bug</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Henady Zakalusky">hza</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>Admin Console</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Reviewer"><value fullName="Thomas Andersen">tan</value></field></issue><issue id="CMS-1035"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>Invalid state - SEVERE: Index transaction already started</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="description"><value>A lot of insignificant error message are cluttering the log.
+
+Posten is getting a lot of these messages in their log, see support issue: S-140427
+
+{code}
+Feb 18, 2013 9:40:37 AM com.enonic.cms.core.search.IndexTransactionServiceImpl newTransactionJournal
+SEVERE: Index transaction already started
+DeleteOldContentFunctionPlugin has deleted content with ContentKey: 265210in category: 4821
+{code}
+
+This is happening when a plugin deleting old content is running.</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Bug</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Runar A. Myklebust">rmy</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>Portal</value></field></issue><issue id="CMS-1548"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>NullPointerException while trying to render error page</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="description"><value>
+
+{code}
+May 16, 2013 8:56:51 AM freemarker.log.Log4JLoggerFactory$Log4JLogger error
+SEVERE: Method public java.lang.String com.enonic.cms.core.portal.SiteErrorDetails.getExceptionMessage(int) threw an exception when invoked on com.enonic.cms.core.portal.SiteErrorDetails@234c0ad0
+
+Method public java.lang.String com.enonic.cms.core.portal.SiteErrorDetails.getExceptionMessage(int) threw an exception when invoked on com.enonic.cms.core.portal.SiteErrorDetails@234c0ad0
+The problematic instruction:
+----------
+==&gt; ${details.getExceptionMessage(i - 1)?html} [on line 174, column 43 in errorPage.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.template.TemplateModelException: Method public java.lang.String com.enonic.cms.core.portal.SiteErrorDetails.getExceptionMessage(int) threw an exception when invoked on com.enonic.cms.core.portal.SiteErrorDetails@234c0ad0
+	at freemarker.ext.beans.SimpleMethodModel.exec(SimpleMethodModel.java:130)
+	at freemarker.core.MethodCall._getAsTemplateModel(MethodCall.java:93)
+	at freemarker.core.Expression.getAsTemplateModel(Expression.java:89)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.StringBuiltins$StringBuiltIn._getAsTemplateModel(StringBuiltins.java:71)
+	at freemarker.core.Expression.getAsTemplateModel(Expression.java:89)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:210)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:210)
+	at freemarker.core.IteratorBlock$Context.runLoop(IteratorBlock.java:179)
+	at freemarker.core.Environment.visit(Environment.java:417)
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:102)
+	at freemarker.core.Environment.visit(Environment.java:210)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:210)
+	at freemarker.core.Environment.process(Environment.java:190)
+	at freemarker.template.Template.process(Template.java:237)
+	at com.enonic.cms.web.portal.template.TemplateProcessor.process(TemplateProcessor.java:33)
+	at com.enonic.cms.web.portal.exception.ExceptionHandlerImpl.serveBuiltInExceptionPage(ExceptionHandlerImpl.java:326)
+	at com.enonic.cms.web.portal.exception.ExceptionHandlerImpl.serveFullBuiltInExceptionPage(ExceptionHandlerImpl.java:317)
+	at com.enonic.cms.web.portal.exception.ExceptionHandlerImpl.serveBuiltInExceptionPage(ExceptionHandlerImpl.java:301)
+	at com.enonic.cms.web.portal.exception.ExceptionHandlerImpl.handleExceptions(ExceptionHandlerImpl.java:163)
+	at com.enonic.cms.web.portal.exception.ExceptionHandlerImpl.handle(ExceptionHandlerImpl.java:132)
+	at com.enonic.cms.web.portal.RequestDispatcherImpl.handle(RequestDispatcherImpl.java:66)
+	at com.enonic.cms.web.portal.RequestDispatcherImpl.handle(RequestDispatcherImpl.java:49)
+	at com.enonic.cms.web.portal.PortalServlet.service(PortalServlet.java:77)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:98)
+	at com.enonic.cms.web.filter.VirtualHostFilter.doFilter(VirtualHostFilter.java:101)
+	at com.enonic.cms.web.filter.VirtualHostFilter.doFilterInternal(VirtualHostFilter.java:48)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:102)
+	at com.enonic.cms.web.filter.UpgradeCheckFilter.doFilterInternal(UpgradeCheckFilter.java:31)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:102)
+	at org.springframework.orm.hibernate3.support.OpenSessionInViewFilter.doFilterInternal(OpenSessionInViewFilter.java:198)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:102)
+	at com.enonic.cms.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:49)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:102)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:83)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:102)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:82)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:857)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:588)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: java.lang.NullPointerException
+	at com.enonic.cms.core.xslt.XsltProcessorException.getLocation(XsltProcessorException.java:104)
+	at com.enonic.cms.core.xslt.XsltProcessorException.formatMessage(XsltProcessorException.java:95)
+	at com.enonic.cms.core.xslt.XsltProcessorException.getMessage(XsltProcessorException.java:82)
+	at com.enonic.cms.core.portal.SiteErrorDetails.getExceptionMessage(SiteErrorDetails.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at freemarker.ext.beans.BeansWrapper.invokeMethod(BeansWrapper.java:840)
+	at freemarker.ext.beans.SimpleMethodModel.exec(SimpleMethodModel.java:106)
+	... 62 more
+{code}
+
+I have debugged and it is TransformerException.getLocator() that sometimes returns null, thereafter creating a NullPointerException in method XsltProcessorException.getLocation where it is used.
+
+I guess the solution to this is to make method XsltProcessorException.formatMessage tolerate that location can be null.</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Bug</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Jørund Vier Skriubakken">jvs</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>Portal</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Reviewer"><value fullName="Jørund Vier Skriubakken">jvs</value></field></issue><issue id="CMS-1549"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>Direct window rendering does not obey given outputFormat</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="description"><value>When requesting a window directly with a outputFormat set, then the given outputFormat is ignored. It should have been set as the Content-Type of the HTTP response.
+
+This task solves support issue: S-126002
+
+Example result of a createWindowUrl with outputFormat:
+http://localhost:5080/site/2/mypage/_window/my-window-returning-json.json
+
+This comes from a scenario where the window, when rendered in-line it returns HTML, but direclty it returns json.
+The customer have spotted XSLT-function createWindowUrl which takes the paramters: windowKey, (), outputFormat
+and expects the result to be returned as json when requested like above.
+
+This can be solved the following way:
+Let WindowRenderer.renderWindowDirect check if the window reference have an extension and if so use the MimeTypeResolver to resolve the corresponding mime type and set it as the httpContentType on the returned RenderedWindowResult.
+
+</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Bug</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Jørund Vier Skriubakken">jvs</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>Portal</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Reviewer"><value fullName="Sten Roger Sandvik">srs</value></field></issue><issue id="CMS-1394"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>Handling of special characters in datasources parameter names when upgrading</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="description"><value>Upgrade model 206 fails if there is a dot (or other special character) in the parameter name of a datasource where the parameter is overridden from the URL.
+
+This solves S-144755.
+
+*CMS-shell*
+
+When: Upgrading from database model 122 to 211 - at model 206 to be specific (but I'm guessing here a bit).
+
+Old datasource on a search portlet that sends data to a plugin has illegal characters in it's parameters after converting. This row here:
+
+{code:lang=xml}
+&lt;parameter name="n.template" override="url"/&gt;
+{code}
+... will turn into:
+
+{code:lang=xml}
+&lt;parameter name="param10"&gt;${select(param.n.template, '')}&lt;/parameter&gt;
+{code}
+But since the dot is illegal in that parameter name as of 4.7's new datasource model, we must manually escape these occurances in every datasource in admin after the upgrade. To this:
+
+{code:lang=xml}
+&lt;parameter name="param10"&gt;${select(param['n.template'], '')}&lt;/parameter&gt;
+{code}
+If it was possible for the updater to detect this automatically and escape parameter names with illegal characters (like . - etc) that would be great. This is really a very minor problem, it just takes us a few minutes to do this manually. But it's a good idea to make the updating process as hassle free as possible i.m.o..</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Bug</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Raman Yafimchyk">rya</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>Tools</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Reviewer"><value fullName="Jørgen Sivesind">jsi</value></field></issue><issue id="CMS-1404"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>Live Portal Trace: Firefox does not load completed requests smoothly</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Bug</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Jørund Vier Skriubakken">jvs</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>Tools</value></field></issue><issue id="CMS-1476"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>Null check on index name in UpgradeContextImpl</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="description"><value>When fetching a list of indexes on a table, it is possible to get indexes in the list that have no name.  This may cause a NullPointerException in upgrade model 210.
+
+In the method {{getIndexNames(...)}}, Gjensidige experience that the call to {{getTableName(...)}} in line 363, can actually return null.  This will cause a NullPointerException later in the code.  We need to check for nulls and log the index if it happens.
+
+Gjensidige has this problem in S-144944 and Posten SEEMS to have the same problem in S-145244.</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Bug</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Jørgen Sivesind">jsi</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>Tools</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Reviewer"><value fullName="Jørgen Sivesind">jsi</value></field></issue><issue id="CMS-1507"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>Duplicate index discovery</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="description"><value>In some situations, indexes could be recorded both with an owner prefix and without, causing an error when dropping the index for the second time.
+
+This problem is a solution to problems experiences in S-144944</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Bug</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Jørgen Sivesind">jsi</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>Tools</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Reviewer"><value fullName="Jørgen Sivesind">jsi</value></field></issue><issue id="CMS-1523"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>Syntax error on SQL Server in upgrade models</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="description"><value>Upgrade Model 211 fails on SQL Server because the SQL syntax for dropping indexes is different from other databases.
+
+SQL Server needs "ALTER TABLE &lt;tablename&gt;" before the Drop command.
+
+This issues solves S-145500</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Bug</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Jørgen Sivesind">jsi</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>Tools</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Reviewer"><value fullName="Michael Lazell">mla</value></field></issue><issue id="CMS-1560"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>Import not considering if content already exists when more than 1000 entries</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="description"><value>When importing from files containing more than 1000 entries, only the first 1000 is considered when checking if exists already or not. 
+
+</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Bug</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Runar A. Myklebust">rmy</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>Tools</value></field></issue><issue id="CMS-1165"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>When multiple sites have the same name, only one is listed on Welcome Page</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="description"><value>If an installation contains multiple sites with the same name, only one of them are listed on the Welcome page.
+
+One of our customers, Gjensidige, have different sites for the different countries the operate in.  Inside the admin console, the sites are listed with their locale, so this is no problem: Gjensidige (NO), Gjensidige (SE), Gjensidige (DK), etc.  However, on the welcome page, only one of these are listed, because the lookup class that fetches the sites and sends them to the welcome page, stores these in a java.util.HashMap, using the name as the HashMap key, thereby overwriting the names.
+We need to do two things to fix this:
+1. Just change the way the sites are transfered to the welcomePage.ftl page that renders them.
+2. Check the rest of the code to make sure having the same name for multiple sites does not cause problems other places.
+
+This issue was trigger by S-141296</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Bug</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Henady Zakalusky">hza</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>General</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Reviewer"><value fullName="Jørgen Sivesind">jsi</value></field></issue><issue id="CMS-1452"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>Class.getPackage() returns null in Plugin environment</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="description"><value>Class.getPackage() returns null in Plugin environment. This can be a potential problem for many caes. One real case is that JAXB's default package annotations in package-info.java is not loaded. 
+
+This will probably solve S-144706.</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Bug</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Sten Roger Sandvik">srs</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>General</value></field></issue><issue id="CMS-1478"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>JBoss bug with OSGi framwork location. </value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="description"><value>In JBoss 7.1.1, the OSGi library, framework.jar, is reported to be located under file://opt..., but the opt folder is at the root, so it should be file:///opt...  This causes problems initializing many Spring beans, like the remoteClient and pluginManager.
+
+This problem has been reported by NAV in S-144861.</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Bug</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Henady Zakalusky">hza</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>General</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Reviewer"><value fullName="Jørgen Sivesind">jsi</value></field></issue><issue id="CMS-1490"><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="summary"><value>Should not be possible to create "entity" cache with timeToLive other than 0</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SingleField" name="description"><value>Having timeToLive set to other than 0 for the "entity" cache is not allowed. An exception is thrown on startup if such is the case. It is recommended to remove property cms.cache.entity.timeToLive from cms.properties</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Type"><value>Bug</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Assignee"><value fullName="Viktar Fiodarau">vfi</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CustomField" name="Subsystem"><value>General</value></field><field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultiUserField" name="Reviewer"><value fullName="Jørund Vier Skriubakken">jvs</value></field></issue></issueCompacts>

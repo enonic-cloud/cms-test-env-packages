@@ -1,0 +1,19 @@
+$(function() {
+
+    // Tooltip
+    $('.tooltip').tooltip({
+        track: true,
+        delay: 0,
+        showURL: false,
+        showBody: ' - ',
+        fade: 250
+    });
+              
+});
+$(document).ready(function() {
+  $('pre[type=syntaxhighlighter]').each(function() {
+    var content = $(this).html();
+    console.log(content.replace(/<!--[^>]*>/g, ''));
+    //$(this).html();
+  });
+});

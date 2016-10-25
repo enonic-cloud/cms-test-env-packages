@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml" xmlns:portal="http://www.enonic.com/cms/xslt/portal" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" exclude-result-prefixes="xs portal" version="2.0">
+	
+   <xsl:output indent="yes" media-type="text/html" method="xhtml" omit-xml-declaration="yes"/>
+	  
+   <xsl:include href="/features/includes/displayContext.xsl"/>
+   
+	   
+	   
+	<xsl:template match="/">		
+     
+     <fieldset>
+        <legend>Hardcoded createContentUrls to content that is only directly placed on a menuitem</legend>
+        <ul>           
+           <li>
+              <p>
+                 721: <a href="{portal:createContentUrl( 721 )}">
+        	      <xsl:value-of select="portal:createContentUrl( 721 )"/>
+        	     </a>
+              </p>   
+           </li>
+           <li>
+              <p>
+                 736: <a href="{portal:createContentUrl( 736 )}">
+                 <xsl:value-of select="portal:createContentUrl( 736 )"/>
+              </a>
+              </p>
+           </li>
+        </ul>
+     </fieldset>
+	   
+	   <fieldset>
+	      <legend>Hardcoded createContentUrls to content that have set home to a section but not added to it</legend>
+	      <ul>
+	         	         
+     	      <li>     
+     	         <p>
+     	            363: <a href="{portal:createContentUrl( 363 )}">     	           
+     	           <xsl:value-of select="portal:createContentUrl( 363 )"/>
+     	        </a>
+     	            </p>
+     	      </li>
+      	   <li> 
+      	      <p>
+       	      364: <a href="{portal:createContentUrl( 364 )}">
+       	         <xsl:value-of select="portal:createContentUrl( 364 )"/>
+       	      </a>
+      	      </p>
+      	   </li>   	      
+   	      <li>
+   	         <p>
+   	            723: <a href="{portal:createContentUrl( 723 )}">
+       	         <xsl:value-of select="portal:createContentUrl( 723 )"/>
+       	      </a>
+   	         </p>
+   	      </li>
+	      </ul>
+	   </fieldset>
+	   
+	  <fieldset>
+	     <legend>Content added to current section</legend>
+	     
+	     <ul>
+      	  <xsl:for-each select="/result/section-content/contents/content">
+      	     <p>      	        
+      	        <li>
+           	        <a href="{portal:createContentUrl( @key )}">
+           	           <xsl:value-of select="title"/>
+           	        </a>
+      	        </li> 
+      	     </p>
+      	  </xsl:for-each>
+	     </ul>
+	  </fieldset> 
+	   
+	   <br/>
+	   <br/>
+	   <xsl:call-template name="displayContext"/>      
+	   
+	</xsl:template>
+   
+</xsl:stylesheet>

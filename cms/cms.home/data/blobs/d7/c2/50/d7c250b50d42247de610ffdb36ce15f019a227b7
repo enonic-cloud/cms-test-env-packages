@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet exclude-result-prefixes="xs portal" version="2.0"
+    xmlns="http://www.w3.org/1999/xhtml" xmlns:portal="http://www.enonic.com/cms/xslt/portal"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <xsl:output indent="yes" media-type="text/html" method="xhtml" omit-xml-declaration="yes"/>
+
+
+    <xsl:template match="/">
+      <link href="{portal:createResourceUrl('/_public/features/features.css')}" media="screen"
+            rel="stylesheet" type="text/css"/>
+      <script src="{portal:createResourceUrl('/_public/features/scripts/contentOperations.js', ())}" type="text/javascript"><xsl:comment>//</xsl:comment></script>
+
+      <xsl:variable name="redirectKey" select="/result/context/querystring/parameter[@name='id']"/>
+      <xsl:variable name="redirect" select="portal:createPageUrl($redirectKey, ())"/>
+
+      <div id="fullXML" style="display: none">
+        <a href="javascript:hidediv('fullXML')">hide xml</a>
+            
+        <p>
+          <textarea>
+            <xsl:copy-of select="/result"/>
+          </textarea>
+        </p>
+      </div>
+      <a href="javascript:showdiv('fullXML')">show xml</a>
+
+
+      
+      <fieldset>
+        <legend>Join group</legend>
+
+        <form action="{portal:createServicesUrl('user','joingroup', $redirect, ())}" id="formJoinGroup"
+              method="post">
+
+          <label for="currentuser">Current user:</label>
+          <input type="text" id="text" disable="true" name="currentuser" disabled="true"
+                 value="{result/context/user/@qualified-name}"/>
+
+          <label for="groupkey">Groupkey:</label>
+          <input type="text" id="key" name="key"/>
+
+          <div class="clear">
+            <input id="joinsubmit" type="submit" value="user_joingroup"/>
+          </div>
+        </form>
+
+        <xsl:if test="/result/context/querystring/parameter[@name = 'error_user_joingroup']">
+
+          <xsl:variable name="errorCode"
+                        select="/result/context/querystring/parameter[@name = 'error_user_joingroup']"/>
+
+          <p class="formError"> An error occured: <xsl:value-of select="$errorCode"/>
+            <xsl:text> - </xsl:text>
+            <xsl:choose>
+              <xsl:when test="$errorCode='109'">Missing group key</xsl:when>
+              <xsl:when test="$errorCode='110'">Join group failed</xsl:when>
+              <xsl:when test="$errorCode='111'">Join group not allowed</xsl:when>
+            </xsl:choose>
+          </p>
+
+        </xsl:if>
+
+      </fieldset>
+
+
+      <fieldset>
+        <legend>Set group</legend>
+
+        <form action="{portal:createServicesUrl('user','setgroups', $redirect, ())}" id="formSetGroups"
+              method="post">
+
+          <label for="allgroupkeys">Group keys to consider:</label>
+          <textarea name="allgroupkeys" id="allgroupkeys"  style="height: 100px;"/>
+
+          <label for="joingroupkey">Group keys to join or keep membership to:</label>
+          <textarea name="joingroupkey" id="joingroupkey" style="height: 100px;"/>
+
+          <div class="clear">
+            <input type="submit" value="user_setgroups"/>
+          </div>
+        </form>
+
+        <p>
+          <xsl:if test="/result/context/querystring/parameter[@name = 'error_user_setgroups']">
+
+            <xsl:variable name="errorCode"
+                          select="/result/context/querystring/parameter[@name = 'error_user_setgroups']"/>
+
+            <p class="formError"> An error occured: <xsl:value-of select="$errorCode"/>
+              <xsl:text> - </xsl:text>
+              <xsl:choose>
+
+                <xsl:when test="$errorCode='109'">Missing allgroupkeys, or allgroupkeys empty </xsl:when>
+                <xsl:when test="$errorCode='110'">Join or leave group failed </xsl:when>
+                <xsl:when test="$errorCode='111'">Join group not allowed (restricted group) </xsl:when>
+                <xsl:when test="$errorCode='113'">Join or leave group not allowed</xsl:when>
+                <xsl:when test="$errorCode='505'">Handler operation failed </xsl:when>
+              </xsl:choose>
+            </p>
+
+          </xsl:if>
+        </p>
+      </fieldset>
+
+
+      <fieldset>
+        <legend>Leave group</legend>
+
+        <form action="{portal:createServicesUrl('user','leavegroup', $redirect, ())}" id="formLeaveGroup"
+              method="post">
+
+          <label for="currentuser">Current user:</label>
+          <input type="text" id="text" disable="true" name="currentuser" disabled="true"
+                 value="{result/context/user/@qualified-name}"/>
+
+          <label for="groupkey">Groupkey:</label>
+          <input type="text" id="key" name="key"/>
+
+          <div class="clear">
+            <input id="leavesubmit" type="submit" value="user_leavegroup"/>
+          </div>
+        </form>
+
+        <xsl:if test="/result/context/querystring/parameter[@name = 'error_user_leavegroup']">
+
+          <xsl:variable name="errorCode"
+                        select="/result/context/querystring/parameter[@name = 'error_user_leavegroup']"/>
+
+          <p class="formError"> An error occured: <xsl:value-of select="$errorCode"/>
+            <xsl:text> - </xsl:text>
+            <xsl:choose>
+              <xsl:when test="$errorCode='109'">Missing group key</xsl:when>
+              <xsl:when test="$errorCode='110'">Leave group failed</xsl:when>
+              <xsl:when test="$errorCode='111'">Leave group not allowed</xsl:when>
+            </xsl:choose>
+          </p>
+
+        </xsl:if>
+
+      </fieldset>
+
+      <div>
+        <h3>Existing memberships:</h3>
+        <table class="httpservices">
+          <tr>
+            <td>
+              <table class="httpservices">
+                <tr>
+                  <th>Name</th>
+                  <th>Key</th>
+                  <th>Type</th>
+                  <th>Operations</th>
+                </tr>
+                <xsl:for-each
+                    select="result/context/user/memberships/group[@direct-membership='true']">
+                  <tr>
+                    <td class="shadowed">
+                      <xsl:choose>
+                        <xsl:when test="restricted='false'">
+                          <xsl:attribute name="class">ok</xsl:attribute>
+                        </xsl:when>
+                      </xsl:choose>
+
+                      <xsl:value-of select="name"/>
+                    </td>
+                    <td class="shadowed">
+                      <xsl:choose>
+                        <xsl:when test="@restricted='false'">
+                          <xsl:attribute name="class">ok</xsl:attribute>
+                        </xsl:when>
+                      </xsl:choose>
+                      <xsl:value-of select="@key"/>
+                    </td>
+                    <td class="shadowed">
+                      <xsl:if test="restricted='false'">
+                        <xsl:attribute name="class">ok</xsl:attribute> Open<BR/>
+                      </xsl:if>
+                      <xsl:if test="restricted='true'">Restricted <BR/></xsl:if>
+                      <xsl:if test="@built-in='true'">Built-in</xsl:if>
+
+                    </td>
+                    <td>
+                      <xsl:if test="restricted='false'">
+                        <form
+                            action="{portal:createServicesUrl('user','leavegroup', ())}"
+                            id="form" method="post">
+                          <input type="hidden" name="key" value="{@key}"/>
+                          <input type="submit" value="user_leavegroup"/>
+                        </form>
+                      </xsl:if>
+                    </td>
+                  </tr>
+                </xsl:for-each>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </xsl:template>
+
+
+</xsl:stylesheet>

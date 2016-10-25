@@ -1,0 +1,25 @@
+<head>
+<title>Foredragsholdere</title>
+<meta charset="UTF-8" />
+<meta name="robots" content="all" />
+<meta content="minimum-scale=1, maximum-scale=1, width=device-width, user-scalable=yes"
+name="viewport" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=yes" />
+<link rel="stylesheet"
+href="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.css" /><script src="http://code.jquery.com/jquery-1.6.2.min.js"></script><script src="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.js"></script><link rel="apple-touch-startup-image" href="" />
+
+<link rel="apple-touch-icon"
+href="http://halkirk.os.ergo.no:8120/admin/site/1/_public/themes/bring/apple-touch-icon.png?_ts=131ccbe209f" />
+<link rel="apple-touch-icon" sizes="57x57"
+href="http://halkirk.os.ergo.no:8120/admin/site/1/_public/themes/bring/apple-touch-icon.png?_ts=131ccbe209f" />
+<link rel="apple-touch-icon" sizes="72x72"
+href="http://halkirk.os.ergo.no:8120/admin/site/1/_public/themes/bring/apple-touch-icon-72x72.png?_ts=131ccbf9f62" />
+<link rel="apple-touch-icon" sizes="114x114"
+href="http://halkirk.os.ergo.no:8120/admin/site/1/_public/themes/bring/apple-touch-icon-114x114.png?_ts=131ccc13e76" />
+<link rel="stylesheet"
+href="http://halkirk.os.ergo.no:8120/admin/site/1/_public/themes/load/normalize.css?_ts=13224544bb7"
+type="text/css" />
+<link rel="stylesheet"
+href="http://halkirk.os.ergo.no:8120/admin/site/1/_public/themes/load/load.css?_ts=13266bca3ee"
+type="text/css" /><script src="http://halkirk.os.ergo.no:8120/admin/site/1/_public/themes/load/scripts/load-mobile.js?_ts=1325e1c7f9e"></script><link rel="stylesheet" type="text/css" href="__info__?type=css&amp;key=7a39beab40d34259971d74786f4bed99"/></head>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet exclude-result-prefixes="xs portal" version="2.0"
+   xmlns="http://www.w3.org/1999/xhtml" xmlns:portal="http://www.enonic.com/cms/xslt/portal"
+   xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+   <xsl:output indent="yes" media-type="text/html" method="xhtml" omit-xml-declaration="yes"/>
+
+   <!--   <xsl:include href="/_public/packages/commons/scripts/common.xsl"/> -->
+
+   <link href="{portal:createResourceUrl('/_public/features/features.css')}" media="screen"
+      rel="stylesheet" type="text/css"/>
+
+   <xsl:template match="/">
+      <link href="{portal:createResourceUrl('/_public/features/features.css')}" media="screen"
+         rel="stylesheet" type="text/css"/>
+      <script src="{portal:createResourceUrl('/_public/features/scripts/contentOperations.js', ())}" type="text/javascript"><xsl:comment>//</xsl:comment></script>
+
+      <xsl:variable name="redirectKey" select="/result/context/querystring/parameter[@name='id']"/>
+      <xsl:variable name="redirect"
+         select="concat(portal:createPageUrl($redirectKey, ()),'?result=success')"/>
+
+      <xsl:if test="/result/context/querystring/parameter[@name = 'error_user_create']">
+
+         <xsl:variable name="errorCode"
+            select="/result/context/querystring/parameter[@name = 'error_user_create']"/>
+
+         <p class="formError"> An error occured: <xsl:value-of select="$errorCode"/>
+            <xsl:text> - </xsl:text>
+            <xsl:choose>
+               <xsl:when test="$errorCode='100'"> E-mail address already exists</xsl:when>
+               <xsl:when test="$errorCode='101'">User id already exists</xsl:when>
+               <xsl:when test="$errorCode='401'">Invalid or missing parameter</xsl:when>
+            </xsl:choose>
+         </p>
+
+      </xsl:if>
+
+      <xsl:if test="/result/context/querystring/parameter[@name = 'result']">
+         <p class="formError">User created successfully</p>
+      </xsl:if>
+      <p>
+         <h3>Create User</h3>
+         <form action="{portal:createServicesUrl('user','create', $redirect, ())}" id="form"
+            method="post" enctype="multipart/form-data">
+            <input type="hidden" name="from_email" value="admin@enonictravels.com"/>
+            <input type="hidden" name="admin_email" value="test@enonic.com"/>
+            <input type="hidden" name="admin_mail_subject"
+               value="Info: User %username% created in userstore %userstore%"/>
+            <input type="hidden" name="admin_mail_body"
+               value="User created.\nUsername: %username%.\nUserstore: %userstore%"/>
+            <input type="hidden" name="user_mail_subject"
+               value="Congratulations %display_name%: User %username% created"/>
+            <input type="hidden" name="user_mail_body"
+               value="User created.\nUsername: %username%.\nPassword: %password%\nUserstore: %userstore%"/>
+
+            <fieldset>
+
+               <label for="userstore">Userstore (#key or name)</label>
+               <input type="text" name="userstore" id="userstore"/>
+               <input type="button" class="button"
+                  onclick="toggleFormInput(this, 'enable', 'disable');" value="disable"/>
+               <label for="username">Username</label>
+               <input type="text" name="username" id="username"/>
+               <input type="button" class="button"
+                  onclick="toggleFormInput(this, 'enable', 'disable');" value="disable"/>
+
+
+               <label for="password">Password (leave blank to be generated)</label>
+               <input type="password" name="password" id="password"/>
+               <input type="button" class="button"
+                  onclick="toggleFormInput(this, 'enable', 'disable');" value="disable"/>
+
+
+               <label for="display-name">Display name</label>
+               <input type="text" name="display_name" id="display-name"/>
+               <input type="button" class="button"
+                  onclick="toggleFormInput(this, 'enable', 'disable');" value="disable"/>
+
+
+               <label for="email">Email</label>
+               <input type="text" name="email" id="email"/>
+               <input type="button" class="button"
+                  onclick="toggleFormInput(this, 'enable', 'disable');" value="disable"/>
+
+            </fieldset>
+
+            <fieldset>
+               <legend>Name</legend>
+
+               <label for="prefix">Prefix</label>
+               <input type="text" name="prefix" id="prefix"/>
+
+               <label for="first_name">First name</label>
+               <input type="text" name="first_name" id="first_name"/>
+
+               <label for="middle_name">Middle name</label>
+               <input type="text" name="middle_name" id="middle_name"/>
+
+               <label for="last_name">Last name</label>
+               <input type="text" name="last_name" id="last_name"/>
+
+               <label for="suffix">Suffix</label>
+               <br/>
+               <input type="text" name="suffix" id="suffix"/>
+
+               <label for="initials">Initials</label>
+               <input type="text" name="initials" id="initials"/>
+
+               <label for="nickname">Nickname</label>
+               <input type="text" name="nick_name" id="nickname"/>
+            </fieldset>
+
+            <fieldset>
+               <legend>Photo</legend>
+
+               <label for="photo">File to upload</label>
+               <input type="file" name="photo" id="photo"/>
+            </fieldset>
+
+
+            <fieldset>
+               <legend>Personal details</legend>
+
+               <label for="personal_id">Personal id</label>
+               <input type="text" name="personal_id" id="personal_id"/>
+
+               <label for="member_id">Member id</label>
+               <input type="text" name="member_id" id="member_id"/>
+
+               <label for="birthday">Birthday</label>
+               <input type="text" name="birthday" id="birthday"/>
+
+               <label for="gender">Gender</label>
+               <br/>
+               <input type="text" name="gender" id="gender"/>
+
+               <label for="title">Title</label>
+               <input type="text" name="title" id="title"/>
+
+               <label for="description">Description</label>
+               <input type="text" name="description" id="description"/>
+
+               <label for="html_email">Html email</label>
+               <input type="checkbox" name="html_email" id="html_email"/>
+
+               <label for="home_page">Home page</label>
+               <input type="text" name="home_page" id="home_page"/>
+            </fieldset>
+
+            <fieldset>
+               <legend>Communication</legend>
+
+               <label for="phone">Phone</label>
+               <input type="text" name="phone" id="phone"/>
+
+               <label for="phone">Mobile</label>
+               <input type="text" name="mobile" id="mobile"/>
+            </fieldset>
+
+            <fieldset>
+               <legend>Location</legend>
+
+               <label for="time_zone">Time zone</label>
+               <input type="text" name="time_zone" id="time_zone"/>
+
+               <label for="locale">Locale</label>
+               <input type="text" name="locale" id="locale"/>
+
+               <label for="country">Country</label>
+				<select name="country" id="country">
+					<option value="">-- Select --</option>
+					<option value="AF">AFGHANISTAN</option>
+					<option value="AX">&#xC5;LAND ISLANDS</option>
+					<option value="AL">ALBANIA</option>
+					<option value="DZ">ALGERIA</option>
+					<option value="AS">AMERICAN SAMOA</option>
+					<option value="AD">ANDORRA</option>
+					<option value="AO">ANGOLA</option>
+					<option value="AI">ANGUILLA</option>
+					<option value="AQ">ANTARCTICA</option>
+					<option value="AG">ANTIGUA AND BARBUDA</option>
+					<option value="AR">ARGENTINA</option>
+					<option value="AM">ARMENIA</option>
+					<option value="AW">ARUBA</option>
+					<option value="AU">AUSTRALIA</option>
+					<option value="AT">AUSTRIA</option>
+					<option value="AZ">AZERBAIJAN</option>
+					<option value="BS">BAHAMAS</option>
+					<option value="BH">BAHRAIN</option>
+					<option value="BD">BANGLADESH</option>
+					<option value="BB">BARBADOS</option>
+					<option value="BY">BELARUS</option>
+					<option value="BE">BELGIUM</option>
+					<option value="BZ">BELIZE</option>
+					<option value="BJ">BENIN</option>
+					<option value="BM">BERMUDA</option>
+				</select>
+
+               <label for="global_position">Global position</label>
+               <input type="text" name="global_position" id="global_position"/>
+            </fieldset>
+
+            <fieldset>
+               <legend>Address</legend>
+
+               <label for="address[0].label">Address name</label>
+               <input type="text" name="address[0].label" id="address[0].label" value="Test"/>
+
+               <label for="address[0].street">Street</label>
+               <input type="text" name="address[0].street" id="address[0].street"/>
+
+               <label for="address[0].postal-code">Postal code</label>
+               <input type="text" name="address[0].postal_code" id="address[0].postal_code"/>
+
+               <label for="address[0].postal_address">Postal addres</label>
+               <input type="text" name="address[0].postal_address" id="address[0].postal_address"/>
+
+               <label for="address[0].iso_country">Country</label>
+               <select name="address[0].iso_country">
+                  <option value="">-- Select --</option>
+                  <option value="AF">AFGHANISTAN</option>
+                  <option value="BE">BELGIUM</option>
+                  <option value="CA">CANADA</option>
+                  <option value="DK">DENMARK</option>
+                  <option value="FI">FINLAND</option>
+                  <option value="IN">INDIA</option>
+                  <option value="MV">MALDIVES</option>
+                  <option value="NO">NORWAY (NORGE)</option>
+                  <option value="PM">SAINT PIERRE AND MIQUELON</option>
+                  <option value="VC">SAINT VINCENT AND THE GRENADINES</option>
+                  <option value="SE">SWEDEN</option>
+                  <option value="GB">UNITED KINGDOM</option>
+                  <option value="US">UNITED STATES</option>
+                  <option value="WF">WALLIS AND FUTUNA</option>
+               </select>
+
+               <label for="address[0].iso_region">Region</label>
+               <input type="text" name="address[0].iso_region" id="address[0].iso_region"/>
+
+            </fieldset>
+
+            <input type="submit" value="Save"/>
+         </form>
+      </p>
+
+
+   </xsl:template>
+
+
+</xsl:stylesheet>

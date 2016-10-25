@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml" xmlns:portal="http://www.enonic.com/cms/xslt/portal" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" exclude-result-prefixes="xs portal" version="2.0">
+    <xsl:output indent="yes" media-type="text/html" method="xhtml" omit-xml-declaration="yes"/>
+    <xsl:include href="/features/Datasources/datasource-result.include.xsl"/>
+    <xsl:variable name="redirectKey" select="/result/context/querystring/parameter[@name='id']"/>
+    <xsl:template match="/">
+        <link href="{portal:createResourceUrl('/_public/features/features.css')}" media="screen" rel="stylesheet" type="text/css"/>
+       
+        <h2> Cached 1 and cached 2 should be equal</h2>
+       <h3>Cached 1</h3>
+        <ul>
+        <xsl:apply-templates select="/result/cached1"></xsl:apply-templates>
+        </ul>
+
+        <h3>Cached 2</h3>
+        <ul>
+        <xsl:apply-templates select="/result/cached2"></xsl:apply-templates>
+        </ul>
+        
+       
+        <h2> Not-Cached 1 and not-cached 2 should be different (if not unlucky - try again)</h2>
+        <h3>Not-Cached 1</h3>
+        <ul>
+        <xsl:apply-templates select="/result/not-cached1"></xsl:apply-templates>
+        </ul>
+        
+        <h3>Not-Cached 1</h3>
+        <ul>
+        <xsl:apply-templates select="/result/not-cached2"></xsl:apply-templates>
+        </ul>
+        
+       
+    
+    </xsl:template>
+    
+    <xsl:template match="contents/content">
+        <li>
+        <xsl:value-of select="name"></xsl:value-of>
+        </li>
+    </xsl:template>
+</xsl:stylesheet>

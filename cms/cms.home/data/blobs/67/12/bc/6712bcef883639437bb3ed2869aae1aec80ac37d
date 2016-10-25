@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet exclude-result-prefixes="#all" version="2.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:portal="http://www.enonic.com/cms/xslt/portal" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    
+    <!--<xsl:import href="/libraries/utilities/standard-variables.xsl"/>-->
+    
+    <xsl:output indent="no" media-type="text/html" method="xhtml" omit-xml-declaration="yes"/>
+    
+    <xsl:param name="menu-id" as="xs:string?"/>
+    <xsl:param name="menu-class" as="xs:string?"/>
+    <xsl:param name="read-more" as="xs:boolean" select="false()"/>
+    <xsl:param name="include-header" select="'false'" />
+    
+    <!-- Context variables -->
+    <xsl:variable name="device-class" select="/result/context/device-class"/>
+    <xsl:variable name="region" select="/result/context/window/@region"/>
+    <xsl:variable name="user" select="/result/context/user"/>
+    <xsl:variable name="language" select="/result/context/@languagecode"/>
+    
+    <!-- Standard variables passed on from page.xsl -->
+    <xsl:variable name="region-width" select="/result/context/querystring/parameter[@name = '_config-region-width']"/>
+    <xsl:variable name="skin" select="/result/context/querystring/parameter[@name = '_config-skin']"/>
+    <xsl:variable name="site" select="/result/context/querystring/parameter[@name = '_config-site']"/>
+    
+    <!-- Configuration variables -->
+    <xsl:variable name="config-site" select="document(concat(/result/context/site/path-to-home-resources, '/config.xml'))/config"/>
+    <xsl:variable name="config-device-class" select="document($config-site)/skin/device-classes/device-class"/>
+    <xsl:variable name="config-device-class-current" select="if ($config-device-class[tokenize(@name, ',')[. = $device-class]]) then $config-device-class[tokenize(@name, ',')[. = $device-class]] else $config-device-class[1]"/>
+    <xsl:variable name="config-filter">
+        <xsl:value-of select="string-join($config-device-class-current/image/filters/filter, ';')"/>
+        <xsl:if test="$config-device-class-current/image/filters/filter != ''">;</xsl:if>
+    </xsl:variable>
+    <xsl:variable name="config-imagesize" select="$config-device-class-current/image/sizes/size"/>
+    <xsl:variable name="config-frame-padding" select="$config-device-class-current/layout/regions/region[@name = $region]/framepadding"/>
+    <xsl:variable name="config-frame-border" select="$config-device-class-current/layout/regions/region[@name = $region]/frameborder"/>
+    
+    <!-- Other variables -->
+    <xsl:variable name="path-to-skin" select="concat('/_public/skins/', $site, '/', $skin)"/>
+    <!-- Menu items under current menu item. Used by mobile menu ajax call. -->
+    <xsl:variable name="current-menuitem" as="element()?" select="/result/menu/menuitems/descendant::menuitem[@key = portal:getPageKey()]"/>
+    <xsl:variable name="toplevel" as="element()*" select="$config-device-class/menu/toplevels/toplevel"/>
+    <!-- Menu items on level 1 -->
+    <xsl:variable name="menu" as="element()*" select="/result/menu/menuitems/menuitem"/>
+    <!-- First menu level to display -->
+    <xsl:variable name="main-menu" as="element()*" select="if ($config-site/multilingual = 'true') then $menu[@path = 'true']/menuitems/menuitem else $menu"/>
+    <xsl:variable name="sub-menu" as="element()*">
+        <xsl:choose>
+            <!-- No toplevels, start submenu at menu level 1 -->
+            <xsl:when test="count($toplevel) = 0 and $main-menu">
+                <xsl:sequence select="$main-menu"/>
+            </xsl:when>
+            <!-- Start submenu at correct level, calculated from number of toplevels and multilingual -->
+            <xsl:when test="$main-menu/descendant::menuitems[count(ancestor::menuitems) = (count($toplevel) + count($config-site/multilingual[. = 'true'])) and parent::menuitem/@path = 'true']/menuitem">
+                <xsl:sequence select="$main-menu/descendant::menuitems[count(ancestor::menuitems) = (count($toplevel) + count($config-site/multilingual[. = 'true'])) and parent::menuitem/@path = 'true']/menuitem"/>
+            </xsl:when>
+            <!-- No regular sub menuitems and active menuitem is at last toplevel, start custom submenu at level 1 -->
+            <xsl:when test="count($current-menuitem/ancestor::menuitems) = count($toplevel) + count($config-site/multilingual[. = 'true'])">
+                <xsl:sequence select="$custom-menu"/>
+            </xsl:when>
+            <!-- No regular sub menuitems, start custom submenu at correct level -->
+            <xsl:otherwise>
+                <xsl:sequence select="/result/custom-menu/menuitems/descendant::menuitem[ancestor::menuitem[1]/@path = 'true' and count(ancestor::menuitems) = count($toplevel) + count($config-site/multilingual[. = 'true'])]"/>
+            </xsl:otherwise>
+        </xsl:choose>
+        
+    </xsl:variable>
+    
+    
+    
+    <xsl:template match="/">
+        <xsl:if test="/result/menu/menus/menu/menuitems/node() or /result/menu/menuitems/menuitem/menuitems/node() or /result/menu/contents/content/node()">
+            <xsl:choose>
+                <xsl:when test="$include-header = 'true'">
+                    <ul class="menu {$menu-class}">
+                        <xsl:if test="$menu-id">
+                            <xsl:attribute name="id" select="$menu-id"/>
+                        </xsl:if>
+                        <li>
+                            <a href="{portal:createPageUrl(result/menu/menuitems/menuitem[@path = 'true']/@key, ())}">
+                                <xsl:value-of select="/result/menu/menuitems/menuitem[@path = 'true']/display-name" />
+                            </a>
+                            <ul>
+                                <xsl:apply-templates select="/result/menu/menus/menu/menuitems/menuitem[not(parameters/parameter[@name = 'hidden'] = 'true')]"/>
+                                <xsl:apply-templates select="/result/menu/menuitems/menuitem[@path = 'true']/menuitems/menuitem[not(parameters/parameter[@name = 'hidden'] = 'true')]"/>
+                                <xsl:apply-templates select="/result/menu/contents/content"/>
+                            </ul>
+                        </li>
+                    </ul>
+                </xsl:when>
+                <xsl:otherwise>
+                    <ul class="menu {$menu-class}">
+                        <xsl:if test="$menu-id">
+                            <xsl:attribute name="id" select="$menu-id"/>
+                        </xsl:if>
+                        <xsl:apply-templates select="/result/menu/menus/menu/menuitems/menuitem[not(parameters/parameter[@name = 'hidden'] = 'true')]"/>
+                        <xsl:apply-templates select="/result/menu/menuitems/menuitem/menuitems/menuitem[not(parameters/parameter[@name = 'hidden'] = 'true')]"/>
+                        <xsl:apply-templates select="/result/menu/contents/content"/>
+                    </ul>
+                </xsl:otherwise>
+            </xsl:choose>
+            
+            
+        </xsl:if>
+    </xsl:template>
+    
+    <xsl:template match="menuitem">
+        <li>
+            <xsl:if test="@path = 'true' or position() = 1 or position() = last()">
+                <xsl:attribute name="class">
+                    <xsl:if test="@path = 'true'">
+                        <xsl:attribute name="class" select="'path '"/>
+                    </xsl:if>
+                    <xsl:if test="position() = 1">
+                        <xsl:attribute name="class" select="'first '"/>
+                    </xsl:if>
+                    <xsl:if test="position() = last()">
+                        <xsl:attribute name="class" select="'last '"/>
+                    </xsl:if>
+                </xsl:attribute>
+            </xsl:if>
+            <a href="{if (@type = 'url') then url else portal:createPageUrl(@key,())}">
+                <xsl:if test="url/@newwindow = 'yes'">
+                    <xsl:attribute name="rel" select="'external'"/>
+                </xsl:if>
+                <xsl:if test="parameters/parameter[@name = 'class'] or @active = 'true'">
+                    <xsl:attribute name="class" select="concat(if (@active = 'true') then 'active ' else '', parameters/parameter[@name = 'class'])"/>
+                </xsl:if>
+                <span>
+                    <xsl:value-of select="if (display-name/text()) then display-name else name"/>
+                </span>
+            </a>
+            <xsl:if test="menuitems/menuitem">
+                <ul>
+                    <xsl:apply-templates select="menuitems/menuitem"/>
+                </ul>
+            </xsl:if>
+        </li>
+    </xsl:template>
+    
+    <xsl:template match="content">
+        <li>
+            <xsl:if test="position() = last()">
+                <xsl:attribute name="class" select="'last'"/>
+            </xsl:if>
+            <a href="{portal:createContentUrl(@key)}">
+                <span>
+                    <xsl:value-of select="title"/>
+                </span>
+                <xsl:if test="$read-more">
+                    <span class="read-more">
+                        <xsl:text>Les mer</xsl:text>
+                    </span>
+                </xsl:if>
+            </a>
+        </li>
+    </xsl:template>
+    
+</xsl:stylesheet>

@@ -1,0 +1,211 @@
+
+.portletEast {
+    color: white;
+}
+
+p.formError {
+    color: red;
+    font: italic bold 12px/20px arial,sans-serif;
+}
+
+
+table.productlist {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0;
+}
+
+div.cartfull {
+    background: #f3f3f3;
+}
+
+table.cartfull {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0;
+    font: italic 10px/20px arial,sans-serif;
+}
+
+.cartfull td, .cartfull th {
+     padding:0px 0px 0px 0px;
+}
+
+td.required {
+    font: italic 10px/20px arial,sans-serif;
+    color: red;
+}
+
+table.cartsummary {
+    background: white;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0;
+    font: italic bold 10px/20px arial,sans-serif;
+}
+
+.productlist td, .productlist th {
+    background: #f3f3f3;
+    border-collapse: collapse;
+    border-bottom: 1px solid #fff;
+}
+
+table.httpservices {
+    width: 500px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0;
+}
+
+table.httpserviceslist {
+    width: 500px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0;
+}
+.httpservices td, .httpservices th {
+    background: #f3f3f3;
+    border-collapse: collapse;
+    border-bottom: 1px solid #fff;
+}
+.httpservices td {
+    border-left: 1px solid #fff;
+    border-right: none;
+    padding: 3px;
+    width: 70%;
+    color: #333;
+}
+
+.httpservices td.shadowed  {
+    color: gray;
+}
+
+.httpservices td.marked  {
+    color: red;
+}
+
+.httpservices td.ok  {
+    color: green;
+}
+
+.httpservices th {
+    width: 30%;
+    color: #333;
+    padding: 5px 5px 5px 10px;
+    font-weight: normal;
+    text-align: left;
+}
+
+.httpserviceslist th {
+    font-weight: bold;
+    text-align: left;
+}
+
+.httpserviceslist td {
+    border-left: 1px solid #fff;
+    border-right: none;
+    color: #333;
+}
+
+.httpserviceslist td, .httpserviceslist th {
+    background: #f3f3f3;
+    border-collapse: collapse;
+    border-bottom: 1px solid #fff;
+}
+
+.httpservices th.comfield {
+    vertical-align: top;
+}
+.httpservices td input.text, .vs-form td textarea, .vs-form select {
+    font-size: 90%;
+    border: 1px solid #e0e0e1;
+}
+.httpservices td input.text {
+    padding: 3px;
+    width: 96%;
+}
+.httpservices td textarea, .httpservices select {
+    width: 98%;
+}
+
+
+.cty-form
+{
+}
+
+.cty-form-input-row
+{
+    clear: both;
+}
+
+.block-group
+{
+    margin-bottom: 7px;
+    border-bottom: 1px dashed #ccc;
+}
+
+.block-group.no-border
+{
+    margin-bottom: 0 !important;
+    border-bottom: none !important;
+}
+
+.add-block-group-button-container
+{
+    margin: 1em 0 !important;
+    clear: both;
+    text-align: left;
+}
+
+/* Override site CSS */
+
+input[type=file],
+input[type=text],
+input[type=checkbox],
+input[type=radio],
+textarea
+{
+    float: left;
+    margin:0 !important;
+}
+
+input[type=radio]
+{
+    clear: right !important;
+    margin-right: 6px !important;    
+}
+
+input[type=file]
+{
+    margin-top: -2px !important;
+}
+
+textarea
+{
+    width: 50% !important;
+    height: 130px !important;
+}
+
+select
+{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.block-group-template
+{
+    display: none;
+}
+
+.disable-enable-button-disabled,
+.disable-enable-button-disabled:hover
+{
+    color: #ccc;
+}
+
+.features-todo
+{
+    color: blue;
+}

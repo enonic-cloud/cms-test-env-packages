@@ -1,0 +1,71 @@
+
+Rekkefølge:
+
+Intranett
+
+Edna - 
+
+
+TestProd upgrade-stuff
+----------------------
+
+Community:
+
+* Confluence plugin
+Portlet confluenceDocument: Set datasource-kall til confluence.getPage
+
+
+Intranett:
+
+Oppgrader Licence Info datasource til:
+<?xml version="1.0" encoding="UTF-8"?>
+<datasources>
+  <datasource>
+    <methodname>license.encodeEnterprise</methodname>
+    <parameters>
+      <parameter name="expireDays">30</parameter>
+      <parameter name="cpuCount">1</parameter>
+    </parameters>
+  </datasource>
+</datasources>
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<datasources>
+  <datasource>
+    <methodname>getContentByCategory</methodname>
+    <parameters>
+      <parameter name="cat" override="url" type="int[]">37</parameter>
+      <parameter name="levels" type="int">1</parameter>
+      <parameter name="query" type="string"/>
+      <parameter name="orderBy" type="string"/>
+      <parameter name="index" type="int">0</parameter>
+      <parameter name="count" type="int">10</parameter>
+      <parameter name="includeData" type="boolean">true</parameter>
+      <parameter name="childrenLevel" type="int">1</parameter>
+      <parameter name="parentLevel" type="int">0</parameter>
+    </parameters>
+  </datasource>
+</datasources>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<datasources>
+  <datasource>
+    <methodname>getContentByCategory</methodname>
+    <parameters>
+      <parameter override="url" type="int[]">37</parameter>
+      <parameter type="int">1</parameter>
+      <parameter type="string"/>
+      <parameter type="string"/>
+      <parameter type="int">0</parameter>
+      <parameter type="int">10</parameter>
+      <parameter type="boolean">true</parameter>
+      <parameter type="int">1</parameter>
+      <parameter type="int">0</parameter>
+    </parameters>
+  </datasource>
+</datasources>
+
+
+

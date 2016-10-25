@@ -1,0 +1,2021 @@
+<gsa-search>
+    <GSP VER="3.2">
+
+        <TM>0.065433</TM>
+        <Q>xslt</Q>
+        <PARAM name="entqr" original_value="0" value="0"/>
+        <PARAM name="access" original_value="p" value="p"/>
+        <PARAM name="getfields" original_value="*" value="*"/>
+        <PARAM name="start" original_value="" value=""/>
+        <PARAM name="entsp" original_value="0" value="0"/>
+        <PARAM name="sort" original_value="date%3AD%3AL%3Ad1" value="date:D:L:d1"/>
+
+        <PARAM name="output" original_value="xml_no_dtd" value="xml_no_dtd"/>
+        <PARAM name="ie" original_value="utf8" value="utf8"/>
+        <PARAM name="client" original_value="enonic" value="enonic"/>
+        <PARAM name="q" original_value="xslt" value="xslt"/>
+        <PARAM name="as_epq" original_value="" value=""/>
+        <PARAM name="as_oq" original_value="" value=""/>
+        <PARAM name="as_eq" original_value="" value=""/>
+        <PARAM name="filter" original_value="" value=""/>
+        <PARAM name="num" original_value="20" value="20"/>
+
+        <PARAM name="site" original_value="enonic_public" value="enonic_public"/>
+        <PARAM name="show_spelling" original_value="1" value="1"/>
+        <PARAM name="oe" original_value="utf8" value="utf8"/>
+        <PARAM name="as_q" original_value="" value=""/>
+        <PARAM name="ip" original_value="10.0.20.8" value="10.0.20.8"/>
+        <RES EN="18" SN="1">
+            <M>79</M>
+            <FI/>
+
+            <R N="1">
+                <U>http://www.enonic.com/en/blog/Time+functions+in+XSLT+2.61519.cms</U>
+                <UE>http://www.enonic.com/en/blog/Time%2Bfunctions%2Bin%2BXSLT%2B2.61519.cms</UE>
+                <T>Blogs about Enonic CMS, &lt;b&gt;XSLT&lt;/b&gt;, Javascript, Google and more - Enonic</T>
+                <RK>0</RK>
+
+                <CRAWLDATE>16 Mar 2010</CRAWLDATE>
+                <FS NAME="date" VALUE=""/>
+                <MT N="robots" V="all"/>
+                <!-- CMS -->
+                <MT N="_cty" V="Community-Blog"/>
+                <MT N="_key" V="61519"/>
+                <MT N="description" V="Blog postings about Enonic CMS, XSLT, templates, Javascript, plugins and related technologies."/>
+                <MT N="google-site-verification" V="JEZSWazC79R2Y6-kHY9MTZz97JyFRxZBaLA4t-TtvwU"/>
+
+                <S>Blog postings about Enonic CMS, &lt;b&gt;XSLT&lt;/b&gt;, templates, Javascript, plugins and&lt;br&gt;
+                related technologies. &lt;b&gt;...&lt;/b&gt;
+                in &lt;b&gt;XSLT&lt;/b&gt; 2. Time functions in &lt;b&gt;XSLT&lt;/b&gt; 2.
+                &lt;b&gt;...&lt;/b&gt;  </S>
+
+                <LANG>en</LANG>
+                <HAS>
+                    <L/>
+                    <C CID="FHfiFrNaeu0J" ENC="UTF-8" SZ="27k"/>
+                </HAS>
+            </R>
+            <R L="2" N="2">
+                <U>http://www.enonic.com/en/blog/XSLT+and+namespaces+in+Vertical+Site+templates.26362.cms</U>
+
+                <UE>http://www.enonic.com/en/blog/XSLT%2Band%2Bnamespaces%2Bin%2BVertical%2BSite%2Btemplates.26362.cms
+            </UE>
+                <T>Blogs about Enonic CMS, &lt;b&gt;XSLT&lt;/b&gt;, Javascript, Google and more - Enonic</T>
+                <RK>0</RK>
+                <CRAWLDATE>16 Mar 2010</CRAWLDATE>
+                <FS NAME="date" VALUE=""/>
+
+                <MT N="robots" V="all"/>
+
+                <MT N="_cty" V="Community-Blog"/>
+                <MT N="_key" V="26362"/>
+
+                <MT N="description" V="Blog postings about Enonic CMS, XSLT, templates, Javascript, plugins and related technologies."/>
+                <MT N="google-site-verification" V="JEZSWazC79R2Y6-kHY9MTZz97JyFRxZBaLA4t-TtvwU"/>
+                <S>Blog postings about Enonic CMS, &lt;b&gt;XSLT&lt;/b&gt;, templates, Javascript, plugins and related&lt;br&gt;
+                technologies. &lt;b&gt;...&lt;/b&gt;
+
+                &lt;b&gt;XSLT&lt;/b&gt; and namespaces in Vertical Site templates. &lt;b&gt;...&lt;/b&gt;  </S>
+                <LANG>en</LANG>
+                <HAS>
+                    <L/>
+
+                    <C CID="cl7cMAaY1gsJ" ENC="UTF-8" SZ="18k"/>
+                </HAS>
+                <HN U="www.enonic.com/en/blog">www.enonic.com/en/blog</HN>
+            </R>
+            <R N="3">
+                <U>http://www.enonic.com/en/home/company/events+and+training/Developer+2+-+XSLT+Development.90685.cms
+            </U>
+                <UE>
+                http://www.enonic.com/en/home/company/events%2Band%2Btraining/Developer%2B2%2B-%2BXSLT%2BDevelopment.90685.cms
+            </UE>
+
+                <T>Developer 2 - &lt;b&gt;XSLT&lt;/b&gt; Development - Enonic</T>
+                <RK>0</RK>
+                <FS NAME="date" VALUE=""/>
+                <MT N="robots" V="all"/>
+                <MT N="_cty" V="event"/>
+                <MT N="_key" V="90685"/>
+
+
+                <MT N="description" V="Industry events and Enonic CMS training."/>
+
+                <MT N="google-site-verification" V="JEZSWazC79R2Y6-kHY9MTZz97JyFRxZBaLA4t-TtvwU"/>
+                <S>&lt;b&gt;...&lt;/b&gt; Du er her: Enonic - Home - Company - Events and training - Developer 2 - &lt;b&gt;XSLT&lt;/b&gt;&lt;br&gt;
+                Development. &lt;b&gt;...&lt;/b&gt; 26MAI. Developer 2 - &lt;b&gt;XSLT&lt;/b&gt; Development. Når:
+                26. mai 2010 09.00 - 27. &lt;b&gt;...&lt;/b&gt;  </S>
+
+                <LANG>no</LANG>
+                <HAS>
+                    <L/>
+                    <C CID="bKoNE_xR0i0J" ENC="UTF-8" SZ="14k"/>
+                </HAS>
+            </R>
+            <R L="2" N="4">
+                <U>http://www.enonic.com/en/home/company/events+and+training/Developer+2+-+XSLT+Development.90686.cms
+            </U>
+
+                <UE>
+                http://www.enonic.com/en/home/company/events%2Band%2Btraining/Developer%2B2%2B-%2BXSLT%2BDevelopment.90686.cms
+            </UE>
+                <T>Developer 2 - &lt;b&gt;XSLT&lt;/b&gt; Development - Enonic</T>
+                <RK>0</RK>
+                <FS NAME="date" VALUE=""/>
+
+                <MT N="robots" V="all"/>
+
+                <MT N="_cty" V="event"/>
+                <MT N="_key" V="90686"/>
+
+
+                <MT N="description" V="Industry events and Enonic CMS training."/>
+                <MT N="google-site-verification" V="JEZSWazC79R2Y6-kHY9MTZz97JyFRxZBaLA4t-TtvwU"/>
+                <S>&lt;b&gt;...&lt;/b&gt; her: Enonic - Home - Company - Events and training - Developer 2 - &lt;b&gt;XSLT&lt;/b&gt;
+                Development.
+                &lt;b&gt;...&lt;/b&gt;&lt;br&gt; 16SEP. Developer 2 - &lt;b&gt;XSLT&lt;/b&gt; Development. Når: 16.
+                september 2010 09.00 - 17.
+                &lt;b&gt;...&lt;/b&gt;  </S>
+
+                <LANG>no</LANG>
+                <HAS>
+                    <L/>
+                    <C CID="SlirRBRyBrEJ" ENC="UTF-8" SZ="14k"/>
+                </HAS>
+                <HN U="www.enonic.com/en/home/company">www.enonic.com/en/home/company</HN>
+            </R>
+            <R N="5">
+
+                <U>http://www.enonic.com/en/blog</U>
+                <UE>http://www.enonic.com/en/blog</UE>
+                <T>Blogs about Enonic CMS, &lt;b&gt;XSLT&lt;/b&gt;, Javascript, Google and more - Enonic</T>
+                <RK>0</RK>
+                <CRAWLDATE>16 Mar 2010</CRAWLDATE>
+
+                <FS NAME="date" VALUE=""/>
+                <MT N="robots" V="all"/>
+                <MT N="description" V="Blog postings about Enonic CMS, XSLT, templates, Javascript, plugins and related technologies."/>
+                <MT N="google-site-verification" V="JEZSWazC79R2Y6-kHY9MTZz97JyFRxZBaLA4t-TtvwU"/>
+                <S>Blog postings about Enonic CMS, &lt;b&gt;XSLT&lt;/b&gt;, templates, Javascript,&lt;br&gt; plugins and
+                related technologies. &lt;b&gt;...&lt;/b&gt;  </S>
+
+                <LANG>en</LANG>
+                <HAS>
+                    <L/>
+                    <C CID="-HwmAZDpzXQJ" ENC="UTF-8" SZ="39k"/>
+                </HAS>
+            </R>
+            <R L="2" N="6">
+                <U>http://www.enonic.com/en/training</U>
+
+                <UE>http://www.enonic.com/en/training</UE>
+                <T>Training and certification - Enonic</T>
+                <RK>0</RK>
+                <CRAWLDATE>16 Mar 2010</CRAWLDATE>
+                <FS NAME="date" VALUE=""/>
+                <MT N="robots" V="all"/>
+                <MT N="description" V="Enonic offers training for customers and partners, whether you are contributing content, administrating a website, or developing websites. We also hold training courses to teach you how to host your solution."/>
+
+                <MT N="google-site-verification" V="JEZSWazC79R2Y6-kHY9MTZz97JyFRxZBaLA4t-TtvwU"/>
+                <S>&lt;b&gt;...&lt;/b&gt; platform. Learn more about Developer 1. You need to know XML and XHTML, and&lt;br&gt;
+                it is an advantage
+                if you have knowledge about &lt;b&gt;XSLT&lt;/b&gt;. Duration &lt;b&gt;...&lt;/b&gt;  </S>
+
+                <LANG>en</LANG>
+                <HAS>
+                    <L/>
+                    <C CID="Ehcch2rUtEUJ" ENC="ISO-8859-1" SZ="19k"/>
+                </HAS>
+            </R>
+            <R N="7">
+                <U>http://www.enonic.com/en/training/developer+2</U>
+
+                <UE>http://www.enonic.com/en/training/developer%2B2</UE>
+                <T>Developer 2 - Enonic</T>
+                <RK>0</RK>
+                <CRAWLDATE>15 Mar 2010</CRAWLDATE>
+                <FS NAME="date" VALUE=""/>
+                <MT N="robots" V="all"/>
+                <MT N="description" V="ake your own tailormade markup by learning how to work with XSLT templates."/>
+
+                <MT N="google-site-verification" V="JEZSWazC79R2Y6-kHY9MTZz97JyFRxZBaLA4t-TtvwU"/>
+                <S>&lt;b&gt;...&lt;/b&gt; Developer 2. Make your own tailormade markup by learning how to work with &lt;b&gt;XSLT&lt;/b&gt;&lt;br&gt;
+                templates. &lt;b&gt;...&lt;/b&gt; Developer 1, XML, XHTML, CSS. If you know &lt;b&gt;XSLT&lt;/b&gt;
+
+                basics, great! Duration. &lt;b&gt;...&lt;/b&gt;  </S>
+                <LANG>en</LANG>
+                <HAS>
+                    <L/>
+                    <C CID="h0itpGZfZzUJ" ENC="ISO-8859-1" SZ="16k"/>
+                </HAS>
+
+            </R>
+            <R L="2" N="8">
+                <U>http://www.enonic.com/en/training/developer+1</U>
+                <UE>http://www.enonic.com/en/training/developer%2B1</UE>
+                <T>Developer 1 - Enonic</T>
+                <RK>0</RK>
+                <CRAWLDATE>15 Mar 2010</CRAWLDATE>
+
+                <FS NAME="date" VALUE=""/>
+                <MT N="robots" V="all"/>
+                <MT N="description" V="Learn how to build websites and get a thorough introduction to the Enonic CMS from a developers perspective!"/>
+                <MT N="google-site-verification" V="JEZSWazC79R2Y6-kHY9MTZz97JyFRxZBaLA4t-TtvwU"/>
+                <S>&lt;b&gt;...&lt;/b&gt; 5MAY Site Manager. 6MAY Developer 1 - Site Configuration. 26MAY Developer 2 -
+                &lt;b&gt;XSLT&lt;/b&gt;&lt;br&gt;
+
+                Development. 3JUN &lt;b&gt;...&lt;/b&gt; 13SEP Hosting. 16SEP Developer 2 - &lt;b&gt;XSLT&lt;/b&gt;
+                Development. 20SEP &lt;b&gt;...&lt;/b&gt;  </S>
+
+                <LANG>en</LANG>
+                <HAS>
+                    <L/>
+                    <C CID="hiqQ3b3AxsIJ" ENC="ISO-8859-1" SZ="16k"/>
+                </HAS>
+                <HN U="www.enonic.com/en/training">www.enonic.com/en/training</HN>
+            </R>
+            <R MIME="application/pdf" N="9">
+
+                <U>http://www.enonic.com/en/home/enonic+cms/whitepapers/_attachment/73752?_ts=124aaad8d45&amp;download=true</U>
+                <UE>
+                http://www.enonic.com/en/home/enonic%2Bcms/whitepapers/_attachment/73752%3F_ts%3D124aaad8d45%26download%3Dtrue
+            </UE>
+                <T>Architecture Whitepaper</T>
+                <RK>0</RK>
+                <CRAWLDATE>16 Mar 2010</CRAWLDATE>
+
+                <FS NAME="date" VALUE=""/>
+                <MT N="Author" V="Morten Eriksen"/>
+                <MT N="Creator" V="Microsoft Word"/>
+                <MT N="Producer" V="Mac OS X 10.5.8 Quartz PDFContext"/>
+                <MT N="CreationDate" V="D:20091031121505Z00'00'"/>
+                <MT N="ModDate" V="D:20091031121505Z00'00'"/>
+                <S>&lt;b&gt;...&lt;/b&gt; The portal is heavily based on XML/&lt;b&gt;XSLT&lt;/b&gt; and Javascripting –
+                this means that people&lt;br&gt;
+
+                with these skills may actually develop the entire portal. &lt;b&gt;...&lt;/b&gt;  </S>
+                <LANG>en</LANG>
+                <HAS>
+                    <L/>
+                    <C CID="KJ-oF-IaXAkJ" ENC="UTF-8" SZ=""/>
+                </HAS>
+
+            </R>
+            <R N="10">
+                <U>http://www.enonic.com/en/home/service+and+support/professional+sevices</U>
+                <UE>http://www.enonic.com/en/home/service%2Band%2Bsupport/professional%2Bsevices</UE>
+                <T>Professional Services - Enonic</T>
+                <RK>0</RK>
+                <CRAWLDATE>15 Mar 2010</CRAWLDATE>
+
+                <FS NAME="date" VALUE=""/>
+                <MT N="robots" V="all"/>
+                <MT N="description" V="We offer best practice on medium to large Enonic CMS solutions. We are happy to share our experience from previous projects, and are dedicated to help our partners and their customers to push the limits of what we can create together."/>
+                <MT N="google-site-verification" V="JEZSWazC79R2Y6-kHY9MTZz97JyFRxZBaLA4t-TtvwU"/>
+                <S>&lt;b&gt;...&lt;/b&gt; else. They are experienced in building Enonic CMS solutions using &lt;b&gt;XSLT&lt;/b&gt;,&lt;br&gt;
+
+                XML,
+                XHTML, advanced CSS and rich Internet applications. &lt;b&gt;...&lt;/b&gt;  </S>
+                <LANG>en</LANG>
+                <HAS>
+                    <L/>
+                    <C CID="tu0TVxoCWcAJ" ENC="ISO-8859-1" SZ="18k"/>
+                </HAS>
+
+            </R>
+            <R L="2" N="11">
+                <U>http://www.enonic.com/en/home/service+and+support/hosting+services</U>
+                <UE>http://www.enonic.com/en/home/service%2Band%2Bsupport/hosting%2Bservices</UE>
+                <T>Hosting services - Enonic</T>
+                <RK>0</RK>
+                <CRAWLDATE>15 Mar 2010</CRAWLDATE>
+
+                <FS NAME="date" VALUE=""/>
+                <MT N="robots" V="all"/>
+                <MT N="description" V="Enonic has ten years experience in hosting Enonic solutions for our customers. We are co-located with one of the most experienced and professional global players – Verizon."/>
+                <MT N="google-site-verification" V="JEZSWazC79R2Y6-kHY9MTZz97JyFRxZBaLA4t-TtvwU"/>
+                <S>Enonic has ten years experience in hosting Enonic solutions for our customers. We&lt;br&gt; are
+                co-located with one of the most
+                experienced and professional global players &lt;b&gt;...&lt;/b&gt;  </S>
+
+                <LANG>en</LANG>
+                <HAS>
+                    <L/>
+                    <C CID="ZjwEAMKaaUgJ" ENC="UTF-8" SZ="18k"/>
+                </HAS>
+            </R>
+            <R N="12">
+                <U>http://www.enonic.com/en/home/service+and+support</U>
+
+                <UE>http://www.enonic.com/en/home/service%2Band%2Bsupport</UE>
+                <T>Service and Support - Enonic</T>
+                <RK>0</RK>
+                <CRAWLDATE>16 Mar 2010</CRAWLDATE>
+                <FS NAME="date" VALUE=""/>
+                <MT N="robots" V="all"/>
+                <MT N="description" V="We are committed to providing the highest level of service and support. Our goal is that you have complete security about your solutions and their ability to grow as your business needs evolve."/>
+
+                <MT N="google-site-verification" V="JEZSWazC79R2Y6-kHY9MTZz97JyFRxZBaLA4t-TtvwU"/>
+                <S>We are committed to providing the highest level of service and support. Our goal&lt;br&gt; is that
+                you have complete security
+                about your solutions and their ability to grow &lt;b&gt;...&lt;/b&gt;  </S>
+                <LANG>en</LANG>
+                <HAS>
+
+                    <L/>
+                    <C CID="hoyKyogyKKYJ" ENC="UTF-8" SZ="18k"/>
+                </HAS>
+            </R>
+            <R L="2" N="13">
+                <U>http://www.enonic.com/en/home/developer</U>
+                <UE>http://www.enonic.com/en/home/developer</UE>
+                <T>Open-source Java and industry standards - Enonic</T>
+
+                <RK>0</RK>
+                <CRAWLDATE>16 Mar 2010</CRAWLDATE>
+                <FS NAME="date" VALUE=""/>
+                <MT N="robots" V="all"/>
+                <MT N="google-site-verification" V="JEZSWazC79R2Y6-kHY9MTZz97JyFRxZBaLA4t-TtvwU"/>
+                <S>&lt;b&gt;...&lt;/b&gt; into different layers and technologies. The Enonic portal is primarily based&lt;br&gt;
+
+                on scripts, XML and
+                &lt;b&gt;XSLT&lt;/b&gt;. This enables you to utilize &lt;b&gt;...&lt;/b&gt;  </S>
+                <LANG>en</LANG>
+                <HAS>
+                    <L/>
+
+                    <C CID="ul0zbdY8N_cJ" ENC="UTF-8" SZ="17k"/>
+                </HAS>
+                <HN U="www.enonic.com/en/home">www.enonic.com/en/home</HN>
+            </R>
+            <R N="14">
+                <U>http://www.enonic.com/en/home/enonic+cms/technology</U>
+                <UE>http://www.enonic.com/en/home/enonic%2Bcms/technology</UE>
+
+                <T>Technology - Enonic</T>
+                <RK>0</RK>
+                <CRAWLDATE>15 Mar 2010</CRAWLDATE>
+                <FS NAME="date" VALUE=""/>
+                <MT N="robots" V="all"/>
+                <MT N="description" V="Enonic delivers one of the markets most versatile CMS tools. We give you scalability, integration without frustration, standards compliance, and security. We build on standards and open-source components. Enonic takes pride in delivering high quality software - robust, scalable and open."/>
+                <MT N="google-site-verification" V="JEZSWazC79R2Y6-kHY9MTZz97JyFRxZBaLA4t-TtvwU"/>
+
+                <S>&lt;b&gt;...&lt;/b&gt; Saxon. &lt;b&gt;XSLT&lt;/b&gt; is the primary technology used for page
+                rendering. Saxon is&lt;br&gt; the
+                leading &lt;b&gt;XSLT&lt;/b&gt; processor in the market - providing fast
+                &lt;b&gt;...&lt;/b&gt;  </S>
+
+                <LANG>en</LANG>
+                <HAS>
+                    <L/>
+                    <C CID="eUHDaxRy2NsJ" ENC="UTF-8" SZ="15k"/>
+                </HAS>
+            </R>
+            <R L="2" N="15">
+                <U>http://www.enonic.com/en/home/enonic+cms/features</U>
+
+                <UE>http://www.enonic.com/en/home/enonic%2Bcms/features</UE>
+                <T>Flexible and feature rich - Enonic</T>
+                <RK>0</RK>
+                <CRAWLDATE>15 Mar 2010</CRAWLDATE>
+                <FS NAME="date" VALUE=""/>
+                <MT N="robots" V="all"/>
+                <MT N="description" V="Enonic CMS is packed with features to make your web operation as inspiring and as swift as possible. Below is an overview of the most important features."/>
+
+                <MT N="google-site-verification" V="JEZSWazC79R2Y6-kHY9MTZz97JyFRxZBaLA4t-TtvwU"/>
+                <S>&lt;b&gt;...&lt;/b&gt; Build your navigation and configure the portlets on each page without any
+                technical&lt;br&gt; know-how.
+                Templates. Create templates in your favorite &lt;b&gt;XSLT&lt;/b&gt; editor.
+                &lt;b&gt;...&lt;/b&gt;  </S>
+
+                <LANG>en</LANG>
+                <HAS>
+                    <L/>
+                    <C CID="uDOFDh_ADs0J" ENC="UTF-8" SZ="34k"/>
+                </HAS>
+            </R>
+            <R N="16">
+                <U>http://www.enonic.com/en/home/company/events+and+training?index=0</U>
+
+                <UE>http://www.enonic.com/en/home/company/events%2Band%2Btraining%3Findex%3D0</UE>
+                <T>Events and training - Enonic</T>
+                <RK>0</RK>
+                <CRAWLDATE>16 Mar 2010</CRAWLDATE>
+                <FS NAME="date" VALUE=""/>
+                <MT N="robots" V="all"/>
+                <MT N="description" V="Industry events and Enonic CMS training."/>
+
+                <MT N="google-site-verification" V="JEZSWazC79R2Y6-kHY9MTZz97JyFRxZBaLA4t-TtvwU"/>
+                <S>&lt;b&gt;...&lt;/b&gt; Wedelsplass 5, Oslo. 26MAY Developer 2 - &lt;b&gt;XSLT&lt;/b&gt; Development.
+                When: 26 May &lt;b&gt;...&lt;/b&gt;
+
+                Wedelsplass&lt;br&gt; 5, Oslo. 16SEP Developer 2 - &lt;b&gt;XSLT&lt;/b&gt; Development. When: 16
+                September
+                &lt;b&gt;...&lt;/b&gt;  </S>
+                <LANG>en</LANG>
+
+                <HAS>
+                    <L/>
+                    <C CID="CFwQ-ipCitEJ" ENC="UTF-8" SZ="19k"/>
+                </HAS>
+            </R>
+            <R MIME="application/pdf" N="17">
+                <U>http://www.enonic.com/en/home/enonic+cms/whitepapers/_attachment/26148?_ts=124aaadff01&amp;download=true</U>
+                <UE>
+
+                http://www.enonic.com/en/home/enonic%2Bcms/whitepapers/_attachment/26148%3F_ts%3D124aaadff01%26download%3Dtrue
+            </UE>
+                <T>Security Whitepaper</T>
+                <RK>0</RK>
+                <CRAWLDATE>16 Mar 2010</CRAWLDATE>
+                <FS NAME="date" VALUE=""/>
+                <MT N="Author" V="Morten Eriksen"/>
+                <MT N="Creator" V="Microsoft Word"/>
+
+                <MT N="Producer" V="Mac OS X 10.5.8 Quartz PDFContext"/>
+                <MT N="CreationDate" V="D:20091031123923Z00'00'"/>
+                <MT N="ModDate" V="D:20091031123923Z00'00'"/>
+                <S>&lt;b&gt;...&lt;/b&gt; html/xml). The portals &lt;b&gt;XSLT&lt;/b&gt; programming framework also - by
+                default prevents&lt;br&gt;
+
+                markup from being presented to the end users. Enonic &lt;b&gt;...&lt;/b&gt;  </S>
+                <LANG>en</LANG>
+                <HAS>
+                    <L/>
+                    <C CID="Lpz7GftH_LUJ" ENC="UTF-8" SZ=""/>
+                </HAS>
+
+            </R>
+            <R N="18">
+                <U>http://www.enonic.com/en/home/company/events+and+training/past+events+and+training?index=0</U>
+                <UE>
+                http://www.enonic.com/en/home/company/events%2Band%2Btraining/past%2Bevents%2Band%2Btraining%3Findex%3D0
+            </UE>
+                <T>Past events and training - Enonic</T>
+                <RK>0</RK>
+
+                <CRAWLDATE>16 Mar 2010</CRAWLDATE>
+                <FS NAME="date" VALUE=""/>
+                <MT N="robots" V="all"/>
+                <MT N="description" V="Past industry events and Enonic CMS training."/>
+                <MT N="google-site-verification" V="JEZSWazC79R2Y6-kHY9MTZz97JyFRxZBaLA4t-TtvwU"/>
+                <S>&lt;b&gt;...&lt;/b&gt; 10FEB Developer 2 - &lt;b&gt;XSLT&lt;/b&gt; Development. When: 10 February
+                2010 09:00 - 11 February&lt;br&gt;
+
+                2010 16:00 Where: Oslo Kurs og Konferansesenter, Grev Wedelsplass 5, Oslo. 26JAN &lt;b&gt;...&lt;/b&gt;  </S>
+                <LANG>en</LANG>
+                <HAS>
+                    <L/>
+                    <C CID="z6F_d9nrhxAJ" ENC="UTF-8" SZ="19k"/>
+                </HAS>
+
+            </R>
+        </RES>
+    </GSP>
+    <contents count="10" index="0" resultcount="4" searchcount="4" totalcount="4">
+        <content approved="true" contenttype="Community-Blog"
+            contenttypekey="10065" created="2007-10-21 14:40"
+            current="true" key="26362" languagecode="en"
+            languagekey="0" priority="0"
+            publishfrom="2007-10-21 14:40" state="5" status="2"
+            timestamp="2008-05-19 22:57" unitkey="106" versionkey="54566">
+            <owner deleted="false"
+                key="1FF4E48F85B006591C230C0A697A0B42D0D357CF" qualified-name="enonic\ves">
+                <userstore>enonic</userstore>
+                <name>ves</name>
+
+                <display-name>Vegard Storstad</display-name>
+                <email>ves@enonic.com</email>
+                <photo exists="true"/>
+            </owner>
+            <modifier deleted="false"
+                key="1FF4E48F85B006591C230C0A697A0B42D0D357CF" qualified-name="enonic\ves">
+                <userstore>enonic</userstore>
+                <name>ves</name>
+
+                <display-name>Vegard Storstad</display-name>
+                <email>ves@enonic.com</email>
+                <photo exists="true"/>
+            </modifier>
+            <title>XSLT and namespaces in Vertical Site templates</title>
+            <contentdata>
+                <heading>XSLT and namespaces in Vertical Site templates</heading>
+
+                <authors>
+                    <content key="18426"/>
+                </authors>
+                <topics>
+                    <content key="25972"/>
+                    <content key="25970"/>
+                    <content key="25973"/>
+                </topics>
+                <tags>XSLT, namespace, saxon, xslt 2, stylesheet</tags>
+
+                <article>
+                    <preface>As of version 4.0.7 something good took place. We added the possibility to write templates
+                    using Saxon and XSLT 2.0.
+                </preface>
+                </article>
+                <content>
+                    <article>
+                        <slidetitle>Stylesheet version?</slidetitle>
+                        <text>
+                            <p>If your site just was updated to either 4.0.x or 4.1.x you should re-implement your site
+                            using the latest and fastest XSLT
+                            transformer. You can easy switch from Xalan to Saxon in both the Page XSL and Object
+                            XSL. A little example:
+                            <br/>
+
+                            </p>
+                            <pre class="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+                            &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                            xmlns:saxon="http://icl.com/saxon"
+                            exclude-result-prefixes="saxon xs" version="2.0"&gt;
+                            &lt;xsl:output method="html"/&gt;
+
+                            &lt;xsl:template match="/"&gt;
+                            &lt;/xsl:template&gt;
+
+                            &lt;/xsl:stylesheet&gt;
+                        </pre>
+                            <p>The new feature lies in version="2.0" in the stylesheet. Vertical Site will use the
+                            latest version of Saxon and you will
+                            have XSLT 2.0 support in your templates. If you specify version="1.0" Xalan is the
+                            current transformator. Xalan has no
+                            support for XSLT 2.0.
+                        </p>
+                        </text>
+                    </article>
+                    <article>
+                        <slidetitle>New namespaces in Vertical Site 4.1.x</slidetitle>
+
+                        <text>
+                            <p>Take a look at the example in the previous slide with a little modification:</p>
+                            <pre class="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+                            &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                            xmlns:saxon="http://icl.com/saxon"
+                            xmlns:portal="http://www.enonic.com/cms/xslt/portal"
+                            exclude-result-prefixes="saxon xs portal" version="2.0"&gt;
+                            &lt;xsl:output method="html"/&gt;
+
+                            &lt;xsl:template match="/"&gt;
+
+                            &lt;/xsl:template&gt;
+
+                            &lt;/xsl:stylesheet&gt;
+                        </pre>
+                            <p>With this namespace you have access to our new portal functions for generating
+                            google-friendly menues and dynamic path's to
+                            content. Just take a look at the navigation on this site.
+                        </p>
+                        </text>
+                    </article>
+                </content>
+
+                <links>
+                    <link>
+                        <linktitle/>
+                        <url/>
+                        <opentarget/>
+                        <description/>
+                    </link>
+                </links>
+                <files>
+
+                    <file>
+                        <description/>
+                    </file>
+                </files>
+                <articles/>
+                <teaser>
+                    <heading/>
+                    <preface/>
+                    <image key="1711">
+
+                        <text/>
+                    </image>
+                    <read_more/>
+                </teaser>
+            </contentdata>
+            <categoryname deprecated="Use category instead" key="1667">XSLT articles</categoryname>
+            <category key="1667" name="XSLT articles"/>
+            <location>
+
+                <site count="5" key="42">
+                    <contentlocation home="true" menuitemkey="1660"
+                        menuitemname="XSLT"
+                        menuitempath="/Articles/XSLT" type="section_and_sectionhome"/>
+                </site>
+                <site count="5" key="43">
+                    <contentlocation home="true" menuitemkey="2013"
+                        menuitemname="blog" menuitempath="/en/blog" type="section"/>
+                </site>
+                <site count="5" key="34">
+                    <contentlocation home="true" menuitemkey="1826"
+                        menuitemname="testside B"
+                        menuitempath="/testside B" type="section"/>
+                    <contentlocation home="false" menuitemkey="1825"
+                        menuitemname="Community articles"
+                        menuitempath="/testside A/Community articles" type="section"/>
+
+                </site>
+                <site count="5" key="41">
+                    <contentlocation home="true" menuitemkey="1362"
+                        menuitemname="Konsulent"
+                        menuitempath="/Konsulent" type="section"/>
+                </site>
+            </location>
+            <sectionnames count="5" deprecated="Use location instead">
+                <sectionname home="true" menuitemkey="1660"
+                    menukey="42" sitekey="42">XSLT</sectionname>
+                <sectionname home="false" menuitemkey="2013"
+                    menukey="43" sitekey="43">blog
+            </sectionname>
+
+                <sectionname home="false" menuitemkey="1826"
+                    menukey="34" sitekey="34">testside B
+            </sectionname>
+                <sectionname home="false" menuitemkey="1362"
+                    menukey="41" sitekey="41">Konsulent
+            </sectionname>
+                <sectionname home="false" menuitemkey="1825"
+                    menukey="34" sitekey="34">Community articles
+            </sectionname>
+            </sectionnames>
+            <binaries count="0"/>
+            <versions>
+                <version key="34435" status="archived"
+                    status-key="3" timestamp="2007-10-21 14:40:50.1">
+
+                    <title>XSLT and namespaces in Vertical Site templates</title>
+                    <modifier deleted="false"
+                        key="CE0F1E6A08C0942DE37E95757A39F7A10A8FF03C" qualified-name="enonic\per">
+                        <userstore>enonic</userstore>
+                        <name>per</name>
+                        <display-name>Per Allan Johansson</display-name>
+                        <email>per@enonic.com</email>
+
+                        <photo exists="true"/>
+                    </modifier>
+                </version>
+                <version key="34437" status="archived"
+                    status-key="3" timestamp="2007-10-21 14:55:41.8">
+                    <title>XSLT and namespaces in Vertical Site templates</title>
+                    <modifier deleted="false"
+                        key="CE0F1E6A08C0942DE37E95757A39F7A10A8FF03C" qualified-name="enonic\per">
+                        <userstore>enonic</userstore>
+                        <name>per</name>
+
+                        <display-name>Per Allan Johansson</display-name>
+                        <email>per@enonic.com</email>
+                        <photo exists="true"/>
+                    </modifier>
+                </version>
+                <version key="34438" status="archived"
+                    status-key="3" timestamp="2007-10-21 15:03:09.4">
+                    <title>XSLT and namespaces in Vertical Site templates</title>
+
+                    <modifier deleted="false"
+                        key="CE0F1E6A08C0942DE37E95757A39F7A10A8FF03C" qualified-name="enonic\per">
+                        <userstore>enonic</userstore>
+                        <name>per</name>
+                        <display-name>Per Allan Johansson</display-name>
+                        <email>per@enonic.com</email>
+                        <photo exists="true"/>
+                    </modifier>
+
+                </version>
+                <version key="34439" status="archived"
+                    status-key="3" timestamp="2007-10-21 15:04:48.4">
+                    <title>XSLT and namespaces in Vertical Site templates</title>
+                    <modifier deleted="false"
+                        key="CE0F1E6A08C0942DE37E95757A39F7A10A8FF03C" qualified-name="enonic\per">
+                        <userstore>enonic</userstore>
+                        <name>per</name>
+                        <display-name>Per Allan Johansson</display-name>
+
+                        <email>per@enonic.com</email>
+                        <photo exists="true"/>
+                    </modifier>
+                </version>
+                <version key="34440" status="archived"
+                    status-key="3" timestamp="2007-10-21 15:09:11.9">
+                    <title>XSLT and namespaces in Vertical Site templates</title>
+                    <modifier deleted="false"
+                        key="CE0F1E6A08C0942DE37E95757A39F7A10A8FF03C" qualified-name="enonic\per">
+                        <userstore>enonic</userstore>
+
+                        <name>per</name>
+                        <display-name>Per Allan Johansson</display-name>
+                        <email>per@enonic.com</email>
+                        <photo exists="true"/>
+                    </modifier>
+                </version>
+                <version key="34441" status="archived"
+                    status-key="3" timestamp="2007-10-21 15:16:01.2">
+
+                    <title>XSLT and namespaces in Vertical Site templates</title>
+                    <modifier deleted="false"
+                        key="CE0F1E6A08C0942DE37E95757A39F7A10A8FF03C" qualified-name="enonic\per">
+                        <userstore>enonic</userstore>
+                        <name>per</name>
+                        <display-name>Per Allan Johansson</display-name>
+                        <email>per@enonic.com</email>
+
+                        <photo exists="true"/>
+                    </modifier>
+                </version>
+                <version key="34808" status="archived"
+                    status-key="3" timestamp="2007-10-29 10:51:12.1">
+                    <title>XSLT and namespaces in Vertical Site templates</title>
+                    <modifier deleted="false"
+                        key="CE0F1E6A08C0942DE37E95757A39F7A10A8FF03C" qualified-name="enonic\per">
+                        <userstore>enonic</userstore>
+                        <name>per</name>
+
+                        <display-name>Per Allan Johansson</display-name>
+                        <email>per@enonic.com</email>
+                        <photo exists="true"/>
+                    </modifier>
+                </version>
+                <version key="35023" status="archived"
+                    status-key="3" timestamp="2007-10-31 20:27:38.0">
+                    <title>XSLT and namespaces in Vertical Site templates</title>
+
+                    <modifier deleted="false"
+                        key="4A052F1326B99E551D18A879A881BBFB24FEA045" qualified-name="enonic\leg">
+                        <userstore>enonic</userstore>
+                        <name>leg</name>
+                        <display-name>Lars Gunnar Eggen</display-name>
+                        <email>leg@enonic.com</email>
+                    </modifier>
+                </version>
+
+                <version key="38995" status="archived"
+                    status-key="3" timestamp="2007-12-21 12:29:49.4">
+                    <title>XSLT and namespaces in Vertical Site templates</title>
+                    <modifier deleted="false"
+                        key="CE0F1E6A08C0942DE37E95757A39F7A10A8FF03C" qualified-name="enonic\per">
+                        <userstore>enonic</userstore>
+                        <name>per</name>
+                        <display-name>Per Allan Johansson</display-name>
+                        <email>per@enonic.com</email>
+
+                        <photo exists="true"/>
+                    </modifier>
+                </version>
+                <version key="50528" status="archived"
+                    status-key="3" timestamp="2008-04-21 20:29:36.4">
+                    <title>XSLT and namespaces in Vertical Site templates</title>
+                    <modifier deleted="false"
+                        key="D78B393C8656BC51BA48794CBBA576F107FD903B" qualified-name="enonic\tsi">
+                        <userstore>enonic</userstore>
+                        <name>tsi</name>
+
+                        <display-name>Thomas Lund Sigdestad</display-name>
+                        <email>tsi@enonic.com</email>
+                        <photo exists="true"/>
+                    </modifier>
+                </version>
+                <version current="true" key="54566"
+                    status="approved" status-key="2" timestamp="2008-05-19 22:57:20.8">
+                    <title>XSLT and namespaces in Vertical Site templates</title>
+
+                    <modifier deleted="false"
+                        key="1FF4E48F85B006591C230C0A697A0B42D0D357CF" qualified-name="enonic\ves">
+                        <userstore>enonic</userstore>
+                        <name>ves</name>
+                        <display-name>Vegard Storstad</display-name>
+                        <email>ves@enonic.com</email>
+                        <photo exists="true"/>
+                    </modifier>
+
+                </version>
+            </versions>
+            <relatedcontentkeys count="5">
+                <relatedcontentkey contenttype="Person" key="18426"
+                    level="1" versionkey="83389"/>
+                <relatedcontentkey contenttype="Topic" key="25970"
+                    level="1" versionkey="33942"/>
+                <relatedcontentkey contenttype="Topic" key="25972"
+                    level="1" versionkey="112774"/>
+                <relatedcontentkey contenttype="Topic" key="25973"
+                    level="1" versionkey="33945"/>
+                <relatedcontentkey contenttype="Image" key="1711"
+                    level="1" versionkey="38992"/>
+            </relatedcontentkeys>
+
+        </content>
+        <content approved="true" contenttype="Community-Blog"
+            contenttypekey="10065" created="2008-10-08 11:08"
+            current="true" key="61519" languagecode="en"
+            languagekey="0" priority="0"
+            publishfrom="2008-10-08 11:24" state="5" status="2"
+            timestamp="2008-10-08 11:27" unitkey="106" versionkey="75835">
+            <owner deleted="false"
+                key="4CE4A60E61B9EFA866B0B1280535DEEB39429B5F" qualified-name="enonic\srs">
+                <userstore>enonic</userstore>
+                <name>srs</name>
+                <display-name>Sten Roger Sandvik</display-name>
+                <email>srs@enonic.com</email>
+
+            </owner>
+            <modifier deleted="false"
+                key="4CE4A60E61B9EFA866B0B1280535DEEB39429B5F" qualified-name="enonic\srs">
+                <userstore>enonic</userstore>
+                <name>srs</name>
+                <display-name>Sten Roger Sandvik</display-name>
+                <email>srs@enonic.com</email>
+            </modifier>
+
+            <title>Time functions in XSLT 2</title>
+            <contentdata>
+                <heading>Time functions in XSLT 2</heading>
+                <authors>
+                    <content key="18433"/>
+                </authors>
+                <topics>
+                    <content key="25970"/>
+
+                    <content key="25974"/>
+                </topics>
+                <tags>xslt,xml</tags>
+                <article>
+                    <preface>This aricle describes the basic time and date functions in XSLT 2.0. It only touches the
+                    surface of the functionality
+                    provided using a series of examples.
+                </preface>
+                </article>
+                <content>
+                    <article>
+
+                        <slidetitle/>
+                        <text>
+                            <p>XSLT 2.0 added alot of functionality, but the biggest difference from XSLT 1.0 is typing.
+                            This means that the XSLT engine
+                            knows the difference between strings, numbers and dates. In this article I will
+                            illustrate the use of date and time
+                            functions to do alot of things that was nearly impossible with XSLT 1.0. All the
+                            illustrated functionality can be used in
+                            Vertical Site 4.1 and later.
+                        </p>
+                            <h2>Current time</h2>
+                            <p>We start off by simply getting hold of the current time and date. XSLT 2.0 define some
+                            functions for this (Actually, all
+                            functions that we use here is defined in the XPath 2.0 specification):
+                        </p>
+                            <ul>
+                                <li>current-date() - returns the current date (not time)</li>
+
+                                <li>current-time() - returns the current time (not date)</li>
+                                <li>current-dateTime() - returns both current date and time</li>
+                            </ul>
+                            <p>To use the functions we must ensure that we are using the right XSLT version by defining
+                            it into the version field. So, the
+                            example below uses all three functions:
+                        </p>
+                            <pre class="xml">&lt;?xml version="1.0"?&gt;
+                            &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"&gt;
+
+                            &lt;xsl:output method="xml" indent="yes"/&gt;
+
+                            &lt;xsl:template match="/"&gt;
+                            &lt;values&gt;
+                            &lt;date&gt;
+                            &lt;xsl:value-of select="current-date()"/&gt;
+                            &lt;/date&gt;
+
+                            &lt;time&gt;
+
+                            &lt;xsl:value-of select="current-time()"/&gt;
+                            &lt;/time&gt;
+                            &lt;dateTime&gt;
+                            &lt;xsl:value-of select="current-dateTime()"/&gt;
+                            &lt;/dateTime&gt;
+
+                            &lt;/values&gt;
+
+                            &lt;/xsl:template&gt;
+
+                            &lt;/xsl:stylesheet&gt;
+                        </pre>
+                            <p>When executing this, you would get the following result:</p>
+                            <pre class="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+                            &lt;values&gt;
+                            &lt;date&gt;2008-10-08+02:00&lt;/date&gt;
+
+                            &lt;time&gt;10:22:21.53+02:00&lt;/time&gt;
+                            &lt;dateTime&gt;2008-10-08T10:22:21.53+02:00&lt;/dateTime&gt;
+
+                            &lt;/values&gt;
+                        </pre>
+                            <h2>Extracting components</h2>
+                            <p>Since the XSLT engine knows the date types we can extract the year, month, day and
+                            timezone from the date. To do this we
+                            have the following functions:
+                        </p>
+                            <ul>
+                                <li>day-from-date(..) - extracts the day from a date (ex: 13)</li>
+                                <li>month-from-date(..) - extracts the month from a date (ex: 12)</li>
+
+                                <li>year-from-date(..) - extracts the year from a date (ex: 2008)</li>
+                                <li>timezone-from-date(..) - extracts the timezone from a date (ex: PT1H)</li>
+                            </ul>
+                            <p>To extract components from time, we have the following functions avaliable:</p>
+                            <ul>
+                                <li>hours-from-time(..) - extracts the hours from time (ex: 14)</li>
+                                <li>minutes-from-time(..) - extracts the minutes from time (ex: 13)</li>
+
+                                <li>seconds-from-time(..) - extracts the seconds (and milliseconds) from time (ex:
+                                11.43)
+                            </li>
+                                <li>timezone-from-time(..) - extracts the timezone from a time (ex: PT1H)</li>
+                            </ul>
+                            <p>So, as you can see it follows a pattern in the function names. The next function group
+                            extracts data from dateTime datatype
+                            and follows the same pattern as above:
+                        </p>
+                            <ul>
+                                <li>day-from-dateTime(..)</li>
+                                <li>month-from-dateTime(..)</li>
+
+                                <li>year-from-dateTime(..)</li>
+                                <li>hours-from-dateTime(..)</li>
+                                <li>minutes-from-dateTime(..)</li>
+                                <li>seconds-from-dateTime(..)</li>
+                                <li>timezone-from-dateTime(..)</li>
+                            </ul>
+
+                            <p>Here is a simple example to illustrate the usage:</p>
+                            <pre class="xml">&lt;?xml version="1.0"?&gt;
+                            &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"&gt;
+                            &lt;xsl:output method="xml" indent="yes"/&gt;
+
+                            &lt;xsl:template match="/"&gt;
+                            &lt;xsl:variable name="date" select="current-date()"/&gt;
+
+                            &lt;xsl:variable name="time" select="current-time()"/&gt;
+                            &lt;xsl:variable name="dateTime" select="current-dateTime()"/&gt;
+
+                            &lt;values&gt;
+                            &lt;day&gt;
+                            &lt;xsl:value-of select="day-from-date($date)"/&gt;
+
+                            &lt;/day&gt;
+                            &lt;hours&gt;
+                            &lt;xsl:value-of select="hours-from-time($time)"/&gt;
+                            &lt;/hours&gt;
+                            &lt;seconds&gt;
+                            &lt;xsl:value-of select="seconds-from-dateTime($dateTime)"/&gt;
+
+                            &lt;/seconds&gt;
+                            &lt;/values&gt;
+                            &lt;/xsl:template&gt;
+
+                            &lt;/xsl:stylesheet&gt;
+                        </pre>
+                            <p>This gives the following output:</p>
+
+                            <pre class="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+                            &lt;values&gt;
+                            &lt;day&gt;8&lt;/day&gt;
+                            &lt;hours&gt;10&lt;/hours&gt;
+
+                            &lt;seconds&gt;7.616&lt;/seconds&gt;
+
+                            &lt;/values&gt;
+                        </pre>
+                            <h2>Typecasting</h2>
+                            <p>Sometimes it is necessary to convert values. The most common case is to convert strings
+                            to date/time values so that we can
+                            manipulate the data as real date/time types. To do this we need to do typecasting. This
+                            is best illustrated by an example:
+                        </p>
+
+                            <pre class="xml">&lt;?xml version="1.0"?&gt;
+                            &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema" version="2.0" exclude-result-prefixes="#all"&gt;
+                            &lt;xsl:output method="xml" indent="yes"/&gt;
+
+                            &lt;xsl:template match="/"&gt;
+                            &lt;xsl:variable name="time" select="'12:12:12' cast as xs:time"/&gt;
+                            &lt;xsl:variable name="date" select="'2008-12-12' cast as xs:date"/&gt;
+
+                            &lt;xsl:variable name="dateTime" select="'2008-12-12T12:12:12' cast as xs:dateTime"/&gt;
+
+                            &lt;values&gt;
+                            &lt;hours&gt;
+                            &lt;xsl:value-of select="hours-from-time($time)"/&gt;
+
+                            &lt;/hours&gt;
+
+                            &lt;year&gt;
+                            &lt;xsl:value-of select="year-from-date($date)"/&gt;
+                            &lt;/year&gt;
+                            &lt;day&gt;
+                            &lt;xsl:value-of select="day-from-dateTime($dateTime)"/&gt;
+
+                            &lt;/day&gt;
+
+                            &lt;/values&gt;
+                            &lt;/xsl:template&gt;
+
+                            &lt;/xsl:stylesheet&gt;
+                        </pre>
+                            <p>When executing this, we get the following output:</p>
+                            <pre class="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+                            &lt;values&gt;
+                            &lt;hours&gt;12&lt;/hours&gt;
+                            &lt;year&gt;2008&lt;/year&gt;
+                            &lt;days&gt;12&lt;/days&gt;
+
+                            &lt;/values&gt;
+                        </pre>
+                            <p>Another (more simpler) way to do the above is to use the constructors that is avaliable.
+                            All types has a default
+                            constructor that takes a string value. So, when we execute
+                            <b>xs:date($str)</b>
+                            we would get the data as date, not string. The following example does the same thing as
+                            the previous code:
+                        </p>
+                            <pre class="xml">&lt;?xml version="1.0"?&gt;
+                            &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema" version="2.0" exclude-result-prefixes="#all"&gt;
+
+                            &lt;xsl:output method="xml" indent="yes"/&gt;
+
+                            &lt;xsl:template match="/"&gt;
+                            &lt;xsl:variable name="time" select="xs:time('12:12:12')"/&gt;
+                            &lt;xsl:variable name="date" select="xs:date('2008-12-12')"/&gt;
+                            &lt;xsl:variable name="dateTime" select="xs:dateTime('2008-12-12T12:12:12')"/&gt;
+
+                            &lt;values&gt;
+                            &lt;hours&gt;
+                            &lt;xsl:value-of select="hours-from-time($time)"/&gt;
+
+                            &lt;/hours&gt;
+                            &lt;year&gt;
+                            &lt;xsl:value-of select="year-from-date($date)"/&gt;
+
+                            &lt;/year&gt;
+                            &lt;day&gt;
+                            &lt;xsl:value-of select="day-from-dateTime($dateTime)"/&gt;
+
+                            &lt;/day&gt;
+                            &lt;/values&gt;
+                            &lt;/xsl:template&gt;
+
+                            &lt;/xsl:stylesheet&gt;
+                        </pre>
+                            <h2>Durations</h2>
+                            <p>Durations are value types that can be added or substracted from all the date/time types.
+                            Using durations can simplify
+                            date/time calculations a great deal, but it requires an understanding of the duration
+                            pattern. This pattern is described in
+                            the XPath 2.0 functions and operator documentation and will not be described in detail
+                            here.
+                        </p>
+                            <p>So, the easiest way to understand duration is to look at an example:</p>
+                            <pre class="xml">&lt;?xml version="1.0"?&gt;
+
+                            &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema" version="2.0" exclude-result-prefixes="#all"&gt;
+                            &lt;xsl:output method="xml" indent="yes"/&gt;
+
+                            &lt;xsl:template match="/"&gt;
+                            &lt;xsl:variable name="date" select="xs:date('2001-01-01')"/&gt;
+                            &lt;xsl:variable name="time" select="xs:time('11:00:00')"/&gt;
+
+                            &lt;values&gt;
+
+                            &lt;dateAdd&gt;
+                            &lt;xsl:value-of select="$date + xs:yearMonthDuration('P2Y2M')"/&gt;
+                            &lt;/dateAdd&gt;
+                            &lt;dateSub&gt;
+                            &lt;xsl:value-of select="$date - xs:yearMonthDuration('P1M')"/&gt;
+
+                            &lt;/dateSub&gt;
+
+                            &lt;timeAdd&gt;
+                            &lt;xsl:value-of select="$time + xs:dayTimeDuration('P0DT3H15M')"/&gt;
+                            &lt;/timeAdd&gt;
+                            &lt;timeSub&gt;
+                            &lt;xsl:value-of select="$time - xs:dayTimeDuration('P0DT1H30M')"/&gt;
+
+                            &lt;/timeSub&gt;
+
+                            &lt;/values&gt;
+                            &lt;/xsl:template&gt;
+
+                            &lt;/xsl:stylesheet&gt;
+                        </pre>
+                            <p>This gives the output:</p>
+
+                            <pre class="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+                            &lt;values&gt;
+
+                            &lt;dateAdd&gt;2003-03-01&lt;/dateAdd&gt;
+                            &lt;dateSub&gt;2000-12-01&lt;/dateSub&gt;
+
+                            &lt;timeAdd&gt;14:15:00&lt;/timeAdd&gt;
+                            &lt;timeSub&gt;09:30:00&lt;/timeSub&gt;
+
+                            &lt;/values&gt;
+                        </pre>
+                        </text>
+
+                        <image key="1711">
+                            <text/>
+                        </image>
+                    </article>
+                </content>
+                <links>
+                    <link>
+                        <linktitle>XPath 2.0 Functions and Operators</linktitle>
+
+                        <url>http://www.w3.org/TR/xpath-functions/</url>
+                        <opentarget>new</opentarget>
+                    </link>
+                    <link>
+                        <linktitle>XMLSchema Datatypes</linktitle>
+                        <url>http://www.w3.org/TR/xmlschema-2/</url>
+                        <opentarget>new</opentarget>
+
+                    </link>
+                    <link>
+                        <linktitle>XSLT 2.0 Documentation</linktitle>
+                        <url>http://www.w3.org/TR/xslt20/</url>
+                        <opentarget>new</opentarget>
+                    </link>
+                </links>
+
+                <files>
+                    <file>
+                        <description/>
+                    </file>
+                </files>
+                <articles/>
+                <teaser>
+                    <heading/>
+                    <preface/>
+
+                    <!-- Tukling: bytta ut 29712 med 1710 -->
+                    <image key="1710">
+                        <text/>
+                    </image>
+                    <read_more/>
+                </teaser>
+            </contentdata>
+            <categoryname deprecated="Use category instead" key="1667">XSLT articles</categoryname>
+            <category key="1667" name="XSLT articles"/>
+
+            <location>
+                <site count="5" key="34">
+                    <contentlocation home="true" menuitemkey="1826"
+                        menuitemname="testside B"
+                        menuitempath="/testside B" type="section"/>
+                    <contentlocation home="false" menuitemkey="1825"
+                        menuitemname="Community articles"
+                        menuitempath="/testside A/Community articles" type="section"/>
+                </site>
+                <site count="5" key="43">
+                    <contentlocation home="true" menuitemkey="2013"
+                        menuitemname="blog" menuitempath="/en/blog" type="section"/>
+                </site>
+                <site count="5" key="42">
+
+                    <contentlocation home="false" menuitemkey="1589"
+                        menuitemname="Articles"
+                        menuitempath="/Articles" type="section"/>
+                    <contentlocation home="true" menuitemkey="1660"
+                        menuitemname="XSLT"
+                        menuitempath="/Articles/XSLT" type="section_and_sectionhome"/>
+                </site>
+            </location>
+            <sectionnames count="5" deprecated="Use location instead">
+                <sectionname home="false" menuitemkey="1825"
+                    menukey="34" sitekey="34">Community articles
+            </sectionname>
+                <sectionname home="false" menuitemkey="2013"
+                    menukey="43" sitekey="43">blog
+            </sectionname>
+                <sectionname home="true" menuitemkey="1660"
+                    menukey="42" sitekey="42">XSLT</sectionname>
+
+                <sectionname home="false" menuitemkey="1826"
+                    menukey="34" sitekey="34">testside B
+            </sectionname>
+                <sectionname home="false" menuitemkey="1589"
+                    menukey="42" sitekey="42">Articles
+            </sectionname>
+            </sectionnames>
+            <binaries count="0"/>
+            <versions>
+                <version key="75833" status="archived"
+                    status-key="3" timestamp="2008-10-08 11:27:11.2">
+                    <title>Time functions in XSLT 2</title>
+
+                    <modifier deleted="false"
+                        key="4CE4A60E61B9EFA866B0B1280535DEEB39429B5F" qualified-name="enonic\srs">
+                        <userstore>enonic</userstore>
+                        <name>srs</name>
+                        <display-name>Sten Roger Sandvik</display-name>
+                        <email>srs@enonic.com</email>
+                    </modifier>
+                </version>
+
+                <version current="true" key="75835"
+                    status="approved" status-key="2" timestamp="2008-10-08 11:27:47.4">
+                    <title>Time functions in XSLT 2</title>
+                    <modifier deleted="false"
+                        key="4CE4A60E61B9EFA866B0B1280535DEEB39429B5F" qualified-name="enonic\srs">
+                        <userstore>enonic</userstore>
+                        <name>srs</name>
+                        <display-name>Sten Roger Sandvik</display-name>
+                        <email>srs@enonic.com</email>
+
+                    </modifier>
+                </version>
+            </versions>
+            <relatedcontentkeys count="4">
+                <relatedcontentkey contenttype="Person" key="18433"
+                    level="1" versionkey="34274"/>
+                <relatedcontentkey contenttype="Topic" key="25970"
+                    level="1" versionkey="33942"/>
+                <relatedcontentkey contenttype="Topic" key="25974"
+                    level="1" versionkey="33946"/>
+                <relatedcontentkey contenttype="Image" key="1711"
+                    level="1" versionkey="38992"/>
+
+                <!-- Tukling -->
+                <relatedcontentkey contenttype="Image" key="1710"
+                    level="1" versionkey="38992"/>
+            </relatedcontentkeys>
+
+        </content>
+        <content approved="true" contenttype="event"
+            contenttypekey="10085" created="2009-12-16 00:27"
+            current="true" key="90685" languagecode="no"
+            languagekey="1" priority="0"
+            publishfrom="2009-12-16 00:29" state="5" status="2"
+            timestamp="2009-12-16 00:29" unitkey="109" versionkey="114731">
+            <owner deleted="false"
+                key="1FF4E48F85B006591C230C0A697A0B42D0D357CF" qualified-name="enonic\ves">
+                <userstore>enonic</userstore>
+                <name>ves</name>
+                <display-name>Vegard Storstad</display-name>
+                <email>ves@enonic.com</email>
+
+                <photo exists="true"/>
+            </owner>
+            <modifier deleted="false"
+                key="1FF4E48F85B006591C230C0A697A0B42D0D357CF" qualified-name="enonic\ves">
+                <userstore>enonic</userstore>
+                <name>ves</name>
+                <display-name>Vegard Storstad</display-name>
+                <email>ves@enonic.com</email>
+
+                <photo exists="true"/>
+            </modifier>
+            <title>Developer 2 - XSLT Development</title>
+            <contentdata>
+                <heading>Developer 2 - XSLT Development</heading>
+                <start-date>2010-05-26</start-date>
+                <start-time>09:00</start-time>
+
+                <end-date>2010-05-27</end-date>
+                <end-time>16:00</end-time>
+                <location>Oslo Kurs og Konferansesenter, Grev Wedelsplass 5, Oslo</location>
+                <preface>Skal du gå i dybden på malutvikling på Enonic CMS? I dette kurset lærer du Best Practice
+                malutvikling i XSLT og inkluderer
+                også endel avansert HTML/CSS.
+            </preface>
+                <text>
+                    <p>
+                        <a href="http://www.enonic.com/en/Training/register">Meld deg på</a>
+
+                    på vårsesongens siste Utvikler 2-kurs!
+                </p>
+                    <h2>Betingelser</h2>
+                    <h3>Bestillingsbekreftelse</h3>
+                    <p>Enonic sender en påminnelse pr. e-post 1 uke før kursstart. Her medfølger kart over området og
+                    veibeskrivelse.
+                </p>
+                    <h3>Avbestilling</h3>
+                    <p>Påmeldingen er bindende. Om du likevel skulle være så uheldig å måtte avbestille kurset gjelder
+                    følgende:
+                </p>
+
+                    <ul>
+                        <li>Ved avbestilling av kurset mer enn 10 arbeidsdager før kursstart refunderes 100% av
+                        deltakeravgiften
+                    </li>
+                        <li>Ved avbestilling av kurset mer enn 5 arbeidsdager før kursstart refunderes 50% av
+                        deltakeravgiften
+                    </li>
+                        <li>Ved avbestilling av kurset mindre enn 5 arbeidsdager før kursstart gis ingen refusjon.</li>
+                    </ul>
+                    <h3>Varighet</h3>
+                    <p>2 dager</p>
+
+                    <h3>Pris</h3>
+                    <p>NOK 9900,-</p>
+                    <h3>Betalingsbetingelser</h3>
+                    <p>Faktura sendes ved kursets start, betalingsfristen er 10 dager. Alle priser er i NOK, eks. MVA.
+                </p>
+                </text>
+                <image>
+                    <image/>
+
+                    <image_text/>
+                </image>
+                <link>
+                    <url/>
+                    <description/>
+                    <target>new</target>
+                </link>
+                <file>
+
+                    <file/>
+                </file>
+                <articles/>
+                <events/>
+            </contentdata>
+            <categoryname deprecated="Use category instead" key="1953">Courses</categoryname>
+            <category key="1953" name="Courses"/>
+            <location>
+
+                <site count="2" key="43">
+                    <contentlocation home="true" menuitemkey="1939"
+                        menuitemname="events and training"
+                        menuitempath="/en/home/company/events and training" type="section"/>
+                    <contentlocation home="false" menuitemkey="2089"
+                        menuitemname="Courses"
+                        menuitempath="/en/training/developer 2/Courses" type="section"/>
+                </site>
+            </location>
+            <sectionnames count="2" deprecated="Use location instead">
+                <sectionname home="false" menuitemkey="1939"
+                    menukey="43" sitekey="43">events and training
+            </sectionname>
+                <sectionname home="false" menuitemkey="2089"
+                    menukey="43" sitekey="43">Courses
+            </sectionname>
+
+            </sectionnames>
+            <binaries count="0"/>
+            <versions>
+                <version current="true" key="114731"
+                    status="approved" status-key="2" timestamp="2009-12-16 00:29:31.0">
+                    <title>Developer 2 - XSLT Development</title>
+                    <modifier deleted="false"
+                        key="1FF4E48F85B006591C230C0A697A0B42D0D357CF" qualified-name="enonic\ves">
+                        <userstore>enonic</userstore>
+                        <name>ves</name>
+
+                        <display-name>Vegard Storstad</display-name>
+                        <email>ves@enonic.com</email>
+                        <photo exists="true"/>
+                    </modifier>
+                </version>
+            </versions>
+            <relatedcontentkeys count="0"/>
+        </content>
+
+        <content approved="true" contenttype="event"
+            contenttypekey="10085" created="2009-12-16 00:29"
+            current="true" key="90686" languagecode="no"
+            languagekey="1" priority="0"
+            publishfrom="2009-12-16 00:30" state="5" status="2"
+            timestamp="2009-12-16 00:30" unitkey="109" versionkey="114734">
+            <owner deleted="false"
+                key="1FF4E48F85B006591C230C0A697A0B42D0D357CF" qualified-name="enonic\ves">
+                <userstore>enonic</userstore>
+                <name>ves</name>
+                <display-name>Vegard Storstad</display-name>
+                <email>ves@enonic.com</email>
+                <photo exists="true"/>
+
+            </owner>
+            <modifier deleted="false"
+                key="1FF4E48F85B006591C230C0A697A0B42D0D357CF" qualified-name="enonic\ves">
+                <userstore>enonic</userstore>
+                <name>ves</name>
+                <display-name>Vegard Storstad</display-name>
+                <email>ves@enonic.com</email>
+                <photo exists="true"/>
+
+            </modifier>
+            <title>Developer 2 - XSLT Development</title>
+            <contentdata>
+                <heading>Developer 2 - XSLT Development</heading>
+                <start-date>2010-09-16</start-date>
+                <start-time>09:00</start-time>
+                <end-date>2010-09-17</end-date>
+
+                <end-time>16:00</end-time>
+                <location>Oslo Kurs og Konferansesenter, Grev Wedelsplass 5, Oslo</location>
+                <preface>Skal du gå i dybden på malutvikling på Enonic CMS? I dette kurset lærer du Best Practice
+                malutvikling i XSLT og inkluderer
+                også endel avansert HTML/CSS.
+            </preface>
+                <text>
+                    <p>
+                        <a href="http://www.enonic.com/en/Training/register">Meld deg på</a>
+                    på høstsesongens første Utvikler 2-kurs!
+                </p>
+
+                    <h2>Betingelser</h2>
+                    <h3>Bestillingsbekreftelse</h3>
+                    <p>Enonic sender en påminnelse pr. e-post 1 uke før kursstart. Her medfølger kart over området og
+                    veibeskrivelse.
+                </p>
+                    <h3>Avbestilling</h3>
+                    <p>Påmeldingen er bindende. Om du likevel skulle være så uheldig å måtte avbestille kurset gjelder
+                    følgende:
+                </p>
+                    <ul>
+
+                        <li>Ved avbestilling av kurset mer enn 10 arbeidsdager før kursstart refunderes 100% av
+                        deltakeravgiften
+                    </li>
+                        <li>Ved avbestilling av kurset mer enn 5 arbeidsdager før kursstart refunderes 50% av
+                        deltakeravgiften
+                    </li>
+                        <li>Ved avbestilling av kurset mindre enn 5 arbeidsdager før kursstart gis ingen refusjon.</li>
+                    </ul>
+                    <h3>Varighet</h3>
+                    <p>2 dager</p>
+
+                    <h3>Pris</h3>
+                    <p>NOK 9900,-</p>
+                    <h3>Betalingsbetingelser</h3>
+                    <p>Faktura sendes ved kursets start, betalingsfristen er 10 dager. Alle priser er i NOK, eks. MVA.
+                </p>
+                </text>
+                <image>
+                    <image/>
+
+                    <image_text/>
+                </image>
+                <link>
+                    <url/>
+                    <description/>
+                    <target>new</target>
+                </link>
+                <file>
+
+                    <file/>
+                </file>
+                <articles/>
+                <events/>
+            </contentdata>
+            <categoryname deprecated="Use category instead" key="1953">Courses</categoryname>
+            <category key="1953" name="Courses"/>
+            <location>
+
+                <site count="2" key="43">
+                    <contentlocation home="true" menuitemkey="1939"
+                        menuitemname="events and training"
+                        menuitempath="/en/home/company/events and training" type="section"/>
+                    <contentlocation home="false" menuitemkey="2089"
+                        menuitemname="Courses"
+                        menuitempath="/en/training/developer 2/Courses" type="section"/>
+                </site>
+            </location>
+            <sectionnames count="2" deprecated="Use location instead">
+                <sectionname home="false" menuitemkey="2089"
+                    menukey="43" sitekey="43">Courses
+            </sectionname>
+                <sectionname home="false" menuitemkey="1939"
+                    menukey="43" sitekey="43">events and training
+            </sectionname>
+
+            </sectionnames>
+            <binaries count="0"/>
+            <versions>
+                <version current="true" key="114734"
+                    status="approved" status-key="2" timestamp="2009-12-16 00:30:30.3">
+                    <title>Developer 2 - XSLT Development</title>
+                    <modifier deleted="false"
+                        key="1FF4E48F85B006591C230C0A697A0B42D0D357CF" qualified-name="enonic\ves">
+                        <userstore>enonic</userstore>
+                        <name>ves</name>
+
+                        <display-name>Vegard Storstad</display-name>
+                        <email>ves@enonic.com</email>
+                        <photo exists="true"/>
+                    </modifier>
+                </version>
+            </versions>
+            <relatedcontentkeys count="0"/>
+        </content>
+
+        <relatedcontents count="7">
+
+
+            <!-- Tukling -->
+            <content unitkey="1" approved="true" state="5" status="2" contenttype="Image" contenttypekey="1003" created="2010-03-17 16:26" key="1710" languagecode="en" languagekey="0" priority="0" publishfrom="2010-03-17 16:26" timestamp="2010-03-17 16:26">
+                <owner key="F5C828FF122CD8D0509051584236CCEB28C78BFA" deleted="false" qualified-name="admin">
+                    <name>admin</name>
+                    <display-name>Enterprise Administrator</display-name>
+                    <email/>
+                </owner>
+                <modifier key="F5C828FF122CD8D0509051584236CCEB28C78BFA" deleted="false" qualified-name="admin">
+                    <name>admin</name>
+                    <display-name>Enterprise Administrator</display-name>
+                    <email/>
+                </modifier>
+                <title>antique-clock</title>
+                <contentdata>
+                    <name>antique-clock</name>
+                    <description/>
+                    <photographer email="" name=""/>
+                    <copyright/>
+                    <keywords/>
+                    <sourceimage height="300" width="300">
+                        <binarydata key="900"/>
+                    </sourceimage>
+                    <images border="no">
+                        <image rotation="none" type="original">
+                            <width>300</width>
+                            <height>300</height>
+                            <binarydata key="898"/>
+                        </image>
+                    </images>
+                </contentdata>
+                <categoryname key="17" deprecated="Use category instead">Div</categoryname>
+                <category key="17" name="Div"/>
+                <location/>
+                <sectionnames deprecated="Use location instead" count="0"/>
+                <binaries count="3">
+                    <binary filename="antique-clock_300x300.jpeg" filesize="26682" key="898"/>
+                    <binary filename="antique-clock_small.jpeg" filesize="52839" key="899" label="small"/>
+                    <binary filename="antique-clock.jpeg" filesize="82387" key="900" label="source"/>
+                </binaries>
+                <relatedcontentkeys count="0"/>
+            </content>
+           
+
+
+            <content approved="true" contenttype="Person"
+                contenttypekey="10010" created="2007-02-06 09:02"
+                current="true" key="18426" languagecode="no"
+                languagekey="1" priority="0"
+                publishfrom="2007-02-06 09:02" state="5" status="2"
+                timestamp="2008-12-01 09:33" unitkey="105" versionkey="83389">
+                <owner deleted="false"
+                    key="CE0F1E6A08C0942DE37E95757A39F7A10A8FF03C" qualified-name="enonic\per">
+                    <userstore>enonic</userstore>
+                    <name>per</name>
+                    <display-name>Per Allan Johansson</display-name>
+                    <email>per@enonic.com</email>
+
+                    <photo exists="true"/>
+                </owner>
+                <modifier deleted="false"
+                    key="CE0F1E6A08C0942DE37E95757A39F7A10A8FF03C" qualified-name="enonic\per">
+                    <userstore>enonic</userstore>
+                    <name>per</name>
+                    <display-name>Per Allan Johansson</display-name>
+                    <email>per@enonic.com</email>
+
+                    <photo exists="true"/>
+                </modifier>
+                <title>Johansson</title>
+                <contentdata>
+                    <firstname>Per Allan</firstname>
+                    <surname>Johansson</surname>
+                    <birthdate>1971-07-23</birthdate>
+
+                    <title>Senior consultant</title>
+                    <phone>211</phone>
+                    <fax/>
+                    <mobile>(+47) 90 57 61 50</mobile>
+                    <email>per@enonic.com</email>
+                    <image key="26206">
+                        <text/>
+
+                    </image>
+                    <description/>
+                </contentdata>
+                <categoryname deprecated="Use category instead" key="1549">Ansatte</categoryname>
+                <category key="1549" name="Ansatte"/>
+                <location>
+                    <site count="3" key="41">
+                        <contentlocation home="true"
+                            menuitemkey="1379"
+                            menuitemname="Konsulent"
+                            menuitempath="/Administrasjon/Om oss/Ansatte/Konsulent" type="section"/>
+
+                    </site>
+                    <site count="3" key="42">
+                        <contentlocation home="true"
+                            menuitemkey="1704"
+                            menuitemname="Support team"
+                            menuitempath="/Support/Support team" type="section"/>
+                    </site>
+                    <site count="3" key="43">
+                        <contentlocation home="true"
+                            menuitemkey="2008"
+                            menuitemname="support team"
+                            menuitempath="/en/support/support team" type="section"/>
+                    </site>
+                </location>
+                <sectionnames count="3" deprecated="Use location instead">
+
+                    <sectionname home="false" menuitemkey="1379"
+                        menukey="41" sitekey="41">Konsulent
+                </sectionname>
+                    <sectionname home="false" menuitemkey="1704"
+                        menukey="42" sitekey="42">Support team
+                </sectionname>
+                    <sectionname home="false" menuitemkey="2008"
+                        menukey="43" sitekey="43">support team
+                </sectionname>
+                </sectionnames>
+                <binaries count="0"/>
+                <relatedcontentkeys count="0"/>
+            </content>
+
+            <content approved="true" contenttype="Person"
+                contenttypekey="10010" created="2007-02-06 09:12"
+                current="true" key="18433" languagecode="no"
+                languagekey="1" priority="0"
+                publishfrom="2007-02-06 09:12" state="5" status="2"
+                timestamp="2008-03-11 19:43" unitkey="105" versionkey="34274">
+                <owner deleted="false"
+                    key="F5C828FF122CD8D0509051584236CCEB28C78BFA" qualified-name="admin">
+                    <name>admin</name>
+                    <display-name>Enterprise Administrator</display-name>
+                    <email/>
+                </owner>
+                <modifier deleted="false"
+                    key="1FF4E48F85B006591C230C0A697A0B42D0D357CF" qualified-name="enonic\ves">
+                    <userstore>enonic</userstore>
+
+                    <name>ves</name>
+                    <display-name>Vegard Storstad</display-name>
+                    <email>ves@enonic.com</email>
+                    <photo exists="true"/>
+                </modifier>
+                <title>Sandvik</title>
+                <contentdata>
+
+                    <firstname>Sten Roger</firstname>
+                    <surname>Sandvik</surname>
+                    <birthdate>1971-11-20</birthdate>
+                    <title>Chief Architect</title>
+                    <phone>302</phone>
+                    <fax/>
+
+                    <mobile>(+47) 95 99 70 84</mobile>
+                    <email>srs@enonic.com</email>
+                    <image key="26208">
+                        <text/>
+                    </image>
+                    <description/>
+                </contentdata>
+                <categoryname deprecated="Use category instead" key="1549">Ansatte</categoryname>
+
+                <category key="1549" name="Ansatte"/>
+                <location>
+                    <site count="2" key="42">
+                        <contentlocation home="true"
+                            menuitemkey="1704"
+                            menuitemname="Support team"
+                            menuitempath="/Support/Support team" type="section"/>
+                    </site>
+                    <site count="2" key="41">
+                        <contentlocation home="true"
+                            menuitemkey="1381"
+                            menuitemname="Utvikling"
+                            menuitempath="/Administrasjon/Om oss/Ansatte/Utvikling" type="section"/>
+                    </site>
+                </location>
+
+                <sectionnames count="2" deprecated="Use location instead">
+                    <sectionname home="false" menuitemkey="1704"
+                        menukey="42" sitekey="42">Support team
+                </sectionname>
+                    <sectionname home="false" menuitemkey="1381"
+                        menukey="41" sitekey="41">Utvikling
+                </sectionname>
+                </sectionnames>
+                <binaries count="0"/>
+                <relatedcontentkeys count="0"/>
+            </content>
+            <content approved="true" contenttype="Topic"
+                contenttypekey="10013" created="2007-10-15 13:29"
+                current="true" key="25970" languagecode="en"
+                languagekey="0" priority="0"
+                publishfrom="2007-10-15 13:29" state="5" status="2"
+                timestamp="2007-10-15 13:29" unitkey="106" versionkey="33942">
+
+                <owner deleted="false"
+                    key="CE0F1E6A08C0942DE37E95757A39F7A10A8FF03C" qualified-name="enonic\per">
+                    <userstore>enonic</userstore>
+                    <name>per</name>
+                    <display-name>Per Allan Johansson</display-name>
+                    <email>per@enonic.com</email>
+                    <photo exists="true"/>
+                </owner>
+
+                <modifier deleted="false"
+                    key="CE0F1E6A08C0942DE37E95757A39F7A10A8FF03C" qualified-name="enonic\per">
+                    <userstore>enonic</userstore>
+                    <name>per</name>
+                    <display-name>Per Allan Johansson</display-name>
+                    <email>per@enonic.com</email>
+                    <photo exists="true"/>
+                </modifier>
+
+                <title>XSLT</title>
+                <contentdata>
+                    <topic>XSLT</topic>
+                    <description/>
+                </contentdata>
+                <categoryname deprecated="Use category instead" key="1656">Topics</categoryname>
+                <category key="1656" name="Topics"/>
+
+                <location/>
+                <sectionnames count="0" deprecated="Use location instead"/>
+                <binaries count="0"/>
+                <relatedcontentkeys count="0"/>
+            </content>
+            <content approved="true" contenttype="Topic"
+                contenttypekey="10013" created="2007-10-15 13:30"
+                current="true" key="25972" languagecode="en"
+                languagekey="0" priority="0"
+                publishfrom="2007-10-15 13:30" state="5" status="2"
+                timestamp="2009-11-19 10:47" unitkey="106" versionkey="112774">
+                <owner deleted="false"
+                    key="CE0F1E6A08C0942DE37E95757A39F7A10A8FF03C" qualified-name="enonic\per">
+                    <userstore>enonic</userstore>
+
+                    <name>per</name>
+                    <display-name>Per Allan Johansson</display-name>
+                    <email>per@enonic.com</email>
+                    <photo exists="true"/>
+                </owner>
+                <modifier deleted="false"
+                    key="04D3731B72BFF823BCF0C00604ED8FA85E7B7D69" qualified-name="enonic\jsi">
+                    <userstore>enonic</userstore>
+
+                    <name>jsi</name>
+                    <display-name>Jørgen Sivesind</display-name>
+                    <email>jsi@enonic.com</email>
+                    <photo exists="true"/>
+                </modifier>
+                <title>Enonic CMS</title>
+                <contentdata>
+
+                    <topic>Enonic CMS</topic>
+                    <description/>
+                </contentdata>
+                <categoryname deprecated="Use category instead" key="1656">Topics</categoryname>
+                <category key="1656" name="Topics"/>
+                <location/>
+                <sectionnames count="0" deprecated="Use location instead"/>
+                <binaries count="0"/>
+
+                <relatedcontentkeys count="0"/>
+            </content>
+            <content approved="true" contenttype="Topic"
+                contenttypekey="10013" created="2007-10-15 13:30"
+                current="true" key="25973" languagecode="en"
+                languagekey="0" priority="0"
+                publishfrom="2007-10-15 13:30" state="5" status="2"
+                timestamp="2007-10-15 13:30" unitkey="106" versionkey="33945">
+                <owner deleted="false"
+                    key="CE0F1E6A08C0942DE37E95757A39F7A10A8FF03C" qualified-name="enonic\per">
+                    <userstore>enonic</userstore>
+                    <name>per</name>
+                    <display-name>Per Allan Johansson</display-name>
+
+                    <email>per@enonic.com</email>
+                    <photo exists="true"/>
+                </owner>
+                <modifier deleted="false"
+                    key="CE0F1E6A08C0942DE37E95757A39F7A10A8FF03C" qualified-name="enonic\per">
+                    <userstore>enonic</userstore>
+                    <name>per</name>
+                    <display-name>Per Allan Johansson</display-name>
+
+                    <email>per@enonic.com</email>
+                    <photo exists="true"/>
+                </modifier>
+                <title>Saxon</title>
+                <contentdata>
+                    <topic>Saxon</topic>
+                    <description/>
+
+                </contentdata>
+                <categoryname deprecated="Use category instead" key="1656">Topics</categoryname>
+                <category key="1656" name="Topics"/>
+                <location/>
+                <sectionnames count="0" deprecated="Use location instead"/>
+                <binaries count="0"/>
+                <relatedcontentkeys count="0"/>
+            </content>
+
+            <content approved="true" contenttype="Topic"
+                contenttypekey="10013" created="2007-10-15 13:30"
+                current="true" key="25974" languagecode="en"
+                languagekey="0" priority="0"
+                publishfrom="2007-10-15 13:30" state="5" status="2"
+                timestamp="2007-10-15 13:30" unitkey="106" versionkey="33946">
+                <owner deleted="false"
+                    key="CE0F1E6A08C0942DE37E95757A39F7A10A8FF03C" qualified-name="enonic\per">
+                    <userstore>enonic</userstore>
+                    <name>per</name>
+                    <display-name>Per Allan Johansson</display-name>
+                    <email>per@enonic.com</email>
+                    <photo exists="true"/>
+
+                </owner>
+                <modifier deleted="false"
+                    key="CE0F1E6A08C0942DE37E95757A39F7A10A8FF03C" qualified-name="enonic\per">
+                    <userstore>enonic</userstore>
+                    <name>per</name>
+                    <display-name>Per Allan Johansson</display-name>
+                    <email>per@enonic.com</email>
+                    <photo exists="true"/>
+
+                </modifier>
+                <title>XML</title>
+                <contentdata>
+                    <topic>XML</topic>
+                    <description/>
+                </contentdata>
+                <categoryname deprecated="Use category instead" key="1656">Topics</categoryname>
+
+                <category key="1656" name="Topics"/>
+                <location/>
+                <sectionnames count="0" deprecated="Use location instead"/>
+                <binaries count="0"/>
+                <relatedcontentkeys count="0"/>
+            </content>
+            <content approved="true" contenttype="Image"
+                contenttypekey="46" created="2007-12-21 12:28"
+                current="true" key="29712" languagecode="en"
+                languagekey="0" priority="0"
+                publishfrom="2007-12-21 12:27" state="5" status="2"
+                timestamp="2007-12-21 12:28" unitkey="54" versionkey="38992">
+                <owner deleted="false"
+                    key="CE0F1E6A08C0942DE37E95757A39F7A10A8FF03C" qualified-name="enonic\per">
+                    <userstore>enonic</userstore>
+
+                    <name>per</name>
+                    <display-name>Per Allan Johansson</display-name>
+                    <email>per@enonic.com</email>
+                    <photo exists="true"/>
+                </owner>
+                <modifier deleted="false"
+                    key="CE0F1E6A08C0942DE37E95757A39F7A10A8FF03C" qualified-name="enonic\per">
+                    <userstore>enonic</userstore>
+
+                    <name>per</name>
+                    <display-name>Per Allan Johansson</display-name>
+                    <email>per@enonic.com</email>
+                    <photo exists="true"/>
+                </modifier>
+                <title>xslt</title>
+                <contentdata>
+
+                    <name>xslt</name>
+                    <description/>
+                    <photographer email="" name=""/>
+                    <copyright/>
+                    <keywords/>
+                    <sourceimage height="180" width="180">
+                        <binarydata key="32184"/>
+                    </sourceimage>
+
+                    <images border="no">
+                        <image rotation="none" type="original">
+                            <width>180</width>
+                            <height>180</height>
+                            <binarydata key="32176"/>
+                        </image>
+                        <image type="custom">
+                            <width>310</width>
+
+                            <height>310</height>
+                            <binarydata key="32177"/>
+                        </image>
+                        <image type="scaled">
+                            <width>90</width>
+                            <height>90</height>
+                            <binarydata key="32178"/>
+
+                        </image>
+                        <image type="scaled">
+                            <width>120</width>
+                            <height>120</height>
+                            <binarydata key="32179"/>
+                        </image>
+                        <image type="scaled">
+                            <width>60</width>
+
+                            <height>60</height>
+                            <binarydata key="32180"/>
+                        </image>
+                        <image type="scaled">
+                            <width>80</width>
+                            <height>80</height>
+                            <binarydata key="32181"/>
+
+                        </image>
+                        <image type="scaled">
+                            <width>100</width>
+                            <height>100</height>
+                            <binarydata key="32182"/>
+                        </image>
+                        <image type="scaled">
+                            <width>150</width>
+
+                            <height>150</height>
+                            <binarydata key="32183"/>
+                        </image>
+                    </images>
+                </contentdata>
+                <categoryname deprecated="Use category instead" key="1662">Community</categoryname>
+                <category key="1662" name="Community"/>
+                <location/>
+
+                <sectionnames count="0" deprecated="Use location instead"/>
+                <binaries count="9">
+                    <binary filename="image.png" filesize="1535" key="32176"/>
+                    <binary filename="image.png" filesize="9752" key="32177"/>
+                    <binary filename="image.png" filesize="1427" key="32178"/>
+                    <binary filename="image.png" filesize="2419" key="32179"/>
+                    <binary filename="image.png" filesize="1160" key="32180"/>
+                    <binary filename="image.png" filesize="1770" key="32181"/>
+                    <binary filename="image.png" filesize="2341" key="32182"/>
+
+                    <binary filename="image.png" filesize="3593" key="32183"/>
+                    <binary filename="xslt.gif" filesize="1535"
+                        key="32184" label="source"/>
+                </binaries>
+                <relatedcontentkeys count="0"/>
+            </content>
+
+
+            <content unitkey="1" approved="true" state="5" status="2" contenttype="Image" contenttypekey="1003" created="2010-03-19 10:31" key="1711" languagecode="en" languagekey="0" priority="0" publishfrom="2010-03-19 10:31" timestamp="2010-03-19 10:31">
+                <owner key="F5C828FF122CD8D0509051584236CCEB28C78BFA" deleted="false" qualified-name="admin">
+                    <name>admin</name>
+                    <display-name>Enterprise Administrator</display-name>
+                    <email/>
+                </owner>
+                <modifier key="F5C828FF122CD8D0509051584236CCEB28C78BFA" deleted="false" qualified-name="admin">
+                    <name>admin</name>
+                    <display-name>Enterprise Administrator</display-name>
+                    <email/>
+                </modifier>
+                <title>source</title>
+                <contentdata>
+                    <name>source</name>
+                    <description/>
+                    <photographer email="" name=""/>
+                    <copyright/>
+                    <keywords/>
+                    <sourceimage height="180" width="180">
+                        <binarydata key="902"/>
+                    </sourceimage>
+                    <images border="no">
+                        <image rotation="none" type="original">
+                            <width>180</width>
+                            <height>180</height>
+                            <binarydata key="901"/>
+                        </image>
+                    </images>
+                </contentdata>
+                <categoryname key="17" deprecated="Use category instead">Div</categoryname>
+                <category key="17" name="Div"/>
+                <location/>
+                <sectionnames deprecated="Use location instead" count="0"/>
+                <binaries count="2">
+                    <binary filename="source_180x180.png" filesize="1535" key="901"/>
+                    <binary filename="source.png" filesize="1535" key="902" label="source"/>
+                </binaries>
+                <relatedcontentkeys count="0"/>
+            </content>
+
+
+        </relatedcontents>
+    </contents>
+    <facets>
+        <facet max="z" min="a" name="f1" type="int|date">
+
+            <values count="y" value="x"/>
+            <values count="8" value="xd"/>
+        </facet>
+        <facet/>
+    </facets>
+</gsa-search>

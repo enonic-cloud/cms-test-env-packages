@@ -1,0 +1,23 @@
+
+4.6
+---
+> * Find replacement for JCaptcha
+   - SimpleCaptcha or http://code.google.com/p/kaptcha/
+   - JCaptcha library is dead and include old dependencies
+> * Update image library
+   - Old image library in JCaptcha, update this 
+> * Update JCR webdav to latest
+> * Update last version of Spring 3.0.x
+> * Update concurrentlinkedhashmap to latest version
+> * Update to use latest felix version 
+* Package scanning in plugin framework should be more stable - use spring classpath scanning
+   - Version of libraries? How? Or set all to 0.0.0?
+* Add config variables in plugin view. 
+* Hide OSGi metadata in plugin view -> show if needed
+> * Update to latest joda-time
+> * Update to latest guava
+> * Update to latest commons-io library
+
+5.0
+---
+* JMX console in Admin

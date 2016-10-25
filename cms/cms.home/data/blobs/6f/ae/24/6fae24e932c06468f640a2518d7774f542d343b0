@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet exclude-result-prefixes="#all" version="2.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:util="enonic:utilities" xmlns:portal="http://www.enonic.com/cms/xslt/portal" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    
+    <!--<xsl:import href="/libraries/utilities/standard-variables.xsl"/>-->
+    <!--<xsl:import href="/themes/travel/framework.xsl"/>-->
+    <xsl:include href="/libraries/utilities/utilities.xsl"/>
+    <xsl:include href="/libraries/utilities/navigation-menu.xsl"/>
+    <xsl:include href="/themes/travel/widgets/eCommerce-utilities.xsl"/>
+    
+    <xsl:output indent="yes" media-type="text/html" method="xhtml" omit-xml-declaration="yes"/>
+    
+    <xsl:param name="shopper-userstore" select="'Shoppers'" as="xs:string"/>
+    <xsl:variable name="url-parameters" select="/result/context/querystring/parameter[not(@name = 'index' or @name = 'id' or starts-with(@name, '_config-'))]"/>
+    
+    <xsl:variable name="language" select="/result/context/@languagecode"/>
+    <xsl:variable name="device-class" select="/result/context/device-class"/>
+    <xsl:variable name="region-width" select="/result/context/querystring/parameter[@name = '_config-region-width']"/>
+    <xsl:variable name="config-xml" as="document-node()" select="document(concat(/result/context/site/path-to-home-resources, '/config.xml'))"/>
+    <xsl:variable name="config" as="element()" select="$config-xml/config"/>
+    <xsl:variable name="config-device-class" as="element()" select="if ($config/device-classes/device-class[tokenize(@name, ',')[. = $device-class]]) then $config/device-classes/device-class[tokenize(@name, ',')[. = $device-class]] else $config/device-classes/device-class[1]"/>
+    <xsl:variable name="config-imagesize" select="$config-device-class/image/sizes/size"/>
+    <xsl:variable name="config-filter">
+        <xsl:value-of select="string-join($config-device-class/image/filters/filter, ';')"/>
+        <xsl:if test="$config-device-class/image/filters/filter != ''">;</xsl:if>
+    </xsl:variable>
+    
+    <xsl:variable name="redirect" select="portal:createPageUrl()"/>
+    <xsl:variable name="redirectKey" select="/result/context/querystring/parameter[@name='id']"/>
+    <xsl:variable name="redirect-create" select="concat(portal:createPageUrl($redirectKey, ()),'?result=success')"/>
+    
+    <xsl:template match="/">
+        <script type="text/javascript">
+            $(document).ready(function() {
+              $('#existing-login').show();
+              $('#new-customer').hide();
+              
+            });
+            
+            function toggleRadio() {
+           	    if($('#exists').attr('checked')) {
+           		   $('#existing-login').slideToggle();
+           		   $('#new-customer').slideToggle();
+           	    } else {
+           		   $('#new-customer').slideToggle('slow');
+           		   $('#existing-login').slideToggle();
+                }
+            }
+            
+            
+            
+            
+        //</script>
+        
+        <xsl:if test="/result/context/querystring/parameter[@name = 'result']">
+            <p class="formError">User created successfully</p>
+        </xsl:if>
+        
+        <xsl:if test="/result/context/querystring/parameter[@name = 'error_user_login']">
+            <xsl:variable name="errorCode" select="/result/context/querystring/parameter[@name = 'error_user_login']"/>
+            <p class="formError">An error occured:
+                <xsl:value-of select="$errorCode"/>
+                <xsl:text> - </xsl:text>
+                <xsl:choose>
+                    <xsl:when test="$errorCode='103'">User not found</xsl:when>
+                    <xsl:when test="$errorCode='104'">Missing userid or password</xsl:when>
+                    <xsl:when test="$errorCode='106'">User id or password is wrong</xsl:when>
+                    <xsl:when test="$errorCode='115'">Userstore not found</xsl:when>
+                    <xsl:when test="$errorCode='400'">Missing or invalid parameter</xsl:when>
+                    <xsl:when test="$errorCode='506'">No rights to handle request</xsl:when>
+                </xsl:choose>
+            </p>
+        </xsl:if>
+        
+        <xsl:if test="/result/context/querystring/parameter[@name = 'error_user_create']">
+            <xsl:variable name="errorCode" select="/result/context/querystring/parameter[@name = 'error_user_create']"/>
+            <p class="formError"> An error occured: <xsl:value-of select="$errorCode"/>
+                <xsl:text> - </xsl:text>
+                <xsl:choose>
+                    <xsl:when test="$errorCode='100'"> E-mail address already exists</xsl:when>
+                    <xsl:when test="$errorCode='101'">User id already exists</xsl:when>
+                    <xsl:when test="$errorCode='401'">Invalid or missing parameter</xsl:when>
+                </xsl:choose>
+            </p>
+        </xsl:if>
+        
+        <div class="shop-customer">
+            
+            <div class="shop-login"><xsl:value-of select="portal:localize('Login')"/></div>
+            <div class="kunde-title">
+                <input type="radio" name="customer" value="existing" id="exists" onclick="toggleRadio()" checked="checked"/>
+                <xsl:value-of select="portal:localize('Already-customer')"/>
+                
+            </div>
+            
+            <div id="existing-login">
+                <form action="{portal:createServicesUrl( 'user', 'login', $redirect, () )}" method="post" class="shop-form">
+                    <label for="email"><xsl:value-of select="portal:localize('Email')"/></label><input type="text" name="email"/>
+                    <label for="password"><xsl:value-of select="portal:localize('Password')"/></label><input type="text" name="password"/>
+                    <label></label><a class="shop-forgot" href="#"><xsl:value-of select="portal:localize('Forgot-your-password')"/></a>
+                    <input type="hidden" name="userstore" value="{$shopper-userstore}"/>
+                    <input type="hidden" name="rememberme" value="true"/>
+                    <label></label>
+                    <div class="form-buttons">
+                        <input type="submit" id="login-btn" class="s-button login-order" value="{portal:localize('Login-and-continue')}"/> 
+                        <input type="button" class="s-button cancel" value="{portal:localize('Continue-shopping')}"/>
+                    </div>
+                </form>
+            </div>
+            
+            
+            <div class="kunde-title">
+                <input type="radio" name="customer" value="new" onclick="toggleRadio()" />
+                <xsl:value-of select="portal:localize('New-customer')"/>
+                
+            </div>
+            <div id="new-customer">
+                <form action="{portal:createServicesUrl('user','create', $redirect-create, ())}" method="post" enctype="multipart/form-data">
+                    <label><xsl:value-of select="portal:localize('User')"/></label><br/>
+                    <label for="new-first-name"><xsl:value-of select="portal:localize('First-name')"/></label>
+                        <input type="text" name="first_name" id="new-first-name"/>
+                    <label for="new-last-name"><xsl:value-of select="portal:localize('Last-name')"/></label>
+                        <input type="text" name="last_name" id="new-last-name"/>
+                    <label for="new-email"><xsl:value-of select="portal:localize('Email')"/></label>
+                        <input type="text" name="email" id="new-email"/>
+                    <label><xsl:value-of select="portal:localize('Delivery-address')"/></label><br/>
+                        <label for="address[0].label"><xsl:value-of select="portal:localize('Label')"/></label>
+                    <select name="address[0].label" id="address[0].label">
+                        <option><xsl:value-of select="portal:localize('Shipping')"/></option>
+                        <option><xsl:value-of select="portal:localize('Billing')"/></option>
+                    </select>
+                    <label for="address[0].street"><xsl:value-of select="portal:localize('Street')"/></label>
+                        <input id="address[0].street" type="text" name="address[0].street"/>
+                    <label for="address[0].postal_code"><xsl:value-of select="portal:localize('Postal-zip-code')"/></label>
+                        <input id="address[0].postal_code" type="text" name="address[0].postal_code"/>
+                    <label for="address[0].postal_address">City</label>
+                        <input type="text" name="address[0].postal_address" id="address[0].postal_address"/>
+                    <label for="address[0].iso_country">Country</label>
+                        <select name="address[0].iso_country">
+                            <option value="">-- Select --</option>
+                            <option value="BE">BELGIUM</option>
+                            <option value="CA">CANADA</option>
+                            <option value="DK">DENMARK</option>
+                            <option value="FI">FINLAND</option>
+                            <option value="IN">INDIA</option>
+                            <option value="MV">MALDIVES</option>
+                            <option value="NO">NORWAY (NORGE)</option>
+                            <option value="SE">SWEDEN</option>
+                            <option value="GB">UNITED KINGDOM</option>
+                            <option value="US">UNITED STATES</option>
+                        </select>
+                    <label for="address[0].iso_region">Region/State</label>
+                        <input id="address[0].iso_region" type="text" name="address[0].iso_region"/>
+                    <label> </label>
+                    <div class="form-buttons">
+                        <input type="submit" id="create-btn" class="s-button login-order" value="{portal:localize('Create-account')}"/> 
+                        <input type="button" class="s-button cancel" value="{portal:localize('Continue-shopping')}"/>
+                    </div>
+                </form>
+            </div>
+            
+            
+<!--            
+                <fieldset>
+                    
+                    <input type="text" name="qty" value="1" class="text"/>
+                </fieldset>
+            -->
+            
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="content">
+
+    </xsl:template>
+    
+    <xsl:template name="image">
+        <xsl:param name="size"/>
+        <xsl:if test="/result/contents/relatedcontents/content[@key = current()/contentdata/image/@key]">
+            <a href="{portal:createContentUrl(@key,())}" title="{title}">
+                <xsl:call-template name="utilities.display-image">
+                    <xsl:with-param name="region-width" select="$region-width"/>
+                    <xsl:with-param name="filter" select="$config-filter"/>
+                    <xsl:with-param name="imagesize" select="$config-imagesize"/>
+                    <xsl:with-param name="image" select="/result/contents/relatedcontents/content[@key = current()/contentdata/image/@key]"/>
+                    <xsl:with-param name="size" select="$size"/>
+                </xsl:call-template>
+            </a>
+        </xsl:if>
+    </xsl:template>
+    
+</xsl:stylesheet>

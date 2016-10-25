@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet
+    exclude-result-prefixes="#all"
+    version="2.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:portal="http://www.enonic.com/cms/xslt/portal">
+
+  <xsl:import href="cms2version1-library.xsl"/>
+
+  <xsl:template match="task" mode="list-view">
+    <xsl:param name="relations"/>
+    <div class="task-list-task">
+      <div>
+        <table>
+          <tbody>
+            <tr>
+              <td width="80%">
+                <h3 class="tasks-list-task-title">
+                  <a href="{portal:createPageUrl( ( 'taskDetail', 'true', 'taskId', id ) )}">
+                    <xsl:value-of select="title"/>
+                  </a>
+                </h3>
+              </td>
+              <td>
+                <div style="text-align: right;">
+                  PM Tool:
+                  <a href="{v1-task/href}" target="_blank">
+                    <xsl:value-of select="v1-task/id"/>
+                  </a>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="task-list-attributes">
+        <table style="width: 100%; table-layout:fixed">
+          <tbody>
+            <tr>
+
+              <td title="Project: {project}">
+                <div>
+                  <xsl:value-of select="project"/>
+                </div>
+              </td>
+
+              <td title="Type: {type}">
+                <div>
+                  <xsl:value-of select="type"/>
+                </div>
+              </td>
+
+              <xsl:variable name="subsystem-id" select="sub-system"/>
+              <xsl:variable name="subsystem" select="$relations/subsystems/subsystem[ id = $subsystem-id ]"/>
+              <xsl:variable name="subsystem-path">
+                <xsl:apply-templates select="$subsystem" mode="minimal-view"/>
+              </xsl:variable>
+              <td title="Sub system: {$subsystem-path}">
+                <div>
+                  <xsl:value-of select="$subsystem-path"/>
+                </div>
+              </td>
+
+              <td title="Status: {status}">
+                <div>
+                  <xsl:attribute name="class">
+                    <xsl:choose>
+                      <xsl:when test="status = 'IN_PROGRESS'">
+                      <xsl:text>attribute-status-inprogress</xsl:text>
+                      </xsl:when>
+                      <xsl:when test="status = 'DONE'">
+                        <xsl:text>attribute-status-done</xsl:text>
+                      </xsl:when>
+                      <xsl:when test="status = 'ACCEPTED'">
+                        <xsl:text>attribute-status-accepted</xsl:text>
+                      </xsl:when>
+                      <xsl:otherwise>
+                        <xsl:text>attribute-status-none</xsl:text>
+                      </xsl:otherwise>
+                    </xsl:choose>
+                  </xsl:attribute>
+                  <xsl:value-of select="status"/>
+                </div>
+              </td>
+
+              <xsl:variable name="done-in-iteration" select="done-in-iteration"/>
+              <xsl:variable name="iteration" select="$relations/iterations/iteration[ id = $done-in-iteration ]"/>
+              <xsl:variable name="done-in-iteration-title">
+                <xsl:text>Done in: </xsl:text><xsl:value-of select="$iteration/name"/>
+                <xsl:text> (</xsl:text><xsl:value-of select="$iteration/begin-date"/><xsl:text> - </xsl:text><xsl:value-of
+                  select="$iteration/end-date"/><xsl:text>)</xsl:text>
+              </xsl:variable>
+              <td title="{$done-in-iteration-title}">
+                <div>
+                  <xsl:value-of select="$iteration/name"/>
+                </div>
+              </td>
+
+              <xsl:variable name="assigned-to-members">
+                <xsl:for-each select="assigned-to/member">
+                  <xsl:variable name="member-id" select="."/>
+                  <xsl:variable name="member" select="$relations/members/member[ id = $member-id ]"/>
+                  <xsl:apply-templates select="$member" mode="minimal-view"/>
+                  <xsl:if test="position() &lt; last()">, </xsl:if>
+                </xsl:for-each>
+              </xsl:variable>
+              <td title="Assigned to: {$assigned-to-members}">
+                <div>
+                  <xsl:value-of select="$assigned-to-members"/>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </xsl:template>
+
+
+</xsl:stylesheet>

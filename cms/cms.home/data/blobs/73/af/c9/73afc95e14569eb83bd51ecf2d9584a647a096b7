@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datasources>
+  <datasource jndi-name="jboss/java:jdbc/cms" pool-name="cms-pool" enabled="true" use-java-context="true">
+  <!--
+    <connection-url>jdbc:jtds:sqlserver://localhost:1433;DatabaseName=cmsdb46</connection-url>
+  -->
+    <connection-url>jdbc:sqlserver://localhost:1433;DatabaseName=cmsdb46</connection-url>
+    
+    <!-- works with jdk 6 and 7 -->
+    <!-- <driver>jtds-1.2.7.jar</driver> -->
+
+    <!-- works with jdk 7 only -->
+    <!-- <driver>jtds-1.3.0.jar</driver> -->
+    
+    <driver>sqljdbc4.jar</driver>
+    <new-connection-sql>select 1</new-connection-sql>
+    <transaction-isolation>TRANSACTION_READ_COMMITTED</transaction-isolation>
+    <pool>
+      <min-pool-size>5</min-pool-size>
+      <max-pool-size>50</max-pool-size>
+    </pool>
+    <security>
+      <user-name>cms</user-name>
+      <password>cmsp</password>
+    </security>
+    <validation>
+      <check-valid-connection-sql>select 1</check-valid-connection-sql>
+    </validation>
+    <timeout>
+      <set-tx-query-timeout>true</set-tx-query-timeout>
+      <blocking-timeout-millis>5000</blocking-timeout-millis>
+      <idle-timeout-minutes>15</idle-timeout-minutes>
+    </timeout>
+    <statement>
+      <track-statements>false</track-statements>
+    </statement>
+  </datasource>
+</datasources>

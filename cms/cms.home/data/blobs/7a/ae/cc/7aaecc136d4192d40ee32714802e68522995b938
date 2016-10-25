@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet exclude-result-prefixes="xs portal" version="2.0" xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:portal="http://www.enonic.com/cms/xslt/portal" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+  <xsl:output indent="yes" media-type="text/html" method="xhtml" omit-xml-declaration="yes"/>
+
+  <xsl:template match="/">
+
+    <!-- Default datasource function arguments -->
+    <xsl:variable name="def-key" select="1023"/>
+    <xsl:variable name="def-relation" select="1"/>
+    <xsl:variable name="def-query" select="''"/>
+    <xsl:variable name="def-orderby" select="''"/>
+    <xsl:variable name="def-index" select="0"/>
+    <xsl:variable name="def-count" select="10"/>
+    <xsl:variable name="def-children-level" select="10"/>
+    <xsl:variable name="def-parent-level" select="0"/>
+
+    <!-- Resolving actual datasource function arguments -->
+    <xsl:variable name="key">
+      <xsl:choose>
+        <xsl:when test="/result/context/querystring/parameter[ @name = 'key' ]">
+          <xsl:value-of select="/result/context/querystring/parameter[ @name = 'key' ]"/> 
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="$def-key"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="relation">
+      <xsl:choose>
+        <xsl:when test="/result/context/querystring/parameter[ @name = 'relation' ]">
+          <xsl:value-of select="/result/context/querystring/parameter[ @name = 'relation' ]"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="$def-relation"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="query">
+      <xsl:choose>
+        <xsl:when test="/result/context/querystring/parameter[ @name = 'query' ]">
+          <xsl:value-of select="/result/context/querystring/parameter[ @name = 'query' ]"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="$def-query"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="orderby">
+      <xsl:choose>
+        <xsl:when test="/result/context/querystring/parameter[ @name = 'orderby' ]">
+          <xsl:value-of select="/result/context/querystring/parameter[ @name = 'orderby' ]"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="$def-orderby"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="index">
+      <xsl:choose>
+        <xsl:when test="/result/context/querystring/parameter[ @name = 'index' ]">
+          <xsl:value-of select="/result/context/querystring/parameter[ @name = 'index' ]"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="$def-index"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="count">
+      <xsl:choose>
+        <xsl:when test="/result/context/querystring/parameter[ @name = 'count' ]">
+          <xsl:value-of select="/result/context/querystring/parameter[ @name = 'count' ]"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="$def-count"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="children-level">
+      <xsl:choose>
+        <xsl:when test="/result/context/querystring/parameter[ @name = 'children-level' ]">
+          <xsl:value-of select="/result/context/querystring/parameter[ @name = 'children-level' ]"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="$def-children-level"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="parent-level">
+      <xsl:choose>
+        <xsl:when test="/result/context/querystring/parameter[ @name = 'parent-level' ]">
+          <xsl:value-of select="/result/context/querystring/parameter[ @name = 'parent-level' ]"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="$def-parent-level"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+
+    
+    Calling datasource getRelatedContent with the follwing parameters:
+    <ul>
+      <li>
+        key:
+        <xsl:value-of select="$key"/>
+      </li>
+      <li>
+        relation:
+        <xsl:value-of select="$relation"/>
+      </li>
+      <li>
+        query:
+        <xsl:value-of select="$query"/>
+      </li>
+      <li>
+        orderby:
+        <xsl:value-of select="$orderby"/>
+      </li>
+      <li>
+        index:
+        <xsl:value-of select="$index"/>
+      </li>
+      <li>
+        count:
+        <xsl:value-of select="$count"/>
+      </li>
+      <li>
+        children-level:
+        <xsl:value-of select="$children-level"/>
+      </li>
+      <li>
+        parent-level:
+        <xsl:value-of select="$parent-level"/>
+      </li>
+
+    </ul>
+
+    <p>
+      Result of datsource-call to getRelatedContent method
+      (
+      index = <xsl:value-of select="result/contents/@index"/>,
+      count = <xsl:value-of select="result/contents/@count"/>,
+      resultcount = <xsl:value-of select="result/contents/@resultcount"/>,
+      totalcount = <xsl:value-of select="result/contents/@totalcount"/>
+      ):
+    </p>
+    <p>
+      The topmost nodes in the tree (bold) are the content in xpath: result/contents/content.<br/>
+      The subnodes are related content (count = <xsl:value-of select="result/contents/relatedcontents/@count"/>).
+    </p>
+    <ul>
+      <xsl:for-each select="result/contents/content">
+        <li>
+          <strong><xsl:value-of select="title"/></strong>
+          <ul>
+            <xsl:for-each select="relatedcontentkeys/relatedcontentkey">
+              <xsl:call-template name="display-related-content">
+                <xsl:with-param name="relatedcontentkey" select="."/>
+              </xsl:call-template>
+            </xsl:for-each>
+          </ul>
+        </li>
+      </xsl:for-each>
+    </ul>
+
+    <p>
+      <xsl:variable name="params" select="( 'content-key', $key, 'relation', $relation, 'query', $query, 'orderby', $orderby, 'index', $index, 'count', $count, 'children-level', $children-level, 'parent-level', $parent-level )"/>
+      <xsl:variable name="url" select="portal:createUrl( '/api-examples/plugin/client/local/get-related-content-example', $params )"/>
+      <a href="{$url}" target="_blank">
+        Verify result of call to Client.getRelatedContent with same arguments using a controller plugin
+      </a>
+    </p>
+
+  </xsl:template>
+
+  <xsl:template name="display-related-content">
+    <xsl:param name="relatedcontentkey"/>
+
+    <xsl:variable name="content-key" select="$relatedcontentkey/@key"/>
+    <xsl:variable name="content" select="/result/contents/relatedcontents/content[@key = $content-key ]"/>
+
+    <li>
+      <xsl:value-of select="$content/title"/>
+      (key = <xsl:value-of select="$content-key"/>, level =
+      <xsl:value-of select="$relatedcontentkey/@level"/> )
+
+      <ul>
+        <xsl:for-each select="$content/relatedcontentkeys/relatedcontentkey">
+          <xsl:call-template name="display-related-content">
+            <xsl:with-param name="relatedcontentkey" select="."/>
+          </xsl:call-template>
+
+        </xsl:for-each>
+      </ul>
+    </li>
+  </xsl:template>
+
+
+</xsl:stylesheet>

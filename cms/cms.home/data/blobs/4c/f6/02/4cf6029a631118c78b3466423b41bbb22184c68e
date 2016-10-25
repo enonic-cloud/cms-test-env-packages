@@ -1,0 +1,22 @@
+<level>
+ <bricks>
+  <brick key="b" color="0xcccccc" />
+  <brick key="c" color="0x0000ff" />
+  <brick key="g" color="0x00ff00" />
+  <brick key="r" color="0xff0000" />
+  <brick key="w" color="0xffffff" />
+  <brick key="y" color="0xffff00" />
+ </bricks>
+ <layout>
+  <line>bbrbxbbxbrbb</line>
+  <line>bgbbxccxbbgb</line>
+  <line>bbgbxxxxbgbb</line>
+  <line>bgbbxccxbbgb</line>
+  <line>bbbbxbbxbbbb</line>
+  <line>yyyyxyyxyyyy</line>
+  <line>wwwwxwwxwwww</line>
+  <line>xxxxxccxxxxx</line>
+  <line>wwwwxwwxwwww</line>
+  <line>xcccxccxcccx</line>
+ </layout>
+</level>

@@ -1,0 +1,48 @@
+<config>
+    <multilingual>true</multilingual>
+    <accessibility-text-size>true</accessibility-text-size>
+    <accessibility-contrast>true</accessibility-contrast>
+    <passport>
+        <email-login>true</email-login>
+        <edit-display-name>true</edit-display-name>
+        <set-password>true</set-password>
+        <admin-name>Einar Børresen</admin-name>
+        <admin-email>ebo@enonic.com</admin-email>
+        <join-group-keys>
+            <join-group-key>3B9B70278261DF07656758768F86CB8F94451090</join-group-key>
+        </join-group-keys>
+        <groups>
+            <group key="group-1-key">Group 1 name</group>
+            <group key="group-2-key">Group 2 name</group>
+        </groups>
+    </passport>
+    <parameters>
+        <parameter path="/en" name="front-page" key="21">/en/home</parameter>
+        <parameter path="/en" name="search-result">/en/search-result</parameter>
+        <parameter path="/en" name="sitemap">/en/home/sitemap</parameter>
+        <parameter path="/en" name="rss">/en/rss</parameter>
+        <parameter path="/no" name="front-page" key="160">/no/forsiden</parameter>
+        <parameter path="/no" name="search-result">/no/forsiden/søkeresultat</parameter>
+        <parameter path="/no" name="sitemap">/no/forsiden/nettstedskart</parameter>
+        <parameter path="/no" name="rss">/no/rss</parameter>
+        <parameter path="/" name="google-tracker">123123123</parameter>
+        <parameter path="/" name="google-verify">asdasdasdas</parameter>
+        <parameter path="/" name="meta-generator">Enonic CMS</parameter>
+        <parameter path="/" name="meta-author">Enonic</parameter>
+    </parameters>
+    <robots>
+        <robot name="*">
+            <rule name="allow">/</rule>
+            <rule name="disallow">/error</rule>
+            <rule name="disallow">/admin</rule>
+        </robot>
+        <robot name="BadBot">
+            <rule name="disallow">/</rule>
+        </robot>
+    </robots>
+    <skins>
+        <skin name="beach"/>
+        <skin name="cityscape"/>
+        <skin name="intranet"/>
+    </skins>
+</config>

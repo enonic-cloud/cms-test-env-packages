@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:portal="http://www.enonic.com/cms/xslt/portal" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                xmlns:xsl="http://www.w3.org/1999/XSL/Transform" exclude-result-prefixes="xs portal" version="2.0">
+
+  <xsl:output indent="yes" media-type="text/html" method="xhtml" omit-xml-declaration="yes"/>
+
+
+  <xsl:template match="/">
+
+    <p>
+      Using function with a content of type Image:
+    </p>
+    <ul>
+      <li>
+        <a href="{portal:createImageUrl( '1503' )}">
+          createImageUrl( '1503' )
+        </a>
+      </li>
+      <li>
+        <a href="{portal:createImageUrl( '1503/label/source' )}">
+          createImageUrl( '1503/label/source' )
+        </a>
+      </li>
+      <li>
+        <a href="{portal:createImageUrl( '1503/label/large' )}">
+          createImageUrl( '1503/label/large' )
+        </a>
+      </li>
+      <li>
+        <a href="{portal:createImageUrl( '1503/label/medium' )}">
+          createImageUrl( '1503/label/medium' )
+        </a>
+      </li>
+      <li>
+        <a href="{portal:createImageUrl( '1503/label/small' )}">
+          createImageUrl( '1503/label/small' )
+        </a>
+      </li>
+      <li>
+        <a href="{portal:createImageUrl( '1704/label/small' )}">
+          createImageUrl( '1704/label/small' ) - Unpublished image
+        </a>
+      </li>
+      <li>
+        <a href="{portal:createImageUrl( '1705/label/small' )}">
+          createImageUrl( '1705/label/small' ) - Not existing image
+        </a>
+      </li>
+      <li>
+        <a href="{portal:createImageUrl( 'ost2' )}">
+          createImageUrl( 'ost2' ) - Bogus key
+        </a>
+      </li>
+      <li>
+        <a href="{portal:createImageUrl( '' )}">
+          createImageUrl( '' ) - Empty key
+        </a>
+      </li>
+      <li>
+        <a href="{portal:createImageUrl( 'user/02BB5ED34D4C67DEA1C2D0CCE5E86BEE07716B49' )}">
+          createImageUrl( 'user/02BB5ED34D4C67DEA1C2D0CCE5E86BEE07716B49' )
+        </a>
+      </li>
+      
+      
+      
+    </ul>
+    
+  </xsl:template>
+
+</xsl:stylesheet>

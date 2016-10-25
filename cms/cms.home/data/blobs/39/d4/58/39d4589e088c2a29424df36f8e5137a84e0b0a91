@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet exclude-result-prefixes="#all" version="2.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:util="enonic:utilities" xmlns:portal="http://www.enonic.com/cms/xslt/portal" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    
+    <!--<xsl:import href="/libraries/utilities/standard-variables.xsl"/>-->
+    <!--<xsl:import href="/themes/travel/framework.xsl"/>-->
+    <xsl:include href="/libraries/utilities/utilities.xsl"/>
+    <xsl:include href="/libraries/utilities/navigation-menu.xsl"/>
+    <xsl:include href="/themes/travel/widgets/eCommerce-utilities.xsl"/>
+    
+    <xsl:output indent="yes" media-type="text/html" method="xhtml" omit-xml-declaration="yes"/>
+    
+    <xsl:variable name="url-parameters" select="/result/context/querystring/parameter[not(@name = 'index' or @name = 'id' or starts-with(@name, '_config-'))]"/>
+    
+    <xsl:variable name="language" select="/result/context/@languagecode"/>
+    <xsl:variable name="device-class" select="/result/context/device-class"/>
+    <xsl:variable name="region-width" select="/result/context/querystring/parameter[@name = '_config-region-width']"/>
+    <xsl:variable name="config-xml" as="document-node()" select="document(concat(/result/context/site/path-to-home-resources, '/config.xml'))"/>
+    <xsl:variable name="config" as="element()" select="$config-xml/config"/>
+    <xsl:variable name="config-device-class" as="element()" select="if ($config/device-classes/device-class[tokenize(@name, ',')[. = $device-class]]) then $config/device-classes/device-class[tokenize(@name, ',')[. = $device-class]] else $config/device-classes/device-class[1]"/>
+    <xsl:variable name="config-imagesize" select="$config-device-class/image/sizes/size"/>
+    <xsl:variable name="config-filter">
+        <xsl:value-of select="string-join($config-device-class/image/filters/filter, ';')"/>
+        <xsl:if test="$config-device-class/image/filters/filter != ''">;</xsl:if>
+    </xsl:variable>
+    
+    <xsl:template match="/">
+        <script type="text/javascript">
+            $(document).ready(function() {
+              $('#existing-login').show();
+              $('#new-customer').hide();
+            });
+            
+            
+            
+        </script>
+        
+        <div class="shop-customer">
+            <div class="shop-login"><xsl:value-of select="portal:localize('Login')"/></div>
+            <div class="kunde-title">
+                <input type="radio" name="customer" value="existing" selected="selected">
+                    <xsl:value-of select="portal:localize('Already-customer')"/>
+                </input>
+            </div>
+            
+            <div id="existing-login">
+                <label for="email"><xsl:value-of select="portal:localize('Name')"/></label><input type="text" name="email"/>
+                <label for="password"><xsl:value-of select="portal:localize('Password')"/></label><input type="text" name="password"/>
+                <label></label><a class="shop-forgot" href="#"><xsl:value-of select="portal:localize('Forgot-your-password')"/></a>
+            </div>
+            
+            
+            <div class="kunde-title">
+                <input type="radio" name="customer" value="new">
+                    <xsl:value-of select="portal:localize('New-customer')"/>
+                </input>
+            </div>
+            <div id="new-customer">
+                <label><xsl:value-of select="portal:localize('User')"/></label><br/>
+                <label for="new-first-name"><xsl:value-of select="portal:localize('First-name')"/></label>
+                <input type="text" name="new-first-name" id="new-first-name"/>
+                <label for="new-last-name"><xsl:value-of select="portal:localize('Last-name')"/></label>
+                <input type="text" name="new-last-name" id="new-last-name"/>
+                <label for="new-email"><xsl:value-of select="portal:localize('Email')"/></label>
+                <input type="text" name="new-email" id="new-email"/>
+                <label><xsl:value-of select="portal:localize('Delivery-address')"/></label>
+                <label for=""></label>
+            </div>
+            
+            
+<!--            <form action="#" class="product-list">
+                <fieldset>
+                    <input type="submit" class="button" value="{portal:localize('Add-to-cart')}"/>
+                    <input type="text" name="qty" value="1" class="text"/>
+                </fieldset>
+            </form>-->
+            
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="content">
+
+    </xsl:template>
+    
+    <xsl:template name="image">
+        <xsl:param name="size"/>
+        <xsl:if test="/result/contents/relatedcontents/content[@key = current()/contentdata/image/@key]">
+            <a href="{portal:createContentUrl(@key,())}" title="{title}">
+                <xsl:call-template name="utilities.display-image">
+                    <xsl:with-param name="region-width" select="$region-width"/>
+                    <xsl:with-param name="filter" select="$config-filter"/>
+                    <xsl:with-param name="imagesize" select="$config-imagesize"/>
+                    <xsl:with-param name="image" select="/result/contents/relatedcontents/content[@key = current()/contentdata/image/@key]"/>
+                    <xsl:with-param name="size" select="$size"/>
+                </xsl:call-template>
+            </a>
+        </xsl:if>
+    </xsl:template>
+    
+</xsl:stylesheet>

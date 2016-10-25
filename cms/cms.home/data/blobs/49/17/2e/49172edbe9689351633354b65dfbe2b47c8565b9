@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet
+    exclude-result-prefixes="xs portal"
+    version="2.0" xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:portal="http://www.enonic.com/cms/xslt/portal"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+  <xsl:output
+      indent="yes"
+      media-type="text/html"
+      method="xml"
+      omit-xml-declaration="yes"/>
+
+  <xsl:include href="/features/includes/displayContext.xsl"/>
+
+  <xsl:param name="categoryTestParam">
+    <type>category</type>
+  </xsl:param>
+
+  <xsl:param name="leaveEmptyCategoryTestParam">
+    <type>category</type>
+  </xsl:param>
+
+  <xsl:param name="contentTestParam">
+    <type>content</type>
+  </xsl:param>
+
+  <xsl:param name="leaveEmptyContentTestParam">
+    <type>content</type>
+  </xsl:param>
+
+  <xsl:param name="pageTestParam">
+    <type>page</type>
+  </xsl:param>
+
+  <xsl:param name="leaveEmptyPageTestParam">
+    <type>page</type>
+  </xsl:param>
+
+  <xsl:param name="objectTestParam">
+    <type>object</type>
+  </xsl:param>
+
+  <xsl:param name="regionTestParam">
+    <type>region</type>
+  </xsl:param>
+
+  <xsl:param name="noTypeParamTest"/>
+
+  <xsl:template match="/">
+
+    <h1>Params in stylesheet</h1>
+    <p>
+      Tesing different types of portlet template parameters.
+    </p>
+    <p>
+      categoryTestParam:
+      <xsl:value-of select="$categoryTestParam"/>
+    </p>
+    <p>
+      leaveEmptyCategoryTestParam  (should be nothing after the colon, if param left empty):
+      <xsl:value-of select="$leaveEmptyCategoryTestParam"/>
+    </p>
+    <p>
+      contentTestParam:
+      <xsl:value-of select="$contentTestParam"/>
+    </p>
+    <p>
+      leaveEmptyContentTestParam  (should be nothing after the colon, if param left empty):
+      <xsl:value-of select="$leaveEmptyContentTestParam"/>
+    </p>
+    <p>
+      objectTestParam:
+      <xsl:value-of select="$objectTestParam"/>
+    </p>
+    <p>
+      regionTestParam:
+      <xsl:value-of select="$regionTestParam"/>
+    </p>
+    <p>
+      pageTestParam:
+      <a href="{portal:createPageUrl( $pageTestParam, () )}">
+        <xsl:value-of select="$pageTestParam"/>
+      </a>
+    </p>
+    <p>
+      leaveEmptyPageTestParam (should be nothing after the colon, if param left empty): <xsl:value-of select="$leaveEmptyPageTestParam"/>
+    </p>
+    <p>
+      noTypeParamTest:
+      <xsl:value-of select="$noTypeParamTest"/>
+    </p>
+    <br/>
+    <br/>
+    <br/>
+    <xsl:call-template name="displayContext">
+    </xsl:call-template>
+
+
+  </xsl:template>
+
+
+</xsl:stylesheet>

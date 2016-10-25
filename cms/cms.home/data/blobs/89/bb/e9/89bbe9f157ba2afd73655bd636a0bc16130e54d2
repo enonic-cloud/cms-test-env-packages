@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:portal="http://www.enonic.com/cms/xslt/portal" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform" exclude-result-prefixes="xs portal" version="2.0">
+
+  <xsl:output indent="yes" media-type="text/html" method="xhtml" omit-xml-declaration="yes"/>
+
+
+  <xsl:template match="/">
+
+    <script src="{portal:createResourceUrl('/_public/features/scripts/contentOperations.js', ())}" type="text/javascript"><xsl:comment>//</xsl:comment></script>
+
+    <h2>Testing createContentUrl with different content-titles:</h2>
+
+    <ul>
+      <xsl:for-each select="/result/contents/content">
+        <li> Title: <strong><xsl:value-of select="title"/></strong><br/>
+          <a href="{portal:createContentUrl(@key, ())}"> createContentUrl </a>
+          <xsl:text>    </xsl:text>
+          <xsl:text>|   </xsl:text>
+          <a href="{portal:createContentUrl(@key, ('param1','test&amp;trøkk',title,'value2'))}">
+            w/params </a>
+          <xsl:text>    </xsl:text>
+          <xsl:text>|   </xsl:text>
+          <a href="{concat(portal:createContentUrl(@key),'#anchor')}"> w/anchor </a>
+          <xsl:text>    </xsl:text>
+          <xsl:text>|   </xsl:text>
+          <a
+            href="{concat(portal:createContentUrl(@key, ('param1',title,title,'value2')),'#anchor')}"
+            > w/params and anchor </a>
+          <xsl:text>    </xsl:text>
+          <xsl:text>    </xsl:text>
+          <xsl:text>|   </xsl:text>
+          <xsl:variable name="redirectOK" select="portal:createContentUrl(@key, () )"/>
+          <a href="{portal:createServicesUrl('portal','resetLocale', $redirectOK, ())}">as
+            redirect</a>
+          <xsl:text>    </xsl:text>
+          <xsl:text>|   </xsl:text>
+          <xsl:variable name="redirectOKwithParams" select="portal:createContentUrl(@key, ('param1', 'value1', 'param2WithTitle', title) )"/>
+          <a href="{portal:createServicesUrl('portal','resetLocale', $redirectOKwithParams, ())}">as
+            redirect w/params</a>
+          <xsl:text>    </xsl:text>
+          <xsl:text>|   </xsl:text>
+          <xsl:variable name="redirectOKwithParamsAndAnchor" select="concat(portal:createContentUrl(@key, ('param1', 'value1', 'param2WithTitle', title) ),'#anchor')"/>
+          <a href="{portal:createServicesUrl('portal','resetLocale', $redirectOKwithParamsAndAnchor, ())}">as
+            redirect w/params and anchor</a>
+        </li>
+      </xsl:for-each>
+
+    </ul>
+
+    <h2>Hardcoded special cases : </h2>
+
+    <ul>
+      <li>
+        <a href="{portal:createUrl('en/Features/XSLT+Functions/createContentUrl/Semicolon++Test.1508.cms')}">portal:createUrl('en/Features/XSLT+Functions/createContentUrl/Semicolon++Test.1508.cms')</a> - 400 OK
+      </li>
+      <li>
+        <a href="{portal:createUrl('en/Features/XSLT+Functions/createContentUrl/1508.cms')}">portal:createUrl('en/Features/XSLT+Functions/createContentUrl/1508.cms')</a> - 400 OK
+      </li>
+      <li>
+        <a
+          href="{portal:createUrl('en/Features/XSLT+Functions/createContentUrl/Semicolon++Test.15080.cms')}">portal:createUrl('en/Features/XSLT+Functions/createContentUrl/Semicolon++Test.15080.cms')</a> - Resource with key 15080 not found
+      </li>
+      <li>
+        <a href="{portal:createUrl('en/Features/XSLT+Functions/createContentUrl/Semicolon++Test.94dsf540.cms')}">portal:createUrl('en/Features/XSLT+Functions/createContentUrl/Semicolon++Test.94dsf540.cms')</a> -  Resource not found
+      </li>
+    </ul>
+
+
+  </xsl:template>
+
+
+</xsl:stylesheet>

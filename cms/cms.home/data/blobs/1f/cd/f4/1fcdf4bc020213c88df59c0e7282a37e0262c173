@@ -1,0 +1,164 @@
+Config for httpS://mail.yourdomain.net using Apache 2.* with Fedora Core and SquirrelMail 1.4.*
+Last updated July 17 2005, by Julius Thyssen, Amsterdam, NL, Europe.
+Questions? Contact me on: <net@the-domainname-where-you-see-this-file.net>
+
+
+This is an example /etc/httpd/conf.d/ssl.conf content:
+
+
+
+
+	LoadModule ssl_module modules/mod_ssl.so
+	Listen yourlocalserverIP:443
+	Listen yourlocalserverIP:81
+
+# replace ^^ with LAN/WAN IP-address of https-server (usually LAN)
+
+	AddType application/x-x509-ca-cert .crt
+	AddType application/x-pkcs7-crl    .crl
+	SSLPassPhraseDialog  builtin
+	SSLSessionCache         shmcb:/var/cache/mod_ssl/scache(512000)
+	SSLSessionCacheTimeout  360
+	SSLMutex default
+	SSLRandomSeed startup file:/dev/urandom  256
+	SSLRandomSeed connect builtin
+	SSLCryptoDevice builtin
+
+	<VirtualHost _default_:443>
+	DocumentRoot "/usr/share/squirrelmail"
+# place under which the SM /src dir resides ^^ this is the default for Fedora Core 3
+
+	ServerName mail.yourdomain.net:443
+
+# ServerAlias mail.yourotherdomain.nl:443 mail.yetanother.com:443
+# optional for other domains on your server
+
+	ErrorDocument 404 /src/login.php
+	ErrorLog logs/ssl_error_log
+	TransferLog logs/ssl_access_log
+	LogLevel warn
+	SSLEngine on
+	SSLCipherSuite ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP
+	SSLCertificateFile /etc/httpd/conf/ssl.crt/server.crt
+	SSLCertificateKeyFile /etc/httpd/conf/ssl.key/server.key
+	SSLCertificateChainFile /etc/httpd/conf/ssl.crt/ca.crt
+	SSLCACertificatePath /etc/httpd/conf/ssl.crt
+
+	<Files ~ "\.(cgi|shtml|phtml|pl|php3?)$">
+		SSLOptions +StdEnvVars
+	</Files>
+	<Directory "/usr/share/squirrelmail">
+		SSLOptions +StdEnvVars
+	</Directory>
+
+	SetEnvIf User-Agent ".*MSIE.*" \
+			 nokeepalive ssl-unclean-shutdown \
+			 downgrade-1.0 force-response-1.0
+
+	CustomLog logs/ssl_request_log \
+			  "%t %h %{SSL_PROTOCOL}x %{SSL_CIPHER}x \"%r\" %b"
+
+	</VirtualHost>                                  
+
+
+
+	
+
+	
+# Next, related explanatory  /etc/httpd/httpd.conf  content
+# (you can put it in place of the default <VirtualHost> entry) :
+
+
+
+
+	UseCanonicalName On
+
+	<Directory "/usr/share/squirrelmail">
+	Options Indexes FollowSymLinks ExecCGI Includes MultiViews
+	AllowOverride None
+	Order allow,deny
+	Allow from all
+	</Directory> 
+
+	
+# below is the yourdomain.net container concerning the part without "https://mail." in front of the name
+
+	NameVirtualHost *:80
+
+	<VirtualHost *:80>
+	ServerName yourdomain.net
+	DocumentRoot /var/www/yourdomains_doc-root
+
+	ServerAlias *.yourdomain.net
+# this ^^ catches mistyped hostnames, like "ww.yourdomain.net" and "wwww.yourdomain.net"
+# and enables you to limit bandwidth traffic to have all calls go to one hostname..
+
+	RewriteEngine on
+	RewriteCond %{HTTP_HOST}  ^mail\.yourdomain\.net
+	RewriteRule ^/(.*)$     https://mail.yourdomain.net/$1 [R,L]
+	RewriteCond $1          =mail
+	RewriteRule ^/(.*)$     https://mail.yourdomain.net/ [R,L]
+	RewriteCond %{HTTP_HOST}  !^yourdomain.net(:80)?$
+	RewriteRule ^/(.*)        http://yourdomain.net/$1 [L,R]
+	RewriteOptions inherit
+
+	Redirect /webmail https://mail.yourdomain.net
+	Redirect /mail https://mail.yourdomain.net
+
+	</VirtualHost>
+
+
+
+
+All this is pretty advanced rewriting going on, some of you might like it
+( the Apache Foundation complimented me on it, it's all good ;-)
+
+it cuts off the preceding stuff unless it's "mail.", in which case it redirects to the SSL Host.
+
+Make sure you have these two DNS Zone records (A and CNAME records):
+
+ *.yourdomain.net
+ mail.yourdomain.net
+
+pointing to your server's public IP (the WAN address).
+
+
+This setup catches all typos for hostnames and redirects them to the  http://yourdomain.net  host.
+Many users will love this, since it pushes all traffic over one ('hostless') name only,
+and shortens the URL.
+
+
+Of course you can add VirtualHosts with other hostnames, as long as you create a separate A record
+for each name, plus a separate <VirtualHost> container for each name.
+
+
+
+
+
+
+
+Problem staying logged in? 'You must be logged in' and the likes ?
+
+
+For the Fedora Core / Apache 2 / https login problem relating to Mozilla Firefox, try this:
+( firefox was actually correct in showing this problem, since the server setup wasn't safe )
+
+- Disable the Sq.M. https redirect plugin (Apache 2 takes care of that
+when you have your mail done in a separate https Virtual Host container)
+
+
+- Make sure a  /usr/share/squirrelmail/favicon.ico  exists!
+( thanks to Bill Polhemus for confirming this )
+
+
+- Make sure the directory where php stores its sessions is readable/writeable by the web server user;
+That is to say, the directory configured in php.ini:
+session.save_path = /var/lib/php/session
+needs permissions 40770 (Octal) and user:group "root:apache" in case of Fedora Core.
+
+- Make sure the directory /var/lib/squirrelmail/prefs
+has permissions 40700 (Octal) and user of your httpd (usually "apache").
+
+
+
+
