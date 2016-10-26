@@ -13,13 +13,14 @@ Starts the database.
    > docker exec cmstestenvpackages_postgres_1 /usr/local/bin/backup-restore.sh
 
 Restores the database from file, before the rest of the CMS is started.  If the CMS had discovered an empty database, it would have created a new one.
-The command takes about half a minute and produces som warnings, but this may safely be ignored.
+This command takes about half a minute and produces som warnings.  These may safely be ignored.
 
-Note: At this point, it is possible to set up a local installation in your favorite development tool with the cms project, while using this database, and a copy of cms.home from this project, to debug locally.
+Note: At this point, it is possible to set up a local installation in your favorite development tool with the cms project, while using this database, and a copy of cms.home from this project, to debug locally.  If you just want an installation for test, continue to bring the whole site up and running like this:
 
    > docker-compose up -d
 
 
-This command startes the rest of the containers and connects them, to get a full system up and running.  After this, the only thing left to do is index the data.  This may be done from the admin console:
+This command startes the rest of the containers and connects them.  After this, the only thing left to do is index the data.  This may be done from the admin console:
+
 http://localhost:8080/admin -> login -> System/Index Monitor -> Rebuild index (FULL)
 
