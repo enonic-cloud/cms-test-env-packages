@@ -1,6 +1,8 @@
 # Enonic CMS Packages test environment  installation container
-This container is based on this repo: https://github.com/enonic-cloud/docker-compose-enonic-cms
-Check out the readme-file there for more details on installation, backup and other maintenance.
+This container is based on this repo: https://github.com/enonic-cloud/docker-compose-enonic-cms , but there are a few changes:
+
+ * The cms-storage container have been removed, as there should not be a need for persistant storage, and this simplified working with the cms.home folder.
+ * The default version of Enonic CMS is currently set to 4.7.15.  The database used requires at least 4.7.14.  Earlier versions of the database in use are not compatible.
 
 ## Installation
 
@@ -12,6 +14,8 @@ Starts the database.
 
 Restores the database from file, before the rest of the CMS is started.  If the CMS had discovered an empty database, it would have created a new one.
 The command takes about half a minute and produces som warnings, but this may safely be ignored.
+
+Note: At this point, it is possible to set up a local installation in your favorite development tool with the cms project, while using this database, and a copy of cms.home from this project, to debug locally.
 
    > docker-compose up -d
 
