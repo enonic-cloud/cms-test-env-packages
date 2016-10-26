@@ -6,16 +6,15 @@ This container is based on this repo: https://github.com/enonic-cloud/docker-com
 
 ## Installation
 
+First, start the database:
+
    > docker-compose up -d postgres
 
-Starts the database.
+Then, restore the back-up of the packages database from file.  This command takes about half a minute and produces som warnings.  These may safely be ignored.
 
    > docker exec cmstestenvpackages_postgres_1 /usr/local/bin/backup-restore.sh
 
-Restores the database from file, before the rest of the CMS is started.  If the CMS had discovered an empty database, it would have created a new one.
-This command takes about half a minute and produces som warnings.  These may safely be ignored.
-
-Note: At this point, it is possible to set up a local installation in your favorite development tool with the cms project, while using this database, and a copy of cms.home from this project, to debug locally.  If you just want an installation for test, continue to bring the whole site up and running like this:
+At this point, if you want to debug locally, it is possible to set up a local installation of the cms project in your favorite development tool.  To do so, make a copy of the cms.home directory in this porject, and use the database in the current state.  If you just want an installation for testing, continue to bring the whole site up and running like this:
 
    > docker-compose up -d
 
