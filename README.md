@@ -2,7 +2,7 @@
 This container is based on this repo: https://github.com/enonic-cloud/docker-compose-enonic-cms , but there are a few changes:
 
  * The cms-storage container have been removed, as there should not be a need for persistant storage, and this simplified working with the cms.home folder.
- * The default version of Enonic CMS is currently set to 4.7.15.  The database used requires at least 4.7.14.  Earlier versions of the database in use are not compatible.
+ * The default version of Enonic CMS is currently set to 4.7.15.  The database used requires at least 4.7.14.  Earlier versions of the cms project are not compatible with the database used here.
 
 ## Installation
 
