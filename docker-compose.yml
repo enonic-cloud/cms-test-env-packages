@@ -32,6 +32,8 @@ postgres:
     io.enonic.backup.data: "/backup"
   volumes_from:
     - postgresstorage
+  ports:
+   - "5432:5432"
 postgresstorage:
   image: postgres:9.4.1
   command: "Postgres storage container"

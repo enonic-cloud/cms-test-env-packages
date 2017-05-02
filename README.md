@@ -14,7 +14,11 @@ Then, restore the back-up of the packages database from file.  This command take
 
    > docker exec cmstestenvpackages_postgres_1 /usr/local/bin/backup-restore.sh
 
-At this point, if you want to debug locally, it is possible to set up a local installation of the cms project in your favorite development tool.  To do so, make a copy of the cms.home directory in this porject, and use the database in the current state.  If you just want an installation for testing, continue to bring the whole site up and running like this:
+At this point, if you want to debug locally, it is possible to set up a local installation of the cms project in your favorite development tool.  To do so, make a copy of the cms.home directory in this project, and use the database in the current state.
+
+WARNING: The 5432 port of Postgres is exposed, so it is available from outside the Docker environment in order to access and debug the database.
+
+If you just want an installation for testing, continue to bring the whole site up and running like this:
 
    > docker-compose up -d
 
